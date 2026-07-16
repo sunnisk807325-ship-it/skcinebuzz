@@ -1,4 +1,3 @@
-
 [
   {
     "name": "Naruto",
@@ -107,25 +106,26 @@
         "url": "https://jumpshare.com/share/Vx0XcdS2hOmNtX2c9Czv",
         "detail": "यह Sunni sk एनीमे सीरीज का Episode 20 है, इसे अपने इन-ऐप प्लेयर पर देखें।"
       }
-    ],
-    {
-  "name": "Doraemon",
-  "category": "anime",
-  "isSeries": true,
-  "image": "https://i.ibb.co/DgtSWnMN/2026-07-16-21-06-06-154-0530.jpg",
-  "detail": "डोरेमोन और नोबिता के जादुई गैजेट्स की दुनिया।",
-  "episodes": [
-    {
-      "title": "Episode 1",
-      "detail": "डोरेमोन का आना",
-      "url": "https://jumpshare.com/share/xrK14jqXodaxSJSIuQYK"
-    },
-    {
-      "title": "Episode 2",
-      "detail": "नोबिता की शरारत",
-      "url": "https://jumpshare.com/share/txNwsbkVzZgauMkplL9u"
-    }
-  ]
+    ]
+  },
+  {
+    "name": "Doraemon",
+    "category": "anime",
+    "isSeries": true,
+    "image": "https://i.ibb.co/DgtSWnMN/2026-07-16-21-06-06-154-0530.jpg",
+    "detail": "डोरेमोन और नोबिता के जादुई गैजेट्स की दुनिया।",
+    "episodes": [
+      {
+        "title": "Episode 1",
+        "detail": "डोरेमोन का आना",
+        "url": "https://jumpshare.com/share/xrK14jqXodaxSJSIuQYK"
+      },
+      {
+        "title": "Episode 2",
+        "detail": "नोबिता की शरारत",
+        "url": "https://jumpshare.com/share/txNwsbkVzZgauMkplL9u"
+      }
+    ]
   },
   {
     "name": "Pritam and Pedro S01",
@@ -141,7 +141,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/Mk8LazDXGb",
     "image": "https://i.ibb.co/HpfWzjpr/Screenshot-20260714-233527-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Drishyam 3",
@@ -149,7 +149,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/rieKzx1FAm",
     "image": "https://i.ibb.co/DPsfRR4f/Screenshot-20260714-235319-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Tuck Jagadish",
@@ -157,7 +157,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/LgSDyJo1he",
     "image": "https://i.ibb.co/YFHpwKJz/Screenshot-20260714-235646-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Junior",
@@ -165,7 +165,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/Kvf93tDIpl",
     "image": "https://i.ibb.co/RTBmhtHR/Screenshot-20260715-000013-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Mareechika",
@@ -173,7 +173,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/zMobBeKkJu",
     "image": "https://i.ibb.co/cc1pqDZr/Screenshot-20260715-000322-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Ruslaan",
@@ -181,7 +181,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/3MpmZwmgDBbDzbS",
     "image": "https://i.ibb.co/q3jbVDM7/Screenshot-20260715-000544-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Thank God",
@@ -189,7 +189,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/rWsetc0udU",
     "image": "https://i.ibb.co/Pv84jpd2/Screenshot-20260715-070158-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Little House on the Prairie S01",
@@ -197,7 +197,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/7u68SisWrh",
     "image": "https://i.ibb.co/YF7V3Yz9/Screenshot-20260715-070639-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Im Not Afraid S01",
@@ -205,7 +205,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/eq0IQWYdVb",
     "image": "https://i.ibb.co/cKsKjwKj/Screenshot-20260715-070834-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Heropanti 2",
@@ -213,7 +213,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/drive/qKFltiBPHL",
     "image": "https://i.ibb.co/HLsVDKnw/Screenshot-20260715-071037-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "I Will Find You S01",
@@ -221,7 +221,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/kylfinsXTt",
     "image": "https://i.ibb.co/dHz0CcW/Screenshot-20260715-071223-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Enola Holmes",
@@ -229,7 +229,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/k2wtJYUSEZ",
     "image": "https://i.ibb.co/HTPj96wH/Screenshot-20260715-071412-Chrome-2.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Enola Holmes 2",
@@ -237,7 +237,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/oDpuCUcdRE",
     "image": "https://i.ibb.co/8DcFWX3x/Screenshot-20260715-071528-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "The Nun II",
@@ -245,7 +245,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/jnFXMfw7qs",
     "image": "https://i.ibb.co/1tLwzq8x/Screenshot-20260715-071702-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Wuthering Heights",
@@ -253,7 +253,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/Mv8FDYwNXA",
     "image": "https://i.ibb.co/SD4dSZ3f/Screenshot-20260715-071849-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Rango",
@@ -261,7 +261,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/AgQ78MbyDW",
     "image": "https://i.ibb.co/wFHHcmFp/Screenshot-20260715-072144-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Madagascar",
@@ -269,7 +269,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/oxhiWvCwFE",
     "image": "https://i.ibb.co/RGjRhrnZ/Screenshot-20260715-072314-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Madagascar 2 - Escape 2 Africa",
@@ -277,7 +277,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/0l2TR1hmZg",
     "image": "https://i.ibb.co/k6ybzS0f/Screenshot-20260715-072442-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Madagascar 3 - Europes Most Wanted",
@@ -285,7 +285,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/r1aoActD5j",
     "image": "https://i.ibb.co/Fkwr8Qsf/Screenshot-20260715-073723-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Penguins of Madagascar",
@@ -293,7 +293,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/g7OlHiFdBI",
     "image": "https://i.ibb.co/qF0TjwP4/Screenshot-20260715-074015-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Peddi",
@@ -301,7 +301,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/TZ2fAa5F3H",
     "image": "https://i.ibb.co/v4Nm3S8w/Screenshot-20260715-074448-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster film।"
   },
   {
     "name": "Raaz 3",
@@ -309,7 +309,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/1uRGP24esT",
     "image": "https://i.ibb.co/DfSGfrhn/Screenshot-20260715-074815-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Thukra Ke Mera Pyaar S02",
@@ -317,7 +317,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/jRWH0abSiI",
     "image": "https://i.ibb.co/35bGW00d/Screenshot-20260715-121322-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Sattendru Maarudhu Vaanilai",
@@ -325,7 +325,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/gsT8LuW2eB",
     "image": "https://i.ibb.co/ds3ZLNJr/Screenshot-20260715-121501-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर film।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster film।"
   },
   {
     "name": "Bhooth Bangla",
@@ -333,7 +333,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/BOm0TZRovD",
     "image": "https://i.ibb.co/0yXJ9zz5/Screenshot-20260715-121826-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Karuppu",
@@ -341,7 +341,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/l6T4G3RSck",
     "image": "https://i.ibb.co/bjS9LkwZ/Screenshot-20260715-121940-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Arjun Son of Vyjayanthi",
@@ -349,7 +349,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/6veJK9MUdw",
     "image": "https://i.ibb.co/HfhW7sPK/Screenshot-20260715-122128-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Patriot",
@@ -357,7 +357,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/DgknpFi8f2",
     "image": "https://i.ibb.co/WpPhwZMF/Screenshot-20260715-122451-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "29",
@@ -365,7 +365,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/xgAej4MXmf",
     "image": "https://i.ibb.co/ymLKgZHt/Screenshot-20260715-122651-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Ugly Story",
@@ -373,7 +373,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/W8LnICiemU",
     "image": "https://i.ibb.co/9kSkCjsN/Screenshot-20260715-122848-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Ishqan De Lekhe",
@@ -381,7 +381,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/CjcngRMi5N",
     "image": "https://i.ibb.co/dsfJfFJ0/Screenshot-20260715-123021-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Nawabs Cafe",
@@ -389,7 +389,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/Y1BQsSV98N",
     "image": "https://i.ibb.co/Qv2J85Tf/Screenshot-20260715-123130-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Kara",
@@ -397,7 +397,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/UZkfwaDpj9",
     "image": "https://i.ibb.co/bjvLbyJB/Screenshot-20260715-123242-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलr से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Sathi Leelavathi",
@@ -405,7 +405,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/EDvU0aIxWq",
     "image": "https://i.ibb.co/jZfGTJyf/Screenshot-20260715-123350-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Dhurandhar 2 - The Revenge",
@@ -413,7 +413,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/mdQbDxZ36P",
     "image": "https://i.ibb.co/Y4Hnr4Gy/Screenshot-20260715-123521-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Gaayapadda Simham",
@@ -421,7 +421,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/LEro1k70Bf",
     "image": "https://i.ibb.co/d0SdJfgm/Screenshot-20260715-123651-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Madhuvidhu",
@@ -429,7 +429,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/PMBQ98HChF",
     "image": "https://i.ibb.co/ZzP3sQkM/Screenshot-20260715-123758-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Krishnavataram Part 1- The Heart",
@@ -437,7 +437,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/7E69P3JuMU",
     "image": "https://i.ibb.co/1YvHw30k/Screenshot-20260715-124020-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Second Case of Seetharam",
@@ -445,7 +445,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/7jkSEFU8pm",
     "image": "https://i.ibb.co/1GZgBhTk/Screenshot-20260715-124121-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Love Insurance Kompany",
@@ -453,7 +453,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/iSQ1TEXqyL",
     "image": "https://i.ibb.co/wZ7M6Ygn/Screenshot-20260715-124226-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Kartavya",
@@ -461,7 +461,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/f5oZAKHwRN",
     "image": "https://i.ibb.co/VWg03yvb/Screenshot-20260715-124349-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "O Romeo",
@@ -469,7 +469,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/drive/TnkAxPvMUV",
     "image": "https://i.ibb.co/ZRhvLC6J/Screenshot-20260715-124450-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Vishnu Vinyasam",
@@ -477,7 +477,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/drive/YRZ712HLoK",
     "image": "https://i.ibb.co/yGkXNtF/Screenshot-20260715-124549-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Theeyavar Kulaigal Nadunga",
@@ -485,7 +485,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/UXQLBTaept",
     "image": "https://i.ibb.co/WptjyrHm/Screenshot-20260715-124703-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Bhartha Mahasayulaku Wignyapthi",
@@ -493,7 +493,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/4nXIA8jf7B",
     "image": "https://i.ibb.co/1tGRRz0f/Screenshot-20260715-124828-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "The Great Indian Kapil Show S04",
@@ -501,7 +501,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/eyNPQI1Krw",
     "image": "https://i.ibb.co/67JwjqRB/Screenshot-20260715-124954-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Biker",
@@ -509,7 +509,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/XJwUyWebMO",
     "image": "https://i.ibb.co/5X8vW5Sx/Screenshot-20260715-125122-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "The Kerala Story 2 Goes Beyond",
@@ -517,7 +517,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/e473udPO9z",
     "image": "https://i.ibb.co/Dg54jVbX/Screenshot-20260715-125236-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Royal",
@@ -525,7 +525,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/UAreVRsOdj",
     "image": "https://i.ibb.co/d4k1T9mt/Screenshot-20260715-140304-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "The Family Star",
@@ -533,7 +533,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/2DKHeWINDKMqwOY",
     "image": "https://i.ibb.co/sdW3dgD4/Screenshot-20260715-140549-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Chand Mera Dil",
@@ -541,7 +541,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/yo01Wmrnxe",
     "image": "https://i.ibb.co/PGbYfmTj/IMG-20260715-WA0008.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Ikka",
@@ -549,7 +549,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/zM5lN0wayS",
     "image": "https://i.ibb.co/k2vfR322/IMG-20260715-WA0009.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Betaal S01",
@@ -557,7 +557,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/YTZPuXk6tj",
     "image": "https://i.ibb.co/tMDVr18j/IMG-20260715-WA0025.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Lingam S01",
@@ -565,7 +565,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/f50YOPVnpj",
     "image": "https://i.ibb.co/v6P4wV08/IMG-20260715-WA0024.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Isakapatnam S01",
@@ -573,7 +573,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/s8rHuTiJtw",
     "image": "https://i.ibb.co/wNnN16TK/IMG-20260715-WA0023.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Super Subbu S01",
@@ -581,7 +581,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/eO5BimEPWb",
     "image": "https://i.ibb.co/xSj8zNQt/IMG-20260715-WA0022.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Ab Hoga Hisaab S01",
@@ -589,7 +589,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/x73WVeJA0G",
     "image": "https://i.ibb.co/XZrYgwrd/IMG-20260715-WA0021.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Ab Hoga Hisaab S02",
@@ -597,7 +597,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/9VUKdeogGi",
     "image": "https://i.ibb.co/60CKHcQB/IMG-20260715-WA0020.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Faadu S01",
@@ -605,7 +605,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/z4cfhB6Oxo",
     "image": "https://i.ibb.co/QsK64T8/IMG-20260715-WA0019.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Bajrangi Bhaijaan",
@@ -613,7 +613,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/dbT269OlC7",
     "image": "https://i.ibb.co/vv6YjLXx/IMG-20260715-WA0018.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Roohi",
@@ -621,7 +621,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/XdJhQw0F78",
     "image": "https://i.ibb.co/whfLCgvK/IMG-20260715-WA0017.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Daadi Ki Shaadi",
@@ -629,7 +629,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/gpLVBS8XZi",
     "image": "https://i.ibb.co/PGtyF4bp/IMG-20260715-WA0016.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Alpha",
@@ -637,7 +637,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/nx2Fu78zfO",
     "image": "https://i.ibb.co/8nsjgwJh/IMG-20260715-WA0015.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Baby Do Die Do",
@@ -645,7 +645,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/qodOEGVS0Z",
     "image": "https://i.ibb.co/ycJ0fyxS/IMG-20260715-WA0014.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Dug Dug",
@@ -653,7 +653,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/vZhzX04nrF",
     "image": "https://i.ibb.co/1Y6Yd7bv/IMG-20260715-WA0013.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Mukhbir - The Story of a Spy",
@@ -661,7 +661,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/1lTiRCFGhM",
     "image": "https://i.ibb.co/QjnmsnpL/IMG-20260715-WA0012.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Dhamaal 4",
@@ -669,7 +669,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/hE0S8eHQxv",
     "image": "https://i.ibb.co/358RVSMf/IMG-20260715-WA0011.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Pati Patni Aur Woh Do",
@@ -677,7 +677,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/ofWspMTueV",
     "image": "https://i.ibb.co/S7WxqyP9/IMG-20260715-WA0010.jpg",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Sattendru Maarudhu Vaanilai",
@@ -685,7 +685,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/gsT8LuW2eB",
     "image": "https://i.ibb.co/W4XYD01w/Screenshot-20260716-115543-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Saaho",
@@ -693,7 +693,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/at71g9BcawHXtzK",
     "image": "https://i.ibb.co/zhgnwDDP/Screenshot-20260716-073501-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Bad Cop S01",
@@ -701,7 +701,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/wvXF6HhvNr3mGlK",
     "image": "https://i.ibb.co/zhsN1HkD/Screenshot-20260716-073815-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Ikkis",
@@ -709,7 +709,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/iw6OAcQYWl",
     "image": "https://i.ibb.co/qY3qpTbz/Screenshot-20260716-074008-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Mirzapur S01",
@@ -717,7 +717,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/zKxufb9cLTZVbxa",
     "image": "https://i.ibb.co/k2WdsQY6/Screenshot-20260716-112838-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Mirzapur S01 Part-02",
@@ -725,7 +725,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/xzODuTvALV3i9i8",
     "image": "https://i.ibb.co/k2WdsQY6/Screenshot-20260716-112838-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Mirzapur S02 Part-01",
@@ -733,7 +733,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/fDfLdjbDDuD2orz",
     "image": "https://i.ibb.co/gMdN1tVH/Screenshot-20260716-113116-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Mirzapur S02 Part-02",
@@ -741,7 +741,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/XMDGHwk9VfkdStv",
     "image": "https://i.ibb.co/gMdN1tVH/Screenshot-20260716-113116-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Mirzapur S03",
@@ -749,15 +749,15 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/YQB60VRvzTn90RS",
     "image": "https://i.ibb.co/35YNFT3S/Screenshot-20260716-113310-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Mirzapur S03 (Bonus Episode)",
     "category": "series",
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/wAedrgiIjsuvtdg",
-    "image": "https://i.ibb.co/qLqRp8dX/Screenshot-20260716-113426-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म।"
+    "image": "https://i.ibb.co/qLqRp8dX/Screenshot-20260716-114426-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म।"
   },
   {
     "name": "Ek Din",
@@ -765,7 +765,7 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/X3zq95t2lk",
     "image": "https://i.ibb.co/gMSJFTMV/Screenshot-20260716-195118-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
   },
   {
     "name": "Antim - The Final Truth",
@@ -773,6 +773,6 @@
     "isSeries": false,
     "url": "https://new6.filesdl.top/cloud/vNIUDshyJ0",
     "image": "https://i.ibb.co/k278tKBF/Screenshot-20260716-195349-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक ब्लॉकबस्टर फिल्म"
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
   }
 ]
