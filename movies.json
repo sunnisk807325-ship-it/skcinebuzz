@@ -107,7 +107,25 @@
         "url": "https://jumpshare.com/share/Vx0XcdS2hOmNtX2c9Czv",
         "detail": "यह Sunni sk एनीमे सीरीज का Episode 20 है, इसे अपने इन-ऐप प्लेयर पर देखें।"
       }
-    ]
+    ],
+    {
+  "name": "Doraemon",
+  "category": "anime",
+  "isSeries": true,
+  "image": "https://i.ibb.co/DgtSWnMN/2026-07-16-21-06-06-154-0530.jpg",
+  "detail": "डोरेमोन और नोबिता के जादुई गैजेट्स की दुनिया।",
+  "episodes": [
+    {
+      "title": "Episode 1",
+      "detail": "डोरेमोन का आना",
+      "url": "https://jumpshare.com/share/xrK14jqXodaxSJSIuQYK",
+    },
+    {
+      "title": "Episode 2",
+      "detail": "नोबिता की शरारत",
+      "url": "https://jumpshare.com/share/txNwsbkVzZgauMkplL9u",
+    }
+  ]
   },
   {
     "name": "Pritam and Pedro S01",
