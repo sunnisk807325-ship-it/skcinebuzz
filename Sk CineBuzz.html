@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sk CineBuzz</title>
+    <style>
+        /* --- APP DESIGN (CSS) --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #141414;
+            color: #ffffff;
+            padding: 15px;
+        }
+
+        header {
+            text-align: center;
+            padding: 15px 0 5px 0;
+        }
+
+        header h1 {
+            color: #E50914;
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        /* Search Bar Box Design */
+        .search-container {
+            margin: 20px 0 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 10px;
+            z-index: 999;
+        }
+
+        .search-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: 2px solid #333;
+            border-radius: 25px;
+            background-color: #222;
+            color: white;
+            outline: none;
+            transition: border-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .search-input:focus {
+            border-color: #E50914;
+        }
+
+        /* Category Buttons Design */
+        .category-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cat-btn {
+            background-color: #222;
+            color: #fff;
+            border: 1px solid #444;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cat-btn.active, .cat-btn:hover {
+            background-color: #E50914;
+            border-color: #E50914;
+            box-shadow: 0 4px 10px rgba(229, 9, 20, 0.4);
+        }
+
+        /* Movie Grid Layout: 2 Columns */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 5px;
+            margin-bottom: 40px;
+        }
+
+        /* Movie Card Design */
+        .movie-card {
+            background-color: #2f2f2f;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-card:hover {
+            transform: scale(1.02);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .movie-info {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .movie-info h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .movie-info p {
+            font-size: 12px;
+            color: #cccccc;
+            line-height: 1.3;
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Play Button Design */
+        .play-btn {
+            margin-top: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #E50914;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 13px;
+            font-weight: bold;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        .play-btn:hover {
+            background-color: #b80710;
+        }
+
+        /* In-App Video Player UI */
+        .video-player-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000000;
+            z-index: 9999;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-player-overlay.active {
+            display: flex;
+        }
+
+        .video-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10000;
+        }
+
+        .video-close-btn:hover {
+            background: #E50914;
+        }
+
+        #appVideoFrame {
+            width: 100%;
+            height: 100%;
+            max-width: 900px;
+            max-height: 80vh;
+            border: none;
+            box-shadow: 0 0 30px rgba(255,255,255,0.1);
+        }
+
+        .body-locked {
+            overflow: hidden !important;
+            height: 100vh !important;
+        }
+    </style>
+</head>
+<body id="main-body">
+
+    <header>
+        <h1>Sk CineBuzz</h1>
+    </header>
+
+    <!-- --- SEARCH BAR --- -->
+    <div class="search-container">
+        <input type="text" id="searchBox" class="search-input" placeholder="मूवी, सीरीज या एनीमे सर्च करें..." oninput="filterMovies()">
+    </div>
+
+    <!-- --- CATEGORY BUTTONS --- -->
+    <div class="category-container">
+        <button class="cat-btn active" id="btn-movie" onclick="changeCategory('movie')">Movie</button>
+        <button class="cat-btn" id="btn-series" onclick="changeCategory('series')">Web Series</button>
+        <button class="cat-btn" id="btn-anime" onclick="changeCategory('anime')">Anime</button>
+    </div>
+
+    <!-- मूवी ग्रिड -->
+    <div class="movie-grid" id="movieContainer"></div>
+
+    <!-- --- IN-APP EMBED PLAYER POPUP HTML --- -->
+    <div class="video-player-overlay" id="videoPlayerOverlay">
+        <button class="video-close-btn" onclick="closeInAppPlayer()">✕ Close</button>
+        <iframe id="appVideoFrame" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+
+    <!-- --- 🎬 NEW EPISODE SCREEN POPUP HTML 🎬 --- -->
+    <div class="video-player-overlay" id="episodeOverlay" style="display:none; background: #141414; overflow-y: auto; padding: 15px; flex-direction: column; justify-content: flex-start; align-items: center;">
+        <button class="video-close-btn" onclick="closeEpisodeSelector()" style="position: sticky; align-self: flex-end; top: 10px;">✕ Back</button>
+        
+        <div style="text-align: center; margin-top: 20px; max-width: 600px; width: 100%;">
+            <h2 id="seriesPopupName" style="color: #E50914; font-size: 26px; font-weight: 800; margin-bottom: 10px;">Anime Name</h2>
+            <p id="seriesPopupDetail" style="color: #aaa; font-size: 14px; margin-bottom: 25px; padding: 0 10px;">Series description...</p>
+        </div>
+
+        <div class="movie-grid" id="episodeListContainer" style="width: 100%; max-width: 800px; margin-bottom: 50px;">
+            <!-- यहाँ जावास्क्रिप्ट से एपिसोड्स बनेंगे -->
+        </div>
+    </div>
+
+    <!-- --- APP LOGIC (JAVASCRIPT) --- -->
+    <script>
+        let currentCategory = 'movie'; 
+        let movieList = []; // डेटा गिटहब से लोड होगा
+
+        // आपका गिटहब RAW JSON लिंक
+        const githubJsonUrl = "https://raw.githubusercontent.com/sunnisk807325-ship-it/skcinebuzz/refs/heads/main/movies.json";
+        const container = document.getElementById('movieContainer');
+        
+        // गिटहब से डेटा लोड करने का फ़ंक्शन
+        async function loadMoviesFromGitHub() {
+            try {
+                container.innerHTML = "<p style='grid-column: span 2; text-align:center; color:#fff; margin-top:20px;'>डेटा लोड हो रहा है, कृपया प्रतीक्षा करें...</p>";
+                const response = await fetch(githubJsonUrl);
+                if (!response.ok) {
+                    throw new Error("डेटा लोड करने में समस्या आई है।");
+                }
+                movieList = await response.json();
+                
+                // डेटा लोड होते ही सिलेक्टेड कैटेगरी के अनुसार फ़िल्टर करें
+                filterMovies(); 
+            } catch (error) {
+                console.error("Error fetching data:", error);
+                container.innerHTML = "<p style='grid-column: span 2; text-align:center; color:#E50914; margin-top:20px;'>डेटा लोड करने में विफल! कृपया इंटरनेट कनेक्शन जांचें।</p>";
+            }
+        }
+
+        function displayMovies(movies) {
+            container.innerHTML = ""; 
+            if(movies.length === 0) {
+                container.innerHTML = "<p style='grid-column: span 2; text-align:center; color:#888; margin-top:20px;'>कोई परिणाम नहीं मिला!</p>";
+                return;
+            }
+            movies.forEach(movie => {
+                const card = document.createElement('div');
+                card.className = 'movie-card';
+                
+                card.onclick = function() { 
+                    if (movie.isSeries) {
+                        openEpisodeSelector(movie);
+                    } else {
+                        playSingleLink(movie.url);
+                    }
+                };
+                
+                card.innerHTML = `
+                    <img src="${movie.image}" alt="${movie.name}">
+                    <div class="movie-info">
+                        <h3>${movie.name}</h3>
+                        <p>${movie.detail}</p>
+                        <div class="play-btn">${movie.isSeries ? 'एपिसोड्स देखें ☰' : 'Play ▶'}</div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function openEpisodeSelector(movie) {
+            const overlay = document.getElementById('episodeOverlay');
+            const title = document.getElementById('seriesPopupName');
+            const mainDetail = document.getElementById('seriesPopupDetail');
+            const listContainer = document.getElementById('episodeListContainer');
+            
+            title.innerText = movie.name;
+            mainDetail.innerText = movie.detail;
+            listContainer.innerHTML = ""; 
+            
+            if(movie.episodes && movie.episodes.length > 0) {
+                movie.episodes.forEach((ep) => {
+                    const epCard = document.createElement('div');
+                    epCard.className = 'movie-card';
+                    
+                    epCard.onclick = function(event) {
+                        event.stopPropagation(); 
+                        playSingleLink(ep.url);   
+                    };
+                    
+                    epCard.innerHTML = `
+                        <img src="${movie.image}" alt="${ep.title}">
+                        <div class="movie-info">
+                            <h3>${ep.title}</h3>
+                            <p>${ep.detail || 'एनीमे सीरीज का यह एपिसोड अभी इन-ऐप प्लेयर पर प्ले करें।'}</p>
+                            <div class="play-btn">Play ▶</div>
+                        </div>
+                    `;
+                    listContainer.appendChild(epCard);
+                });
+            } else {
+                listContainer.innerHTML = "<p style='grid-column: span 2; text-align:center; color:#888;'>कोई एपिसोड उपलब्ध नहीं है।</p>";
+            }
+            
+            overlay.style.display = 'flex';
+            document.getElementById('main-body').classList.add('body-locked');
+        }
+
+        function closeEpisodeSelector() {
+            document.getElementById('episodeOverlay').style.display = 'none';
+            document.getElementById('main-body').classList.remove('body-locked');
+        }
+
+        function playSingleLink(videoUrl) {
+            if(!videoUrl) return;
+            if(videoUrl.includes("drive.google.com")) {
+                const urlParams = new URLSearchParams(videoUrl.split('?')[1]);
+                const fileId = urlParams.get('id');
+                if(fileId) {
+                    const embedUrl = `https://drive.google.com/file/d/${fileId}/preview`;
+                    playInAppVideo(embedUrl);
+                } else {
+                    window.open(videoUrl, '_blank');
+                }
+            } else {
+                const newWindow = window.open(videoUrl, '_blank', 'noopener,noreferrer');
+                if (newWindow) {
+                    newWindow.opener = null;
+                }
+            }
+        }
+
+        function playInAppVideo(embedUrl) {
+            const overlay = document.getElementById('videoPlayerOverlay');
+            const iframeElement = document.getElementById('appVideoFrame');
+            
+            iframeElement.src = embedUrl;
+            overlay.classList.add('active');
+            document.getElementById('main-body').classList.add('body-locked');
+        }
+
+        function closeInAppPlayer() {
+            const overlay = document.getElementById('videoPlayerOverlay');
+            const iframeElement = document.getElementById('appVideoFrame');
+            
+            iframeElement.src = ""; 
+            overlay.classList.remove('active');
+            if(document.getElementById('episodeOverlay').style.display !== 'flex') {
+                document.getElementById('main-body').classList.remove('body-locked');
+            }
+        }
+
+        function changeCategory(category) {
+            currentCategory = category;
+            document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-${category}`).classList.add('active');
+            filterMovies();
+        }
+
+        function filterMovies() {
+            const searchText = document.getElementById('searchBox').value.toLowerCase().trim();
+            
+            if (searchText !== "") {
+                const matchedMovie = movieList.find(movie => movie.name.toLowerCase().includes(searchText));
+                if (matchedMovie) {
+                    currentCategory = matchedMovie.category;
+                    document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+                    document.getElementById(`btn-${currentCategory}`).classList.add('active');
+                }
+            }
+
+            const filteredList = movieList.filter(movie => {
+                const matchesCategory = (movie.category.toLowerCase() === currentCategory.toLowerCase());
+                if (searchText === "") return matchesCategory;
+                
+                const movieName = movie.name.toLowerCase();
+                const matchesSearch = movieName.includes(searchText) || levenshteinDistance(movieName, searchText);
+                return matchesCategory && matchesSearch;
+            });
+            
+            displayMovies(filteredList);
+        }
+
+        function levenshteinDistance(movieName, searchStr) {
+            const n = searchStr.length;
+            if (n <= 2) return movieName.includes(searchStr);
+
+            let words = movieName.split(" ");
+            for (let word of words) {
+                if (word.startsWith(searchStr)) return true;
+                
+                let diff = 0;
+                let lengthToCheck = Math.min(word.length, searchStr.length);
+                for (let i = 0; i < lengthToCheck; i++) {
+                    if (word[i] !== searchStr[i]) diff++;
+                }
+                if (diff <= 2 && Math.abs(word.length - searchStr.length) <= 2) return true;
+            }
+            return false;
+        }
+
+        // डोम लोड होने पर गिटहब से डेटा खींचना शुरू करें
+        document.addEventListener("DOMContentLoaded", function() {
+            loadMoviesFromGitHub();
+        });
+    </script>
+</body>
+</html>
