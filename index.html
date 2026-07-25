@@ -2,12 +2,10 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-    <meta name="775b33d6db3cac725ecc26efa5842060489e595b" content="775b33d6db3cac725ecc26efa5842060489e595b" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sk CineBuzz</title>
-    <meta name="description" content="Sk CineBuzz par dekhein latest movies, web series aur anime.">
-<meta name="keywords" content="Sk CineBuzz, sk cinebuzz, cinebuzz, movies, web series">
+
     <style>
         /* --- APP DESIGN (CSS) --- */
         * {
@@ -23,25 +21,34 @@
             padding: 10px 15px 15px 15px;
         }
 
-        /* --- ANIMATED TELEGRAM BANNER WRAPPER --- */
+        body.blurred #appMainContent {
+            filter: blur(10px);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .ad-banner-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px 0;
+            width: 100%;
+            text-align: center;
+        }
+
         .telegram-banner-wrapper {
             position: relative;
             margin-bottom: 15px;
             border-radius: 12px;
-            padding: 2px; /* बॉर्डर की मोटाई */
+            padding: 2px;
             background: linear-gradient(90deg, #ffcc00, #141414, #ffcc00, #141414, #ffcc00);
             background-size: 300% 300%;
             animation: moveBorder 2.5s linear infinite;
         }
 
-        /* पीली लाइन चलने वाला एनिमेटेड की-फ्रेम */
         @keyframes moveBorder {
-            0% {
-                background-position: 0% 50%;
-            }
-            100% {
-                background-position: 300% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
         }
 
         .telegram-banner {
@@ -57,39 +64,12 @@
             cursor: pointer;
         }
 
-        .tg-left {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+        .tg-left { display: flex; align-items: center; gap: 12px; }
+        .tg-icon-svg { width: 42px; height: 42px; flex-shrink: 0; }
+        .tg-text { display: flex; flex-direction: column; }
+        .tg-text .title { font-size: 14px; font-weight: 700; color: #ffffff; letter-spacing: 0.5px; }
+        .tg-text .subtitle { font-size: 15px; font-weight: 900; color: #ffcc00; text-transform: uppercase; }
 
-        /* Real Telegram SVG Logo Styling */
-        .tg-icon-svg {
-            width: 42px;
-            height: 42px;
-            flex-shrink: 0;
-        }
-
-        .tg-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .tg-text .title {
-            font-size: 14px;
-            font-weight: 700;
-            color: #ffffff;
-            letter-spacing: 0.5px;
-        }
-
-        .tg-text .subtitle {
-            font-size: 15px;
-            font-weight: 900;
-            color: #ffcc00;
-            text-transform: uppercase;
-        }
-
-        /* --- JOIN BUTTON (UP-DOWN BOUNCE ANIMATION) --- */
         .tg-btn {
             background-color: #0088cc;
             color: #ffffff;
@@ -103,28 +83,13 @@
         }
 
         @keyframes bounceUpDown {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-6px);
-            }
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
         }
 
-        /* --- APP HEADER --- */
-        header {
-            text-align: center;
-            padding: 5px 0 10px 0;
-        }
+        header { text-align: center; padding: 5px 0 5px 0; }
+        header h1 { color: #E50914; font-size: 28px; font-weight: 800; letter-spacing: 1px; }
 
-        header h1 {
-            color: #E50914;
-            font-size: 28px;
-            font-weight: 800;
-            letter-spacing: 1px;
-        }
-
-        /* Search Bar Box Design */
         .search-container {
             margin: 10px 0 15px 0;
             text-align: center;
@@ -134,223 +99,272 @@
         }
 
         .search-input {
-            width: 100%;
-            max-width: 500px;
-            padding: 12px 20px;
-            font-size: 15px;
-            border: 2px solid #333;
-            border-radius: 25px;
-            background-color: #222;
-            color: white;
-            outline: none;
-            transition: border-color 0.3s ease;
+            width: 100%; max-width: 500px; padding: 12px 20px; font-size: 15px;
+            border: 2px solid #333; border-radius: 25px; background-color: #222;
+            color: white; outline: none; transition: border-color 0.3s ease;
             box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         }
 
-        .search-input:focus {
-            border-color: #E50914;
-        }
+        .search-input:focus { border-color: #E50914; }
 
-        /* Category Buttons Design */
-        .category-container {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
+        .category-container { display: flex; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
         .cat-btn {
-            background-color: #222;
-            color: #fff;
-            border: 1px solid #444;
-            padding: 8px 18px;
-            font-size: 14px;
-            font-weight: 600;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            background-color: #222; color: #fff; border: 1px solid #444;
+            padding: 8px 18px; font-size: 14px; font-weight: 600; border-radius: 20px;
+            cursor: pointer; transition: all 0.3s ease;
         }
 
-        .cat-btn.active, .cat-btn:hover {
+        .cat-btn.active, .cat-btn:hover { background-color: #E50914; border-color: #E50914; box-shadow: 0 4px 10px rgba(229, 9, 20, 0.4); }
+
+        .movie-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 5px; margin-bottom: 20px; }
+        .movie-card {
+            background-color: #2f2f2f; border-radius: 8px; overflow: hidden; cursor: pointer;
+            transition: transform 0.2s ease; box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            display: flex; flex-direction: column;
+        }
+        .movie-card:hover { transform: scale(1.02); }
+        .movie-card img { width: 100%; height: 200px; object-fit: cover; }
+        .movie-info { padding: 10px; display: flex; flex-direction: column; flex-grow: 1; }
+        .movie-info h3 { font-size: 15px; margin-bottom: 5px; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .movie-info p { font-size: 12px; color: #cccccc; line-height: 1.3; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+        .play-btn {
+            margin-top: auto; display: flex; align-items: center; justify-content: center;
+            background-color: #E50914; color: white; padding: 6px 10px; border-radius: 5px;
+            font-size: 13px; font-weight: bold; text-align: center; transition: background 0.2s;
+        }
+        .play-btn:hover { background-color: #b80710; }
+
+        /* --- 🔢 PAGINATION BUTTONS DESIGN (PREV, 1, 2, 3, NEXT) --- */
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 25px 0 15px 0;
+        }
+
+        .page-btn {
+            background-color: #222;
+            color: #ffffff;
+            border: 1px solid #444;
+            padding: 8px 14px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .page-btn:hover {
+            background-color: #333;
+            border-color: #666;
+        }
+
+        .page-btn.active {
             background-color: #E50914;
             border-color: #E50914;
-            box-shadow: 0 4px 10px rgba(229, 9, 20, 0.4);
+            box-shadow: 0 4px 10px rgba(229, 9, 20, 0.5);
         }
 
-        /* Movie Grid Layout: 2 Columns */
-        .movie-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            padding: 5px;
-            margin-bottom: 40px;
+        .page-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
         }
 
-        /* Movie Card Design */
-        .movie-card {
-            background-color: #2f2f2f;
-            border-radius: 8px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.2s ease;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .movie-card:hover {
-            transform: scale(1.02);
-        }
-
-        .movie-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .movie-info {
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .movie-info h3 {
-            font-size: 15px;
-            margin-bottom: 5px;
-            color: #fff;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .movie-info p {
-            font-size: 12px;
-            color: #cccccc;
-            line-height: 1.3;
-            margin-bottom: 12px;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        /* Play Button Design */
-        .play-btn {
-            margin-top: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #E50914;
-            color: white;
-            padding: 6px 10px;
-            border-radius: 5px;
-            font-size: 13px;
-            font-weight: bold;
-            text-align: center;
-            transition: background 0.2s;
-        }
-
-        .play-btn:hover {
-            background-color: #b80710;
-        }
-
-        /* In-App Video Player UI */
         .video-player-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #000000;
-            z-index: 9999;
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #000000; z-index: 9999; display: none; flex-direction: column;
+            justify-content: center; align-items: center;
         }
-
-        .video-player-overlay.active {
-            display: flex;
-        }
+        .video-player-overlay.active { display: flex; }
 
         .video-close-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.3);
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            z-index: 10000;
+            position: absolute; top: 20px; right: 20px; background: rgba(255, 255, 255, 0.3);
+            color: white; border: none; padding: 10px 18px; font-size: 16px;
+            font-weight: bold; border-radius: 5px; cursor: pointer; z-index: 10000;
+        }
+        .video-close-btn:hover { background: #E50914; }
+
+        #appVideoFrame { width: 100%; height: 100%; max-width: 900px; max-height: 80vh; border: none; box-shadow: 0 0 30px rgba(255,255,255,0.1); }
+
+        .ad-timer-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.95); z-index: 99999; display: none;
+            flex-direction: column; align-items: center; justify-content: flex-start;
+            overflow-y: auto; padding: 20px;
+        }
+        .ad-timer-topbar {
+            width: 100%; max-width: 900px; display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 15px; position: sticky; top: 0; background: #141414; padding: 10px 0; z-index: 10;
+        }
+        .timer-badge { background: #333; color: #ffcc00; padding: 8px 15px; border-radius: 20px; font-weight: bold; font-size: 14px; border: 1px solid #555; }
+        .close-timer-btn { background: #E50914; color: white; border: none; padding: 8px 20px; font-size: 14px; font-weight: bold; border-radius: 20px; cursor: pointer; display: none; }
+        .close-timer-btn:hover { background: #b80710; }
+
+        .banners-row {
+            display: flex; flex-direction: column; gap: 20px; align-items: center; width: 100%; padding-bottom: 30px;
         }
 
-        .video-close-btn:hover {
-            background: #E50914;
+        .update-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(12px);
+            z-index: 99999; display: none; justify-content: center; align-items: center; padding: 20px;
         }
 
-        #appVideoFrame {
-            width: 100%;
-            height: 100%;
-            max-width: 900px;
-            max-height: 80vh;
-            border: none;
-            box-shadow: 0 0 30px rgba(255,255,255,0.1);
+        .update-box {
+            background: #1a1a1a; border: 2px solid #E50914; border-radius: 15px;
+            padding: 20px; text-align: center; max-width: 360px; width: 100%;
+            box-shadow: 0 0 30px rgba(229, 9, 20, 0.6); animation: popupZoom 0.3s ease-out;
         }
 
-        .body-locked {
-            overflow: hidden !important;
-            height: 100vh !important;
+        @keyframes popupZoom {
+            from { transform: scale(0.6); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
+
+        .update-box img { width: 100%; height: 190px; object-fit: cover; border-radius: 10px; margin-bottom: 15px; }
+        .update-box h2 { color: #ffffff; font-size: 20px; margin-bottom: 8px; }
+        .update-box p { color: #bbbbbb; font-size: 13px; line-height: 1.4; margin-bottom: 20px; }
+
+        .update-download-btn {
+            display: block; width: 100%; background: linear-gradient(135deg, #E50914 0%, #b80710 100%);
+            color: white; padding: 12px; font-size: 16px; font-weight: bold; text-decoration: none;
+            border-radius: 25px; box-shadow: 0 4px 15px rgba(229, 9, 20, 0.5);
+        }
+
+        .body-locked { overflow: hidden !important; height: 100vh !important; }
     </style>
 </head>
 <body id="main-body">
 
-    <!-- --- 📢 RUNNING BORDER TELEGRAM BANNER WITH BOUNCING BUTTON 📢 --- -->
-    <div class="telegram-banner-wrapper">
-        <a href="https://t.me/skcinebuzz" target="_blank" class="telegram-banner">
-            <div class="tg-left">
-                <!-- Telegram Official SVG Vector Logo -->
-                <svg class="tg-icon-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="120" cy="120" r="120" fill="#24A1DE"/>
-                    <path d="M98 175c-3.887 0-3.227-1.468-4.568-5.17L82 133.228 171 78" fill="#B0DEE6"/>
-                    <path d="M98 175c3 0 4.325-1.372 6-3l16-15.543-19.958-12.035" fill="#6CBEAE"/>
-                    <path d="M100.04 144.42 148 179.8c5.518 3.045 9.501 1.468 10.88-5.114l19.508-91.954c2.015-8.08-3.063-11.737-8.328-9.346l-114.57 44.17c-7.892 3.165-7.844 7.563-1.436 9.525l29.387 9.176 68.103-42.96c3.218-1.954 6.173-.904 3.743 1.25" fill="#FFFFFF"/>
-                </svg>
-                <div class="tg-text">
-                    <span class="title">SK CineBuzz</span>
-                    <span class="subtitle">NEW MOVIES के लिए MESSAGE करें 🚀</span>
+    <div id="appMainContent">
+        <!-- --- TELEGRAM BANNER --- -->
+        <div class="telegram-banner-wrapper">
+            <a href="https://t.me/skcinebuzz" target="_blank" class="telegram-banner">
+                <div class="tg-left">
+                    <svg class="tg-icon-svg" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="120" cy="120" r="120" fill="#24A1DE"/>
+                        <path d="M98 175c-3.887 0-3.227-1.468-4.568-5.17L82 133.228 171 78" fill="#B0DEE6"/>
+                        <path d="M98 175c3 0 4.325-1.372 6-3l16-15.543-19.958-12.035" fill="#6CBEAE"/>
+                        <path d="M100.04 144.42 148 179.8c5.518 3.045 9.501 1.468 10.88-5.114l19.508-91.954c2.015-8.08-3.063-11.737-8.328-9.346l-114.57 44.17c-7.892 3.165-7.844 7.563-1.436 9.525l29.387 9.176 68.103-42.96c3.218-1.954 6.173-.904 3.743 1.25" fill="#FFFFFF"/>
+                    </svg>
+                    <div class="tg-text">
+                        <span class="title">SK CineBuzz</span>
+                        <span class="subtitle">NEW MOVIES के लिए MESSAGE करें 🚀</span>
+                    </div>
                 </div>
+                <div class="tg-btn">JOIN ➔</div>
+            </a>
+        </div>
+
+        <header>
+            <h1>Sk CineBuzz</h1>
+        </header>
+
+        <!-- --- TOP BANNER AD --- -->
+        <div class="ad-banner-container">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '52325b40c9032b9871a6fa304d438d23',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="https://www.highperformanceformat.com/52325b40c9032b9871a6fa304d438d23/invoke.js"></script>
+        </div>
+
+        <!-- --- SEARCH BAR --- -->
+        <div class="search-container">
+            <input type="text" id="searchBox" class="search-input" placeholder="मूवी, सीरीज या एनीमे सर्च करें..." oninput="filterMovies()">
+        </div>
+
+        <!-- --- CATEGORY BUTTONS --- -->
+        <div class="category-container">
+            <button class="cat-btn active" id="btn-movie" onclick="changeCategory('movie')">Movie</button>
+            <button class="cat-btn" id="btn-series" onclick="changeCategory('series')">Web Series</button>
+            <button class="cat-btn" id="btn-anime" onclick="changeCategory('anime')">Anime</button>
+        </div>
+
+        <!-- मूवी ग्रिड -->
+        <div class="movie-grid" id="movieContainer"></div>
+
+        <!-- --- 🔢 PAGINATION BUTTONS CONTAINER (PREV, 1, 2, 3... NEXT) --- -->
+        <div class="pagination-container" id="paginationContainer"></div>
+
+        <!-- --- BOTTOM BANNER AD --- -->
+        <div class="ad-banner-container">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : '52325b40c9032b9871a6fa304d438d23',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="https://www.highperformanceformat.com/52325b40c9032b9871a6fa304d438d23/invoke.js"></script>
+        </div>
+    </div>
+
+    <!-- --- 10 SECONDS TIMER AD POPUP SCREEN --- -->
+    <div class="ad-timer-overlay" id="adTimerOverlay">
+        <div class="ad-timer-topbar">
+            <div class="timer-badge" id="timerBadge">कृपया प्रतीक्षा करें: 10s</div>
+            <button class="close-timer-btn" id="closeTimerBtn" onclick="closeTimerAndPlay()">CLOSE ✕</button>
+        </div>
+        <div class="banners-row">
+            <div style="background:#222; padding:10px; border-radius:8px;">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'ac2306387b7d15e5d75103718aeed39a',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/ac2306387b7d15e5d75103718aeed39a/invoke.js"></script>
             </div>
-            <div class="tg-btn">JOIN ➔</div>
-        </a>
+            <div style="background:#222; padding:10px; border-radius:8px;">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'ac2306387b7d15e5d75103718aeed39a',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/ac2306387b7d15e5d75103718aeed39a/invoke.js"></script>
+            </div>
+            <div style="background:#222; padding:10px; border-radius:8px;">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'ac2306387b7d15e5d75103718aeed39a',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/ac2306387b7d15e5d75103718aeed39a/invoke.js"></script>
+            </div>
+        </div>
     </div>
 
-    <!-- --- APP HEADER --- -->
-    <header>
-        <h1>Sk CineBuzz</h1>
-    </header>
-
-    <!-- --- SEARCH BAR --- -->
-    <div class="search-container">
-        <input type="text" id="searchBox" class="search-input" placeholder="मूवी, सीरीज या एनीमे सर्च करें..." oninput="filterMovies()">
+    <!-- --- UPDATE OVERLAY --- -->
+    <div class="update-overlay" id="updateOverlay">
+        <div class="update-box">
+            <img id="updateImg" src="" alt="Update">
+            <h2 id="updateTitle">App Update Available</h2>
+            <p id="updateDetail">नया वर्ज़न उपलब्ध है! कृपया अपडेट करें।</p>
+            <a href="#" id="updateBtnLink" target="_blank" class="update-download-btn">UPDATE NOW 🚀</a>
+        </div>
     </div>
-
-    <!-- --- CATEGORY BUTTONS --- -->
-    <div class="category-container">
-        <button class="cat-btn active" id="btn-movie" onclick="changeCategory('movie')">Movie</button>
-        <button class="cat-btn" id="btn-series" onclick="changeCategory('series')">Web Series</button>
-        <button class="cat-btn" id="btn-anime" onclick="changeCategory('anime')">Anime</button>
-    </div>
-
-    <!-- मूवी ग्रिड -->
-    <div class="movie-grid" id="movieContainer"></div>
 
     <!-- --- IN-APP EMBED PLAYER POPUP HTML --- -->
     <div class="video-player-overlay" id="videoPlayerOverlay">
@@ -358,7 +372,7 @@
         <iframe id="appVideoFrame" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
 
-    <!-- --- 🎬 EPISODE SCREEN POPUP HTML 🎬 --- -->
+    <!-- --- EPISODE SCREEN POPUP HTML --- -->
     <div class="video-player-overlay" id="episodeOverlay" style="display:none; background: #141414; overflow-y: auto; padding: 15px; flex-direction: column; justify-content: flex-start; align-items: center;">
         <button class="video-close-btn" onclick="closeEpisodeSelector()" style="position: sticky; align-self: flex-end; top: 10px;">✕ Back</button>
         
@@ -367,20 +381,24 @@
             <p id="seriesPopupDetail" style="color: #aaa; font-size: 14px; margin-bottom: 25px; padding: 0 10px;">Series description...</p>
         </div>
 
-        <div class="movie-grid" id="episodeListContainer" style="width: 100%; max-width: 800px; margin-bottom: 50px;">
-            <!-- जावास्क्रिप्ट से एपिसोड्स लोड होंगे -->
-        </div>
+        <div class="movie-grid" id="episodeListContainer" style="width: 100%; max-width: 800px; margin-bottom: 50px;"></div>
     </div>
 
-    <!-- --- APP LOGIC (JAVASCRIPT) --- -->
+    <!-- --- JAVASCRIPT LOGIC --- -->
     <script>
         let currentCategory = 'movie'; 
         let movieList = []; 
+        let pendingVideoUrl = ""; 
+        let timerInterval = null;
+        
+        // 🔢 Pagination Variables
+        let currentPage = 1;
+        const itemsPerPage = 50; // हर लिस्ट में सिर्फ 50 मूवीज़
 
-        // अपडेटेड JSON URL (movies-2.json)
         const githubJsonUrl = "https://raw.githubusercontent.com/sunnisk807325-ship-it/skcinebuzz/refs/heads/main/movies-2.json";
         const container = document.getElementById('movieContainer');
-        
+        const paginationContainer = document.getElementById('paginationContainer');
+
         async function loadMoviesFromGitHub() {
             try {
                 container.innerHTML = "<p style='grid-column: span 2; text-align:center; color:#fff; margin-top:20px;'>डेटा लोड हो रहा है, कृपया प्रतीक्षा करें...</p>";
@@ -389,6 +407,15 @@
                     throw new Error("डेटा लोड करने में समस्या आई है।");
                 }
                 movieList = await response.json();
+
+                const updateItem = movieList.find(item => item.category === "update");
+                if (updateItem) {
+                    openUpdateBlurModal(updateItem);
+                    container.innerHTML = ""; 
+                    paginationContainer.innerHTML = "";
+                    return; 
+                }
+
                 filterMovies(); 
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -396,13 +423,39 @@
             }
         }
 
+        function openUpdateBlurModal(movie) {
+            document.getElementById('updateImg').src = movie.image;
+            document.getElementById('updateTitle').innerText = movie.name;
+            document.getElementById('updateDetail').innerText = movie.detail;
+            document.getElementById('updateBtnLink').href = movie.url;
+
+            document.getElementById('updateOverlay').style.display = 'flex';
+            document.body.classList.add('blurred');
+            document.getElementById('main-body').classList.add('body-locked');
+        }
+
         function displayMovies(movies) {
             container.innerHTML = ""; 
+            paginationContainer.innerHTML = "";
+
             if(movies.length === 0) {
                 container.innerHTML = "<p style='grid-column: span 2; text-align:center; color:#888; margin-top:20px;'>कोई परिणाम नहीं मिला!</p>";
                 return;
             }
-            movies.forEach(movie => {
+
+            // 🔢 Calculate Pagination Slices (50 items per page)
+            const totalPages = Math.ceil(movies.length / itemsPerPage);
+            
+            if (currentPage > totalPages) {
+                currentPage = 1;
+            }
+
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const paginatedMovies = movies.slice(startIndex, endIndex);
+
+            // 50 मूवीज़ स्क्रीन पर दिखाएं
+            paginatedMovies.forEach(movie => {
                 const card = document.createElement('div');
                 card.className = 'movie-card';
                 
@@ -410,7 +463,7 @@
                     if (movie.isSeries) {
                         openEpisodeSelector(movie);
                     } else {
-                        playSingleLink(movie.url);
+                        triggerTimerAdAndPlay(movie.url);
                     }
                 };
                 
@@ -424,6 +477,52 @@
                 `;
                 container.appendChild(card);
             });
+
+            // 🔢 **« Prev**, **1, 2, 3...**, और **Next »** बटन जनरेट करें
+            if (totalPages > 1) {
+                // 1. Prev Button
+                const prevBtn = document.createElement('button');
+                prevBtn.className = 'page-btn';
+                prevBtn.innerText = '« Prev';
+                prevBtn.disabled = (currentPage === 1);
+                prevBtn.onclick = function() {
+                    if (currentPage > 1) {
+                        currentPage--;
+                        displayMovies(movies);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                };
+                paginationContainer.appendChild(prevBtn);
+
+                // 2. Number Buttons (1, 2, 3...)
+                for (let i = 1; i <= totalPages; i++) {
+                    const pageBtn = document.createElement('button');
+                    pageBtn.className = `page-btn ${i === currentPage ? 'active' : ''}`;
+                    pageBtn.innerText = i;
+                    
+                    pageBtn.onclick = function() {
+                        currentPage = i;
+                        displayMovies(movies);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    };
+                    
+                    paginationContainer.appendChild(pageBtn);
+                }
+
+                // 3. Next Button
+                const nextBtn = document.createElement('button');
+                nextBtn.className = 'page-btn';
+                nextBtn.innerText = 'Next »';
+                nextBtn.disabled = (currentPage === totalPages);
+                nextBtn.onclick = function() {
+                    if (currentPage < totalPages) {
+                        currentPage++;
+                        displayMovies(movies);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                };
+                paginationContainer.appendChild(nextBtn);
+            }
         }
 
         function openEpisodeSelector(movie) {
@@ -443,7 +542,7 @@
                     
                     epCard.onclick = function(event) {
                         event.stopPropagation(); 
-                        playSingleLink(ep.url);   
+                        triggerTimerAdAndPlay(ep.url);   
                     };
                     
                     epCard.innerHTML = `
@@ -469,7 +568,54 @@
             document.getElementById('main-body').classList.remove('body-locked');
         }
 
-        function playSingleLink(videoUrl) {
+        function triggerTimerAdAndPlay(videoUrl) {
+            if(!videoUrl) return;
+            pendingVideoUrl = videoUrl;
+
+            const overlay = document.getElementById('adTimerOverlay');
+            const timerBadge = document.getElementById('timerBadge');
+            const closeBtn = document.getElementById('closeTimerBtn');
+
+            overlay.style.display = 'flex';
+            document.getElementById('main-body').classList.add('body-locked');
+
+            let timeLeft = 10; 
+            timerBadge.innerText = `कृपया प्रतीक्षा करें: ${timeLeft}s`;
+            timerBadge.style.display = 'inline-block';
+            closeBtn.style.display = 'none';
+
+            if (timerInterval) clearInterval(timerInterval);
+
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                if (timeLeft > 0) {
+                    timerBadge.innerText = `कृपया प्रतीक्षा करें: ${timeLeft}s`;
+                } else {
+                    clearInterval(timerInterval);
+                    timerBadge.style.display = 'none';
+                    closeBtn.style.display = 'inline-block'; 
+                }
+            }, 1000);
+        }
+
+        function closeTimerAndPlay() {
+            const overlay = document.getElementById('adTimerOverlay');
+            overlay.style.display = 'none';
+            
+            if(document.getElementById('episodeOverlay').style.display !== 'flex') {
+                document.getElementById('main-body').classList.remove('body-locked');
+            }
+
+            executePlayer(pendingVideoUrl);
+            pendingVideoUrl = "";
+        }
+
+        function executePlayer(videoUrl) {
+            if(!videoUrl) return;
+            openFinalVideoUrl(videoUrl);
+        }
+
+        function openFinalVideoUrl(videoUrl) {
             if(!videoUrl) return;
             if(videoUrl.includes("drive.google.com")) {
                 const urlParams = new URLSearchParams(videoUrl.split('?')[1]);
@@ -510,6 +656,7 @@
 
         function changeCategory(category) {
             currentCategory = category;
+            currentPage = 1; 
             document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
             document.getElementById(`btn-${category}`).classList.add('active');
             filterMovies();
@@ -527,7 +674,7 @@
                 }
             }
 
-            const filteredList = movieList.filter(movie => {
+            let filteredList = movieList.filter(movie => {
                 const matchesCategory = (movie.category.toLowerCase() === currentCategory.toLowerCase());
                 if (searchText === "") return matchesCategory;
                 
@@ -535,7 +682,26 @@
                 const matchesSearch = movieName.includes(searchText) || levenshteinDistance(movieName, searchText);
                 return matchesCategory && matchesSearch;
             });
+
+            if (searchText !== "") {
+                filteredList.sort((a, b) => {
+                    const nameA = a.name.toLowerCase();
+                    const nameB = b.name.toLowerCase();
+
+                    if (nameA === searchText) return -1;
+                    if (nameB === searchText) return 1;
+
+                    if (nameA.startsWith(searchText) && !nameB.startsWith(searchText)) return -1;
+                    if (!nameA.startsWith(searchText) && nameB.startsWith(searchText)) return 1;
+
+                    return 0;
+                });
+            }
             
+            if(searchText !== "") {
+                currentPage = 1;
+            }
+
             displayMovies(filteredList);
         }
 
