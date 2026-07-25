@@ -1,0 +1,123 @@
+{
+  "classes": [
+    {
+      "class_id": "9th",
+      "class_name_hi": "कक्षा 9वीं",
+      "class_name_en": "Class 9th",
+      "subjects": [
+        {
+          "subject_id": "math_9",
+          "name_hi": "📐 गणित (NCERT)",
+          "name_en": "📐 Mathematics",
+          "icon": "https://cdn-icons-png.flaticon.com/512/1739/1739296.png",
+          "book_url": "https://drive.google.com/your-math-book-link",
+          "chapters": [
+            {
+              "chapter_id": "ch_1",
+              "title_hi": "अध्याय 1: संख्या पद्धति",
+              "title_en": "Chapter 1: Number Systems",
+              "questions": [
+                {
+                  "id": 1,
+                  "question_hi": "निम्नलिखित में से कौन-सी एक परिमेय संख्या है?",
+                  "question_en": "Which of the following is a rational number?",
+                  "options_hi": ["√2", "√3", "0", "π"],
+                  "options_en": ["√2", "√3", "0", "π"],
+                  "answer": 2
+                },
+                {
+                  "id": 2,
+                  "question_hi": "दो परिमेय संख्याओं के बीच कितनी परिमेय संख्याएँ होती हैं?",
+                  "question_en": "How many rational numbers are there between two rational numbers?",
+                  "options_hi": ["केवल एक", "100", "अपरिमित (अपरिमित रूप से अनेक)", "कोई नहीं"],
+                  "options_en": ["Only one", "100", "Infinitely many", "None"],
+                  "answer": 2
+                },
+                {
+                  "id": 3,
+                  "question_hi": "√9 का मान क्या है?",
+                  "question_en": "What is the value of √9?",
+                  "options_hi": ["1", "2", "3", "9"],
+                  "options_en": ["1", "2", "3", "9"],
+                  "answer": 2
+                },
+                {
+                  "id": 4,
+                  "question_hi": "सबसे छोटी प्राकृतिक संख्या (Natural Number) कौन सी है?",
+                  "question_en": "Which is the smallest natural number?",
+                  "options_hi": ["0", "1", "-1", "2"],
+                  "options_en": ["0", "1", "-1", "2"],
+                  "answer": 1
+                },
+                {
+                  "id": 5,
+                  "question_hi": "π (पाई) किस प्रकार की संख्या है?",
+                  "question_en": "What type of number is π (Pi)?",
+                  "options_hi": ["परिमेय संख्या", "अपरिमेय संख्या", "पूर्णांक", "इनमें से कोई नहीं"],
+                  "options_en": ["Rational Number", "Irrational Number", "Integer", "None of these"],
+                  "answer": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subject_id": "science_9",
+          "name_hi": "🔬 विज्ञान",
+          "name_en": "🔬 Science",
+          "icon": "https://cdn-icons-png.flaticon.com/512/3081/3081559.png",
+          "book_url": "https://drive.google.com/your-science-book-link",
+          "chapters": [
+            {
+              "chapter_id": "sci_ch_1",
+              "title_hi": "अध्याय 1: हमारे आस-पास के पदार्थ",
+              "title_en": "Chapter 1: Matter in Our Surroundings",
+              "questions": [
+                {
+                  "id": 1,
+                  "question_hi": "पदार्थ की कितनी मुख्य अवस्थाएँ होती हैं?",
+                  "question_en": "How many main states of matter are there?",
+                  "options_hi": ["2", "3", "4", "5"],
+                  "options_en": ["2", "3", "4", "5"],
+                  "answer": 1
+                },
+                {
+                  "id": 2,
+                  "question_hi": "जल का क्वथनांक (Boiling Point) कितना होता है?",
+                  "question_en": "What is the boiling point of water?",
+                  "options_hi": ["0°C", "50°C", "100°C", "200°C"],
+                  "options_en": ["0°C", "50°C", "100°C", "200°C"],
+                  "answer": 2
+                },
+                {
+                  "id": 3,
+                  "question_hi": "निम्नलिखित में से कौन-सा ठोस (Solid) का उदाहरण है?",
+                  "question_en": "Which of the following is an example of a solid?",
+                  "options_hi": ["जल", "हवा", "बर्फ", "दूध"],
+                  "options_en": ["Water", "Air", "Ice", "Milk"],
+                  "answer": 2
+                },
+                {
+                  "id": 4,
+                  "question_hi": "शुष्क बर्फ (Dry Ice) किसे कहते हैं?",
+                  "question_en": "What is called Dry Ice?",
+                  "options_hi": ["ठोस CO2", "ठोस H2O", "तरल CO2", "बर्फ का टुकड़ा"],
+                  "options_en": ["Solid CO2", "Solid H2O", "Liquid CO2", "Ice Piece"],
+                  "answer": 0
+                },
+                {
+                  "id": 5,
+                  "question_hi": "गैसों में विसरण (Diffusion) की दर होती है:",
+                  "question_en": "The rate of diffusion in gases is:",
+                  "options_hi": ["बहुत कम", "बहुत अधिक", "शून्य", "ठोस के बराबर"],
+                  "options_en": ["Very low", "Very high", "Zero", "Equal to solids"],
+                  "answer": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
