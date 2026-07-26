@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -116,6 +115,7 @@
             background: #1f1f1f; color: white; padding: 12px 15px; border-radius: 8px;
             text-decoration: none; font-size: 14px; font-weight: 600;
             display: flex; align-items: center; gap: 10px;
+            cursor: pointer;
         }
 
         .menu-item:hover { background: #E50914; }
@@ -165,13 +165,13 @@
             position: relative;
             padding: 0 16px;
             margin-bottom: 25px;
-            overflow-x: auto; /* हाथ से स्क्रॉल/स्वाइप करने की अनुमति देता है */
+            overflow-x: auto;
             overflow-y: hidden;
-            scrollbar-width: none; /* फ़ायरफ़ॉक्स के लिए स्क्रॉलबर छुपाएं */
+            scrollbar-width: none;
             -webkit-overflow-scrolling: touch;
         }
         .trending-carousel-container::-webkit-scrollbar {
-            display: none; /* क्रोम/सफारी के लिए स्क्रॉलबर छुपाएं */
+            display: none;
         }
 
         .trending-slider {
@@ -365,7 +365,8 @@
                 </svg>
                 <h1>Sk CineBuzz</h1>
             </div>
-            <a href="https://t.me/skcinebuzz" target="_blank" class="icon-btn">🔔</a>
+            <!-- FIXED TELEGRAM LINK -->
+            <button class="icon-btn" onclick="openTelegramLink('skcinebuzz')">🔔</button>
         </div>
 
         <!-- SEARCH BAR -->
@@ -443,7 +444,8 @@
                 <h3>Sk CineBuzz</h3>
                 <button class="menu-close-btn" onclick="closeMenu()">✕</button>
             </div>
-            <a href="https://t.me/skcinebuzz" target="_blank" class="menu-item" onclick="closeMenu()">💬 Support / Message</a>
+            <!-- FIXED TELEGRAM MESSAGE BUTTON -->
+            <div class="menu-item" onclick="closeMenu(); openTelegramLink('skcinebuzz');">💬 Support / Message</div>
             <a href="#" class="menu-item" onclick="closeMenu(); alert('Privacy Policy जल्द ही अपडेट की जाएगी!'); return false;">📜 Privacy Policy</a>
         </div>
     </div>
@@ -532,7 +534,7 @@
         let timerInterval = null;
         let slideInterval = null;
         let currentSlideIndex = 0;
-        let isUserInteracting = false; // यूजर के हाथ से छूने पर ऑटोमैटिक स्लाइड रोकने के लिए
+        let isUserInteracting = false; 
         
         let currentPage = 1;
         const itemsPerPage = 50; 
@@ -542,6 +544,20 @@
         const trendingContainer = document.getElementById('trendingContainer');
         const trendingCarouselContainer = document.getElementById('trendingCarouselContainer');
         const paginationContainer = document.getElementById('paginationContainer');
+
+        /* TELEGRAM LINK HANDLER FUNCTION (PREVENTS ERR_UNKNOWN_URL_SCHEME) */
+        function openTelegramLink(username) {
+            const webUrl = `https://t.me/${username}`;
+            const appUrl = `tg://resolve?domain=${username}`;
+
+            // 1. Try launching Telegram App using Intent / window.location
+            window.location.href = appUrl;
+
+            // 2. Fallback to web link if Telegram App is not installed or fails
+            setTimeout(() => {
+                window.open(webUrl, '_system');
+            }, 1000);
+        }
 
         function openMenu() { 
             pushModalState();
@@ -663,7 +679,6 @@
             currentSlideIndex = 0;
             if (totalItems <= 2) return;
 
-            // जब यूजर हाथ से स्क्रॉल करे तो ऑटोमैटिक स्लाइड कुछ देर के लिए रुक जाए
             trendingCarouselContainer.onmousedown = () => { isUserInteracting = true; };
             trendingCarouselContainer.ontouchstart = () => { isUserInteracting = true; };
             
@@ -671,7 +686,7 @@
             trendingCarouselContainer.ontouchend = () => { setTimeout(() => { isUserInteracting = false; }, 5000); };
 
             slideInterval = setInterval(() => {
-                if (isUserInteracting) return; // अगर यूजर हाथ से खिसका रहा है, तो ऑटो स्लाइड नहीं होगी
+                if (isUserInteracting) return; 
 
                 currentSlideIndex++;
                 const cardWidth = 152; 
@@ -681,7 +696,6 @@
                     currentSlideIndex = 0;
                 }
 
-                // स्मूथ स्क्रॉलिंग (हाथ और ऑटो दोनों के लिए सपोर्टेड)
                 trendingCarouselContainer.scrollTo({
                     left: currentSlideIndex * cardWidth,
                     behavior: 'smooth'
