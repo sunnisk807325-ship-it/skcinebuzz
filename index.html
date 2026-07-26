@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -24,6 +25,19 @@
             filter: blur(10px);
             pointer-events: none;
             user-select: none;
+        }
+
+        /* --- CLICKABLE / PRESS EFFECT FOR ALL POSTERS & BUTTONS --- */
+        .movie-card, .trend-card, .cat-btn, .page-btn, .play-btn, .menu-item {
+            transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.15s ease, filter 0.15s ease !important;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .movie-card:active, .trend-card:active, .cat-btn:active, .page-btn:active, .play-btn:active, .menu-item:active {
+            transform: scale(0.93) !important;
+            filter: brightness(0.85);
+            box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.9) !important;
         }
 
         /* --- NAVIGATION BAR --- */
@@ -101,7 +115,7 @@
         .menu-item {
             background: #1f1f1f; color: white; padding: 12px 15px; border-radius: 8px;
             text-decoration: none; font-size: 14px; font-weight: 600;
-            display: flex; align-items: center; gap: 10px; transition: background 0.2s;
+            display: flex; align-items: center; gap: 10px;
         }
 
         .menu-item:hover { background: #E50914; }
@@ -131,7 +145,7 @@
         .cat-btn {
             background-color: #161616; color: #ccc; border: 1px solid #2a2a2a;
             padding: 8px 16px; font-size: 13px; font-weight: 500; border-radius: 20px;
-            cursor: pointer; white-space: nowrap; transition: all 0.2s; flex: 0 0 auto;
+            cursor: pointer; white-space: nowrap; flex: 0 0 auto;
         }
 
         .cat-btn.active { background-color: #E50914; color: #fff; border-color: #E50914; }
@@ -146,12 +160,18 @@
 
         .see-all { color: #aaa; font-size: 12px; text-decoration: none; }
 
-        /* --- AUTO-SLIDING TRENDING CAROUSEL --- */
+        /* --- SWIPEABLE & AUTO-SLIDING TRENDING CAROUSEL --- */
         .trending-carousel-container {
             position: relative;
             padding: 0 16px;
             margin-bottom: 25px;
-            overflow: hidden;
+            overflow-x: auto; /* हाथ से स्क्रॉल/स्वाइप करने की अनुमति देता है */
+            overflow-y: hidden;
+            scrollbar-width: none; /* फ़ायरफ़ॉक्स के लिए स्क्रॉलबर छुपाएं */
+            -webkit-overflow-scrolling: touch;
+        }
+        .trending-carousel-container::-webkit-scrollbar {
+            display: none; /* क्रोम/सफारी के लिए स्क्रॉलबर छुपाएं */
         }
 
         .trending-slider {
@@ -167,6 +187,7 @@
             flex-direction: column;
             cursor: pointer; 
             position: relative;
+            border-radius: 12px;
         }
 
         .trend-badge {
@@ -232,24 +253,84 @@
         .page-btn {
             background-color: #1a1a1a; color: #fff; border: 1px solid #333;
             padding: 6px 12px; font-size: 13px; border-radius: 6px; cursor: pointer;
-            transition: all 0.2s;
         }
 
         .page-btn.active { background-color: #E50914; border-color: #E50914; font-weight: bold; }
-        .page-btn:hover { background-color: #333; }
+
+        /* --- AD CONTAINERS --- */
+        .bottom-ads-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 15px 0 25px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .ad-banner-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 320px;
+            min-height: 50px;
+            overflow: hidden;
+        }
+
+        .ad-banner-300x250 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 250px;
+            margin: 5px auto;
+            overflow: hidden;
+        }
 
         /* --- MODALS & OVERLAYS --- */
         .video-player-overlay, .update-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.95); z-index: 99999; display: none;
-            flex-direction: column; align-items: center; justify-content: center;
+            background: rgba(0,0,0,0.95); z-index: 200000; display: none;
+            flex-direction: column; align-items: center; justify-content: flex-start;
             padding: 20px; overflow-y: auto;
         }
         .video-player-overlay.active { display: flex; }
-        .video-close-btn { position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.3); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; }
-        #appVideoFrame { width: 100%; height: 100%; max-width: 900px; max-height: 80vh; border: none; }
+        .video-close-btn { position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.3); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; z-index: 200005; }
+        #appVideoFrame { width: 100%; height: 100%; max-width: 900px; max-height: 80vh; border: none; margin-top: 50px; }
 
-        .update-box { background: #1a1a1a; border: 1px solid #E50914; border-radius: 12px; padding: 20px; text-align: center; max-width: 320px; }
+        /* FULLSCREEN AD OVERLAY */
+        .ad-timer-overlay {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: #000000; z-index: 500000; display: none;
+            flex-direction: column; align-items: center; justify-content: center;
+            overflow: hidden;
+        }
+
+        .ad-timer-box { 
+            position: relative;
+            width: 100%; max-width: 360px; height: 100vh;
+            background: #0d0d0d; padding: 45px 10px 10px 10px; 
+            display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
+        }
+
+        .top-right-timer {
+            position: absolute; top: 12px; right: 15px;
+            background: rgba(255, 255, 255, 0.15); color: #ffcc00;
+            padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: bold;
+            border: 1px solid rgba(255, 204, 0, 0.3); backdrop-filter: blur(5px);
+        }
+
+        .top-right-close-btn {
+            position: absolute; top: 10px; right: 15px;
+            background: #E50914; color: white; border: none;
+            width: 32px; height: 32px; border-radius: 50%;
+            font-size: 16px; font-weight: bold; cursor: pointer;
+            display: none; align-items: center; justify-content: center;
+            box-shadow: 0 0 10px rgba(229, 9, 20, 0.6);
+        }
+
+        .update-box { background: #1a1a1a; border: 1px solid #E50914; border-radius: 12px; padding: 20px; text-align: center; max-width: 320px; margin: auto; }
         .update-box img { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
         .update-download-btn { display: block; background: #E50914; color: white; padding: 10px; border-radius: 20px; text-decoration: none; font-weight: bold; margin-top: 15px; }
         .body-locked { overflow: hidden !important; height: 100vh !important; }
@@ -303,13 +384,13 @@
             <button class="cat-btn" id="btn-kids" onclick="changeCategory('kids')">Kids</button>
         </div>
 
-        <!-- TRENDING MOVIES SECTION WITH AUTO-SLIDING -->
+        <!-- TRENDING MOVIES SECTION -->
         <div id="trendingSection">
             <div class="section-header">
-                <div class="section-title">🔥 ट्रेंडिंग मूवीज़</div>
+                <div class="section-title">🔥 ट्रेंडिंग कंटेंट</div>
                 <a href="#" class="see-all">सभी देखें &gt;</a>
             </div>
-            <div class="trending-carousel-container">
+            <div class="trending-carousel-container" id="trendingCarouselContainer">
                 <div class="trending-slider" id="trendingContainer"></div>
             </div>
         </div>
@@ -324,6 +405,35 @@
 
         <!-- PAGINATION BUTTONS -->
         <div class="pagination-container" id="paginationContainer"></div>
+
+        <!-- SMALL BANNER ADS -->
+        <div class="bottom-ads-wrapper">
+            <div class="ad-banner-box">
+                <script type="text/javascript">
+                  atOptions = {
+                    'key' : '52325b40c9032b9871a6fa304d438d23',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                  };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/52325b40c9032b9871a6fa304d438d23/invoke.js"></script>
+            </div>
+
+            <div class="ad-banner-box">
+                <script type="text/javascript">
+                  atOptions = {
+                    'key' : 'b41da5190ad5d7ef489c5c08fecddb13',
+                    'format' : 'iframe',
+                    'height' : 50,
+                    'width' : 320,
+                    'params' : {}
+                  };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/b41da5190ad5d7ef489c5c08fecddb13/invoke.js"></script>
+            </div>
+        </div>
     </div>
 
     <!-- SIDE MENU OVERLAY -->
@@ -335,6 +445,54 @@
             </div>
             <a href="https://t.me/skcinebuzz" target="_blank" class="menu-item" onclick="closeMenu()">💬 Support / Message</a>
             <a href="#" class="menu-item" onclick="closeMenu(); alert('Privacy Policy जल्द ही अपडेट की जाएगी!'); return false;">📜 Privacy Policy</a>
+        </div>
+    </div>
+
+    <!-- AD OVERLAY WITH TIMER -->
+    <div class="ad-timer-overlay" id="adTimerOverlay">
+        <div class="ad-timer-box">
+            <div class="top-right-timer" id="timerBadge">⏱️ 5s</div>
+            <button class="top-right-close-btn" id="closeTimerBtn" onclick="closeTimerAndPlay()">✕</button>
+
+            <!-- 3 LARGE BANNER ADS -->
+            <div class="ad-banner-300x250">
+                <script type="text/javascript">
+                  atOptions = {
+                    'key' : 'ac2306387b7d15e5d75103718aeed39a',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                  };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/ac2306387b7d15e5d75103718aeed39a/invoke.js"></script>
+            </div>
+
+            <div class="ad-banner-300x250">
+                <script type="text/javascript">
+                  atOptions = {
+                    'key' : '0f5e50a05f23a0d093267b4fea3c0baf',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                  };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/0f5e50a05f23a0d093267b4fea3c0baf/invoke.js"></script>
+            </div>
+
+            <div class="ad-banner-300x250">
+                <script type="text/javascript">
+                  atOptions = {
+                    'key' : '56780a93291989c859f78c5d0c642b91',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                  };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/56780a93291989c859f78c5d0c642b91/invoke.js"></script>
+            </div>
         </div>
     </div>
 
@@ -355,13 +513,13 @@
     </div>
 
     <!-- EPISODE POPUP -->
-    <div class="video-player-overlay" id="episodeOverlay" style="display:none; background: #0b0b0b;">
-        <button class="video-close-btn" onclick="closeEpisodeSelector()">✕ Back</button>
-        <div style="text-align: center; margin-top: 40px; width: 100%; max-width: 600px;">
+    <div class="video-player-overlay" id="episodeOverlay" style="display:none; background: #0b0b0b; overflow-y: auto; justify-content: flex-start; padding-top: 60px; z-index: 100000;">
+        <button class="video-close-btn" onclick="closeEpisodeSelector()" style="position: fixed; top: 15px; right: 15px; z-index: 100005;">✕ Back</button>
+        <div style="text-align: center; margin-bottom: 20px; width: 100%; max-width: 600px;">
             <h2 id="seriesPopupName" style="color: #E50914; font-size: 22px; margin-bottom: 5px;">Series Name</h2>
-            <p id="seriesPopupDetail" style="color: #aaa; font-size: 13px; margin-bottom: 20px;">Detail</p>
+            <p id="seriesPopupDetail" style="color: #aaa; font-size: 13px; margin-bottom: 10px;">Detail</p>
         </div>
-        <div class="movie-grid" id="episodeListContainer" style="width: 100%; max-width: 800px;"></div>
+        <div class="movie-grid" id="episodeListContainer" style="width: 100%; max-width: 800px; padding-bottom: 50px;"></div>
     </div>
 
     <!-- JAVASCRIPT LOGIC -->
@@ -370,8 +528,11 @@
 
         let currentCategory = 'movie'; 
         let movieList = []; 
+        let pendingVideoUrl = ""; 
+        let timerInterval = null;
         let slideInterval = null;
         let currentSlideIndex = 0;
+        let isUserInteracting = false; // यूजर के हाथ से छूने पर ऑटोमैटिक स्लाइड रोकने के लिए
         
         let currentPage = 1;
         const itemsPerPage = 50; 
@@ -379,9 +540,13 @@
         const githubJsonUrl = "https://raw.githubusercontent.com/sunnisk807325-ship-it/skcinebuzz/refs/heads/main/movies-2.json";
         const container = document.getElementById('movieContainer');
         const trendingContainer = document.getElementById('trendingContainer');
+        const trendingCarouselContainer = document.getElementById('trendingCarouselContainer');
         const paginationContainer = document.getElementById('paginationContainer');
 
-        function openMenu() { document.getElementById('menuOverlay').style.display = 'flex'; }
+        function openMenu() { 
+            pushModalState();
+            document.getElementById('menuOverlay').style.display = 'flex'; 
+        }
         function closeMenu() { document.getElementById('menuOverlay').style.display = 'none'; }
 
         async function fetchLikes(movieId) {
@@ -458,17 +623,15 @@
 
         function handleMovieClick(movie) {
             autoAddLike(movie); 
-            if (movie.isSeries) {
+            if (movie.isSeries || (movie.episodes && movie.episodes.length > 0)) {
                 openEpisodeSelector(movie);
             } else {
-                openFinalVideoUrl(movie.url);
+                triggerTimerAdAndPlay(movie.url);
             }
         }
 
-        // AUTO-SLIDING TRENDING SECTION LOGIC
         function renderTrendingSection(movies) {
             trendingContainer.innerHTML = "";
-            
             const sortedByClicks = [...movies].sort((a, b) => (b.likes || 0) - (a.likes || 0));
             const trendingItems = sortedByClicks.slice(0, 8);
 
@@ -498,10 +661,18 @@
         function startAutoSlide(totalItems) {
             if (slideInterval) clearInterval(slideInterval);
             currentSlideIndex = 0;
-
             if (totalItems <= 2) return;
 
+            // जब यूजर हाथ से स्क्रॉल करे तो ऑटोमैटिक स्लाइड कुछ देर के लिए रुक जाए
+            trendingCarouselContainer.onmousedown = () => { isUserInteracting = true; };
+            trendingCarouselContainer.ontouchstart = () => { isUserInteracting = true; };
+            
+            trendingCarouselContainer.onmouseup = () => { setTimeout(() => { isUserInteracting = false; }, 5000); };
+            trendingCarouselContainer.ontouchend = () => { setTimeout(() => { isUserInteracting = false; }, 5000); };
+
             slideInterval = setInterval(() => {
+                if (isUserInteracting) return; // अगर यूजर हाथ से खिसका रहा है, तो ऑटो स्लाइड नहीं होगी
+
                 currentSlideIndex++;
                 const cardWidth = 152; 
                 const maxIndex = totalItems - 2;
@@ -510,7 +681,11 @@
                     currentSlideIndex = 0;
                 }
 
-                trendingContainer.style.transform = `translateX(-${currentSlideIndex * cardWidth}px)`;
+                // स्मूथ स्क्रॉलिंग (हाथ और ऑटो दोनों के लिए सपोर्टेड)
+                trendingCarouselContainer.scrollTo({
+                    left: currentSlideIndex * cardWidth,
+                    behavior: 'smooth'
+                });
             }, 3000);
         }
 
@@ -536,7 +711,10 @@
                 card.onclick = () => handleMovieClick(movie);
 
                 const yearInfo = movie.year ? `<span>${movie.year}</span>` : '';
+                const isSeriesItem = movie.isSeries || (movie.episodes && movie.episodes.length > 0);
                 
+                const buttonText = isSeriesItem ? "▶ Watch Episodes" : "▶ Watch Now";
+
                 card.innerHTML = `
                     <img src="${movie.image}" alt="${movie.name}">
                     <div class="movie-info">
@@ -546,7 +724,7 @@
                             ${yearInfo}
                         </div>
                         <div class="card-genre">${movie.genre || movie.detail || 'एक्शन, ड्रामा'}</div>
-                        <div class="play-btn">▶ अभी देखें</div>
+                        <div class="play-btn">${buttonText}</div>
                     </div>
                 `;
                 container.appendChild(card);
@@ -591,29 +769,6 @@
             }
         }
 
-        function getSimilarity(a, b) {
-            if (a.length === 0) return b.length;
-            if (b.length === 0) return a.length;
-            const matrix = [];
-            for (let i = 0; i <= b.length; i++) matrix[i] = [i];
-            for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
-
-            for (let i = 1; i <= b.length; i++) {
-                for (let j = 1; j <= a.length; j++) {
-                    if (b.charAt(i - 1) === a.charAt(j - 1)) {
-                        matrix[i][j] = matrix[i - 1][j - 1];
-                    } else {
-                        matrix[i][j] = Math.min(
-                            matrix[i - 1][j - 1] + 1,
-                            matrix[i][j - 1] + 1,
-                            matrix[i - 1][j] + 1
-                        );
-                    }
-                }
-            }
-            return matrix[b.length][a.length];
-        }
-
         function filterMovies() {
             const searchText = document.getElementById('searchBox').value.toLowerCase().trim();
             const trendingSection = document.getElementById('trendingSection');
@@ -625,22 +780,9 @@
                 seeAllBtn.style.display = 'none';
                 mainSectionTitle.innerText = `खोज के परिणाम: "${searchText}"`;
 
-                let filteredList = movieList.filter(movie => {
-                    const mName = movie.name.toLowerCase();
-                    if (mName.includes(searchText)) return true;
-
-                    const words = mName.split(" ");
-                    for (let word of words) {
-                        const dist = getSimilarity(searchText, word);
-                        if (dist <= 2 && searchText.length > 2) return true;
-                    }
-
-                    return false;
-                });
-
+                let filteredList = movieList.filter(movie => movie.name.toLowerCase().includes(searchText));
                 currentPage = 1;
                 displayMovies(filteredList);
-
             } else {
                 trendingSection.style.display = 'block';
                 seeAllBtn.style.display = 'inline-block';
@@ -664,10 +806,15 @@
             filterMovies();
         }
 
+        function pushModalState() {
+            window.history.pushState({ modalOpen: true }, "");
+        }
+
         function openEpisodeSelector(movie) {
+            pushModalState();
             const overlay = document.getElementById('episodeOverlay');
             document.getElementById('seriesPopupName').innerText = movie.name;
-            document.getElementById('seriesPopupDetail').innerText = movie.detail;
+            document.getElementById('seriesPopupDetail').innerText = movie.detail || "";
             const listContainer = document.getElementById('episodeListContainer');
             listContainer.innerHTML = ""; 
             
@@ -675,13 +822,16 @@
                 movie.episodes.forEach((ep) => {
                     const epCard = document.createElement('div');
                     epCard.className = 'movie-card';
-                    epCard.onclick = (e) => { e.stopPropagation(); openFinalVideoUrl(ep.url); };
+                    epCard.onclick = (e) => { 
+                        e.stopPropagation(); 
+                        triggerTimerAdAndPlay(ep.url); 
+                    };
                     
                     epCard.innerHTML = `
                         <img src="${movie.image}" alt="${ep.title}">
                         <div class="movie-info">
                             <h3>${ep.title}</h3>
-                            <div class="play-btn">▶ अभी देखें</div>
+                            <div class="play-btn">▶ Watch Now</div>
                         </div>
                     `;
                     listContainer.appendChild(epCard);
@@ -691,6 +841,7 @@
             }
             
             overlay.style.display = 'flex';
+            overlay.scrollTop = 0; 
             document.getElementById('main-body').classList.add('body-locked');
         }
 
@@ -699,23 +850,62 @@
             document.getElementById('main-body').classList.remove('body-locked');
         }
 
-        function openFinalVideoUrl(videoUrl) {
-            if(!videoUrl) return;
-            if(videoUrl.includes("drive.google.com")) {
-                const urlParams = new URLSearchParams(videoUrl.split('?')[1]);
-                const fileId = urlParams.get('id');
-                if(fileId) {
-                    playInAppVideo(`https://drive.google.com/file/d/${fileId}/preview`);
-                } else {
-                    window.open(videoUrl, '_blank');
-                }
-            } else {
-                const newWindow = window.open(videoUrl, '_blank', 'noopener,noreferrer');
-                if (newWindow) newWindow.opener = null;
+        function triggerTimerAdAndPlay(videoUrl) {
+            if(!videoUrl) {
+                alert("वीडियो लिंक उपलब्ध नहीं है!");
+                return;
             }
+            pendingVideoUrl = videoUrl;
+
+            pushModalState();
+            const overlay = document.getElementById('adTimerOverlay');
+            const timerBadge = document.getElementById('timerBadge');
+            const closeBtn = document.getElementById('closeTimerBtn');
+
+            overlay.style.display = 'flex';
+            document.getElementById('main-body').classList.add('body-locked');
+
+            let timeLeft = 5; 
+            timerBadge.innerText = `⏱️ ${timeLeft}s`;
+            timerBadge.style.display = 'block';
+            closeBtn.style.display = 'none';
+
+            if (timerInterval) clearInterval(timerInterval);
+
+            timerInterval = setInterval(() => {
+                timeLeft--;
+                if (timeLeft > 0) {
+                    timerBadge.innerText = `⏱️ ${timeLeft}s`;
+                } else {
+                    clearInterval(timerInterval);
+                    timerBadge.style.display = 'none'; 
+                    closeBtn.style.display = 'flex';  
+                }
+            }, 1000);
+        }
+
+        function closeTimerAndPlay() {
+            document.getElementById('adTimerOverlay').style.display = 'none';
+            document.getElementById('main-body').classList.remove('body-locked');
+            
+            if(pendingVideoUrl) {
+                let targetUrl = pendingVideoUrl;
+                
+                if(targetUrl.includes("drive.google.com") && targetUrl.includes("/view")) {
+                    targetUrl = targetUrl.replace("/view", "/preview");
+                }
+
+                const win = window.open(targetUrl, '_blank');
+                
+                if (!win || win.closed || typeof win.closed == 'undefined') {
+                    playInAppVideo(targetUrl);
+                }
+            }
+            pendingVideoUrl = "";
         }
 
         function playInAppVideo(embedUrl) {
+            pushModalState();
             const overlay = document.getElementById('videoPlayerOverlay');
             document.getElementById('appVideoFrame').src = embedUrl;
             overlay.classList.add('active');
@@ -726,10 +916,39 @@
             const overlay = document.getElementById('videoPlayerOverlay');
             document.getElementById('appVideoFrame').src = ""; 
             overlay.classList.remove('active');
+            
             if(document.getElementById('episodeOverlay').style.display !== 'flex') {
                 document.getElementById('main-body').classList.remove('body-locked');
             }
         }
+
+        window.addEventListener('popstate', function (e) {
+            const timerOverlay = document.getElementById('adTimerOverlay');
+            const playerOverlay = document.getElementById('videoPlayerOverlay');
+            const episodeOverlay = document.getElementById('episodeOverlay');
+            const menuOverlay = document.getElementById('menuOverlay');
+
+            if (timerOverlay && timerOverlay.style.display === 'flex') {
+                timerOverlay.style.display = 'none';
+                if(timerInterval) clearInterval(timerInterval);
+                return;
+            }
+
+            if (playerOverlay && playerOverlay.classList.contains('active')) {
+                closeInAppPlayer();
+                return;
+            }
+
+            if (episodeOverlay && episodeOverlay.style.display === 'flex') {
+                closeEpisodeSelector();
+                return;
+            }
+
+            if (menuOverlay && menuOverlay.style.display === 'flex') {
+                closeMenu();
+                return;
+            }
+        });
 
         document.addEventListener("DOMContentLoaded", loadMoviesFromGitHub);
     </script>
