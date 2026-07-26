@@ -424,6 +424,32 @@
     ]
   },
   {
+  "name": "Jujutsu Kaisen",
+  "category": "anime",
+  "isSeries": true,
+  "year": 2020,
+  "genre": "Action, Fantasy, Supernatural",
+  "image": "https://i.ibb.co/7tM3vYCc/kj-WDfeq8-PY2-UNDity-FEzj3-CF7-KA.jpg",
+  "detail": "Multi Audio [Hindi-Tamil-Telugu-Eng-Jap] Two Hindi Dubs",
+  "episodes": [
+    {
+      "title": "Episode 1",
+      "detail": "Jujutsu Kaisen Season 1 | Audio: Hindi",
+      "url": "YOUR_EPISODE_1_LINK_HERE"
+    },
+    {
+      "title": "Episode 2",
+      "detail": "Jujutsu Kaisen Season 1 | Audio: Hindi",
+      "url": "YOUR_EPISODE_2_LINK_HERE"
+    },
+    {
+      "title": "Episode 3",
+      "detail": "Jujutsu Kaisen Season 1 | Audio: Hindi",
+      "url": "YOUR_EPISODE_3_LINK_HERE"
+    }
+  ]
+},
+  {
     "name": "Pritam and Pedro S01",
     "category": "series",
     "isSeries": false,
