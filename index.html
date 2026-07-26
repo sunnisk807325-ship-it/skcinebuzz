@@ -237,37 +237,6 @@
         .page-btn.active { background-color: #E50914; border-color: #E50914; font-weight: bold; }
         .page-btn:hover { background-color: #333; }
 
-        /* --- AD CONTAINERS --- */
-        .bottom-ads-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin: 15px 0 25px 0;
-            width: 100%;
-            text-align: center;
-        }
-
-        .ad-banner-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 320px;
-            min-height: 50px;
-            overflow: hidden;
-        }
-
-        .ad-banner-300x250 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 300px;
-            height: 250px;
-            margin: 5px auto;
-            overflow: hidden;
-        }
-
         /* --- MODALS & OVERLAYS --- */
         .video-player-overlay, .update-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -278,39 +247,6 @@
         .video-player-overlay.active { display: flex; }
         .video-close-btn { position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.3); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; }
         #appVideoFrame { width: 100%; height: 100%; max-width: 900px; max-height: 80vh; border: none; }
-
-        /* 🔒 PERFECT FULLSCREEN FIXED AD POPUP (NO SCROLL) */
-        .ad-timer-overlay {
-            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background: #000000; z-index: 99999; display: none;
-            flex-direction: column; align-items: center; justify-content: center;
-            overflow: hidden;
-        }
-
-        .ad-timer-box { 
-            position: relative;
-            width: 100%; max-width: 360px; height: 100vh;
-            background: #0d0d0d; padding: 45px 10px 10px 10px; 
-            display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
-        }
-
-        /* ⏱️ TOP-RIGHT TIMER BADGE */
-        .top-right-timer {
-            position: absolute; top: 12px; right: 15px;
-            background: rgba(255, 255, 255, 0.15); color: #ffcc00;
-            padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: bold;
-            border: 1px solid rgba(255, 204, 0, 0.3); backdrop-filter: blur(5px);
-        }
-
-        /* ❌ TOP-RIGHT CLOSE BUTTON (HIDDEN AT FIRST) */
-        .top-right-close-btn {
-            position: absolute; top: 10px; right: 15px;
-            background: #E50914; color: white; border: none;
-            width: 32px; height: 32px; border-radius: 50%;
-            font-size: 16px; font-weight: bold; cursor: pointer;
-            display: none; align-items: center; justify-content: center;
-            box-shadow: 0 0 10px rgba(229, 9, 20, 0.6);
-        }
 
         .update-box { background: #1a1a1a; border: 1px solid #E50914; border-radius: 12px; padding: 20px; text-align: center; max-width: 320px; }
         .update-box img { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
@@ -387,35 +323,6 @@
 
         <!-- PAGINATION BUTTONS -->
         <div class="pagination-container" id="paginationContainer"></div>
-
-        <!-- 💰 BOTH SMALL BANNER ADS (320x50) -->
-        <div class="bottom-ads-wrapper">
-            <div class="ad-banner-box">
-                <script type="text/javascript">
-                  atOptions = {
-                    'key' : '52325b40c9032b9871a6fa304d438d23',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                  };
-                </script>
-                <script type="text/javascript" src="https://www.highperformanceformat.com/52325b40c9032b9871a6fa304d438d23/invoke.js"></script>
-            </div>
-
-            <div class="ad-banner-box">
-                <script type="text/javascript">
-                  atOptions = {
-                    'key' : 'b41da5190ad5d7ef489c5c08fecddb13',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                  };
-                </script>
-                <script type="text/javascript" src="https://www.highperformanceformat.com/b41da5190ad5d7ef489c5c08fecddb13/invoke.js"></script>
-            </div>
-        </div>
     </div>
 
     <!-- SIDE MENU OVERLAY -->
@@ -427,54 +334,6 @@
             </div>
             <a href="https://t.me/skcinebuzz" target="_blank" class="menu-item" onclick="closeMenu()">💬 Support / Message</a>
             <a href="#" class="menu-item" onclick="closeMenu(); alert('Privacy Policy जल्द ही अपडेट की जाएगी!'); return false;">📜 Privacy Policy</a>
-        </div>
-    </div>
-
-    <!-- 🔒 FIXED FULLSCREEN AD OVERLAY -->
-    <div class="ad-timer-overlay" id="adTimerOverlay">
-        <div class="ad-timer-box">
-            <div class="top-right-timer" id="timerBadge">⏱️ 5s</div>
-            <button class="top-right-close-btn" id="closeTimerBtn" onclick="closeTimerAndPlay()">✕</button>
-
-            <!-- 💰 3 FIXED LARGE BANNER ADS (300x250) -->
-            <div class="ad-banner-300x250">
-                <script type="text/javascript">
-                  atOptions = {
-                    'key' : 'ac2306387b7d15e5d75103718aeed39a',
-                    'format' : 'iframe',
-                    'height' : 250,
-                    'width' : 300,
-                    'params' : {}
-                  };
-                </script>
-                <script type="text/javascript" src="https://www.highperformanceformat.com/ac2306387b7d15e5d75103718aeed39a/invoke.js"></script>
-            </div>
-
-            <div class="ad-banner-300x250">
-                <script type="text/javascript">
-                  atOptions = {
-                    'key' : '0f5e50a05f23a0d093267b4fea3c0baf',
-                    'format' : 'iframe',
-                    'height' : 250,
-                    'width' : 300,
-                    'params' : {}
-                  };
-                </script>
-                <script type="text/javascript" src="https://www.highperformanceformat.com/0f5e50a05f23a0d093267b4fea3c0baf/invoke.js"></script>
-            </div>
-
-            <div class="ad-banner-300x250">
-                <script type="text/javascript">
-                  atOptions = {
-                    'key' : '56780a93291989c859f78c5d0c642b91',
-                    'format' : 'iframe',
-                    'height' : 250,
-                    'width' : 300,
-                    'params' : {}
-                  };
-                </script>
-                <script type="text/javascript" src="https://www.highperformanceformat.com/56780a93291989c859f78c5d0c642b91/invoke.js"></script>
-            </div>
         </div>
     </div>
 
@@ -510,8 +369,6 @@
 
         let currentCategory = 'movie'; 
         let movieList = []; 
-        let pendingVideoUrl = ""; 
-        let timerInterval = null;
         let slideInterval = null;
         let currentSlideIndex = 0;
         
@@ -603,16 +460,16 @@
             if (movie.isSeries) {
                 openEpisodeSelector(movie);
             } else {
-                triggerTimerAdAndPlay(movie.url);
+                openFinalVideoUrl(movie.url);
             }
         }
 
-        // 🔥 AUTO-SLIDING TRENDING SECTION LOGIC
+        // AUTO-SLIDING TRENDING SECTION LOGIC
         function renderTrendingSection(movies) {
             trendingContainer.innerHTML = "";
             
             const sortedByClicks = [...movies].sort((a, b) => (b.likes || 0) - (a.likes || 0));
-            const trendingItems = sortedByClicks.slice(0, 8); // Top 8 items for slider
+            const trendingItems = sortedByClicks.slice(0, 8);
 
             trendingItems.forEach((movie, index) => {
                 const movieId = movie.id || movie.name;
@@ -641,20 +498,19 @@
             if (slideInterval) clearInterval(slideInterval);
             currentSlideIndex = 0;
 
-            if (totalItems <= 2) return; // अगर आइटम्स कम हैं तो स्लाइड करने की ज़रूरत नहीं
+            if (totalItems <= 2) return;
 
             slideInterval = setInterval(() => {
                 currentSlideIndex++;
-                // एक बार में कार्ड की चौड़ाई (140px + 12px gap = 152px) हिसाब से स्लाइड करें
                 const cardWidth = 152; 
-                const maxIndex = totalItems - 2; // स्क्रीन पर दिखने वाले कार्ड्स को छोड़कर
+                const maxIndex = totalItems - 2;
 
                 if (currentSlideIndex > maxIndex) {
-                    currentSlideIndex = 0; // वापस शुरुआत में आ जाए
+                    currentSlideIndex = 0;
                 }
 
                 trendingContainer.style.transform = `translateX(-${currentSlideIndex * cardWidth}px)`;
-            }, 3000); // हर 3 सेकंड में अपने आप आगे खिसकेगा
+            }, 3000);
         }
 
         function displayMovies(movies) {
@@ -818,7 +674,7 @@
                 movie.episodes.forEach((ep) => {
                     const epCard = document.createElement('div');
                     epCard.className = 'movie-card';
-                    epCard.onclick = (e) => { e.stopPropagation(); triggerTimerAdAndPlay(ep.url); };
+                    epCard.onclick = (e) => { e.stopPropagation(); openFinalVideoUrl(ep.url); };
                     
                     epCard.innerHTML = `
                         <img src="${movie.image}" alt="${ep.title}">
@@ -840,46 +696,6 @@
         function closeEpisodeSelector() {
             document.getElementById('episodeOverlay').style.display = 'none';
             document.getElementById('main-body').classList.remove('body-locked');
-        }
-
-        /* ⏱️ TOP-RIGHT TIMER + CANCEL BUTTON LOGIC */
-        function triggerTimerAdAndPlay(videoUrl) {
-            if(!videoUrl) return;
-            pendingVideoUrl = videoUrl;
-
-            const overlay = document.getElementById('adTimerOverlay');
-            const timerBadge = document.getElementById('timerBadge');
-            const closeBtn = document.getElementById('closeTimerBtn');
-
-            overlay.style.display = 'flex';
-            document.getElementById('main-body').classList.add('body-locked');
-
-            let timeLeft = 5; 
-            timerBadge.innerText = `⏱️ ${timeLeft}s`;
-            timerBadge.style.display = 'block';
-            closeBtn.style.display = 'none';
-
-            if (timerInterval) clearInterval(timerInterval);
-
-            timerInterval = setInterval(() => {
-                timeLeft--;
-                if (timeLeft > 0) {
-                    timerBadge.innerText = `⏱️ ${timeLeft}s`;
-                } else {
-                    clearInterval(timerInterval);
-                    timerBadge.style.display = 'none'; 
-                    closeBtn.style.display = 'flex';  
-                }
-            }, 1000);
-        }
-
-        function closeTimerAndPlay() {
-            document.getElementById('adTimerOverlay').style.display = 'none';
-            if(document.getElementById('episodeOverlay').style.display !== 'flex') {
-                document.getElementById('main-body').classList.remove('body-locked');
-            }
-            openFinalVideoUrl(pendingVideoUrl);
-            pendingVideoUrl = "";
         }
 
         function openFinalVideoUrl(videoUrl) {
