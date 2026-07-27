@@ -448,6 +448,64 @@
     }
   ]
 },
+
+
+  
+  {
+  "name": "Demon Slayer: Kimetsu no Yaiba",
+  "category": "anime",
+  "isSeries": true,
+  "year": 2019,
+  "genre": "Action, Fantasy, Animation",
+  "image": "https://i.ibb.co/LDrKvhCq/2026-07-27-08-16-29-849-0530.jpg",
+  "detail": "Multi Audio [Hindi-Tamil-Telugu-Eng-Jap]",
+  "episodes": [
+    {
+      "title": "Episode 1",
+      "detail": "Demon Slayer Season 1 | Audio: Hindi",
+      "url": "YOUR_EPISODE_1_LINK_HERE"
+    },
+    {
+      "title": "Episode 2",
+      "detail": "Demon Slayer Season 1 | Audio: Hindi",
+      "url": "YOUR_EPISODE_2_LINK_HERE"
+    },
+    {
+      "title": "Episode 3",
+      "detail": "Demon Slayer Season 1 | Audio: Hindi",
+      "url": "YOUR_EPISODE_3_LINK_HERE"
+    }
+  ]
+},
+
+
+  
+  {
+  "name": "One Piece",
+  "category": "anime",
+  "isSeries": true,
+  "year": 1999,
+  "genre": "Action, Adventure, Fantasy",
+  "image": "https://i.ibb.co/hRw6jwP3/2026-07-27-08-21-17-690-0530.jpg",
+  "detail": "Multi Audio [Hindi-Eng-Jap]",
+  "episodes": [
+    {
+      "title": "Episode 1",
+      "detail": "One Piece | Audio: Hindi",
+      "url": "YOUR_EPISODE_1_LINK_HERE"
+    },
+    {
+      "title": "Episode 2",
+      "detail": "One Piece | Audio: Hindi",
+      "url": "YOUR_EPISODE_2_LINK_HERE"
+    },
+    {
+      "title": "Episode 3",
+      "detail": "One Piece | Audio: Hindi",
+      "url": "YOUR_EPISODE_3_LINK_HERE"
+    }
+  ]
+},
   {
     "name": "Pritam and Pedro S01",
     "category": "series",
