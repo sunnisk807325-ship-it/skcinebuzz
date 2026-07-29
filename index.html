@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sk CineBuzz</title>
 
+    <!-- ADSTERRA AD SCRIPTS (Popunder & Social Bar) -->
+    <script src="https://pl30535111.effectivecpmnetwork.com/3a/cc/80/3acc80e735248b17e16fe8fda2aa0597.js"></script>
+    <script src="https://pl30535406.effectivecpmnetwork.com/d6/d3/c9/d6d3c9a7312baafb451101e6db87ff49.js"></script>
+
     <style>
         /* --- GLOBAL & APP DESIGN --- */
         * {
@@ -26,14 +30,14 @@
             user-select: none;
         }
 
-        /* --- CLICKABLE / PRESS EFFECT FOR ALL POSTERS & BUTTONS --- */
-        .movie-card, .trend-card, .cat-btn, .page-btn, .play-btn, .menu-item {
+        /* --- CLICKABLE / PRESS EFFECT --- */
+        .movie-card, .trend-card, .cat-btn, .page-btn, .play-btn, .menu-item, .header-app-btn {
             transition: transform 0.15s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.15s ease, filter 0.15s ease !important;
             user-select: none;
             -webkit-tap-highlight-color: transparent;
         }
 
-        .movie-card:active, .trend-card:active, .cat-btn:active, .page-btn:active, .play-btn:active, .menu-item:active {
+        .movie-card:active, .trend-card:active, .cat-btn:active, .page-btn:active, .play-btn:active, .menu-item:active, .header-app-btn:active {
             transform: scale(0.93) !important;
             filter: brightness(0.85);
             box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.9) !important;
@@ -64,6 +68,26 @@
             align-items: center;
         }
 
+        .header-right-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-app-btn {
+            background: linear-gradient(135deg, #E50914, #b20710);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            box-shadow: 0 2px 6px rgba(229, 9, 20, 0.4);
+        }
+
         .brand-logo {
             display: flex;
             align-items: center;
@@ -86,7 +110,7 @@
         .menu-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.85);
             z-index: 999999; display: none;
             justify-content: flex-start;
         }
@@ -119,6 +143,10 @@
         }
 
         .menu-item:hover { background: #E50914; }
+        .menu-item.app-download-item {
+            background: #E50914;
+            color: #ffffff;
+        }
 
         /* --- SEARCH BAR --- */
         .search-container { padding: 12px 16px 0 16px; margin-bottom: 15px; }
@@ -160,7 +188,7 @@
 
         .see-all { color: #aaa; font-size: 12px; text-decoration: none; }
 
-        /* --- SWIPEABLE & AUTO-SLIDING TRENDING CAROUSEL --- */
+        /* --- TRENDING CAROUSEL --- */
         .trending-carousel-container {
             position: relative;
             padding: 0 16px;
@@ -170,24 +198,13 @@
             scrollbar-width: none;
             -webkit-overflow-scrolling: touch;
         }
-        .trending-carousel-container::-webkit-scrollbar {
-            display: none;
-        }
+        .trending-carousel-container::-webkit-scrollbar { display: none; }
 
-        .trending-slider {
-            display: flex;
-            gap: 12px;
-            transition: transform 0.5s ease-in-out;
-            will-change: transform;
-        }
+        .trending-slider { display: flex; gap: 12px; transition: transform 0.5s ease-in-out; }
 
         .trend-card {
-            flex: 0 0 140px; 
-            display: flex; 
-            flex-direction: column;
-            cursor: pointer; 
-            position: relative;
-            border-radius: 12px;
+            flex: 0 0 140px; display: flex; flex-direction: column;
+            cursor: pointer; position: relative; border-radius: 12px;
         }
 
         .trend-badge {
@@ -196,9 +213,7 @@
             border-radius: 4px; z-index: 2;
         }
 
-        .trend-card img {
-            width: 100%; height: 195px; object-fit: cover; border-radius: 12px; margin-bottom: 8px;
-        }
+        .trend-card img { width: 100%; height: 195px; object-fit: cover; border-radius: 12px; margin-bottom: 8px; }
 
         .trend-card h4 {
             font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden;
@@ -207,11 +222,18 @@
 
         .meta-info { display: flex; align-items: center; gap: 10px; font-size: 11px; color: #aaa; }
 
-        .like-display {
-            color: #ff3366; font-size: 12px; display: inline-flex; align-items: center; gap: 3px;
+        .like-display { color: #ff3366; font-size: 12px; display: inline-flex; align-items: center; gap: 3px; }
+
+        /* --- NATIVE BANNER AD CONTAINER --- */
+        .native-ad-wrapper {
+            padding: 0 16px;
+            margin: 15px 0;
+            text-align: center;
+            width: 100%;
+            overflow: hidden;
         }
 
-        /* --- VERTICAL GRID FOR MOVIES --- */
+        /* --- VERTICAL GRID FOR MOVIES & EPISODES --- */
         .movie-grid {
             display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;
             padding: 0 16px; margin-bottom: 20px;
@@ -257,37 +279,6 @@
 
         .page-btn.active { background-color: #E50914; border-color: #E50914; font-weight: bold; }
 
-        /* --- AD CONTAINERS --- */
-        .bottom-ads-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin: 15px 0 25px 0;
-            width: 100%;
-            text-align: center;
-        }
-
-        .ad-banner-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 320px;
-            min-height: 50px;
-            overflow: hidden;
-        }
-
-        .ad-banner-300x250 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 300px;
-            height: 250px;
-            margin: 5px auto;
-            overflow: hidden;
-        }
-
         /* --- MODALS & OVERLAYS --- */
         .video-player-overlay, .update-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -299,35 +290,52 @@
         .video-close-btn { position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.3); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; z-index: 200005; }
         #appVideoFrame { width: 100%; height: 100%; max-width: 900px; max-height: 80vh; border: none; margin-top: 50px; }
 
-        /* FULLSCREEN AD OVERLAY */
+        /* === IMPROVED FULLSCREEN AD TIMER OVERLAY === */
         .ad-timer-overlay {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            background: #000000; z-index: 500000; display: none;
+            /* Full screen gradient background to cover sides properly */
+            background: radial-gradient(circle at center, #1a080a 0%, #080808 100%);
+            z-index: 500000; display: none;
             flex-direction: column; align-items: center; justify-content: center;
-            overflow: hidden;
         }
 
         .ad-timer-box { 
-            position: relative;
-            width: 100%; max-width: 360px; height: 100vh;
-            background: #0d0d0d; padding: 45px 10px 10px 10px; 
-            display: flex; flex-direction: column; align-items: center; justify-content: space-evenly;
-        }
-
-        .top-right-timer {
-            position: absolute; top: 12px; right: 15px;
-            background: rgba(255, 255, 255, 0.15); color: #ffcc00;
-            padding: 6px 12px; border-radius: 20px; font-size: 13px; font-weight: bold;
-            border: 1px solid rgba(255, 204, 0, 0.3); backdrop-filter: blur(5px);
+            position: relative; width: 90%; max-width: 380px; 
+            background: rgba(22, 22, 22, 0.85); 
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 40px 20px 30px 20px; 
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center; gap: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(229, 9, 20, 0.15);
         }
 
         .top-right-close-btn {
-            position: absolute; top: 10px; right: 15px;
-            background: #E50914; color: white; border: none;
+            position: absolute; top: 12px; right: 12px;
+            background: rgba(255, 255, 255, 0.1); color: #fff; border: none;
             width: 32px; height: 32px; border-radius: 50%;
-            font-size: 16px; font-weight: bold; cursor: pointer;
-            display: none; align-items: center; justify-content: center;
-            box-shadow: 0 0 10px rgba(229, 9, 20, 0.6);
+            font-size: 14px; font-weight: bold; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .timer-status-text {
+            color: #ffcc00; font-size: 17px; font-weight: 700;
+        }
+
+        .continue-btn-red {
+            background: linear-gradient(135deg, #E50914, #b20710);
+            color: white; padding: 14px 28px; border-radius: 30px;
+            font-size: 15px; font-weight: 800; border: none; cursor: pointer;
+            box-shadow: 0 4px 15px rgba(229, 9, 20, 0.5);
+            display: none; animation: pulse 1.5s infinite;
+            width: 100%;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.98); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(0.98); }
         }
 
         .update-box { background: #1a1a1a; border: 1px solid #E50914; border-radius: 12px; padding: 20px; text-align: center; max-width: 320px; margin: auto; }
@@ -365,15 +373,19 @@
                 </svg>
                 <h1>Sk CineBuzz</h1>
             </div>
-            <!-- FIXED TELEGRAM LINK -->
-            <button class="icon-btn" onclick="openTelegramLink('skcinebuzz')">🔔</button>
+            
+            <div class="header-right-actions">
+                <!-- HEADER APP DOWNLOAD BUTTON -->
+                <a href="https://www.appcreator24.com/app4130809-xb3zpc" target="_blank" class="header-app-btn">📲 App</a>
+                <button class="icon-btn" onclick="openTelegramLink('skcinebuzz')">🔔</button>
+            </div>
         </div>
 
         <!-- SEARCH BAR -->
         <div class="search-container">
             <div class="search-wrapper">
                 <span>🔍</span>
-                <input type="text" id="searchBox" class="search-input" placeholder="मूवी, वेब सीरीज या एनीमे खोजें..." oninput="filterMovies()">
+                <input type="text" id="searchBox" class="search-input" placeholder="मूवी, वेब सीरीज या एनीमे खोजें..." onfocus="triggerSearchAd()" oninput="filterMovies()">
             </div>
         </div>
 
@@ -396,6 +408,12 @@
             </div>
         </div>
 
+        <!-- NATIVE BANNER AD -->
+        <div class="native-ad-wrapper">
+            <script async="async" data-cfasync="false" src="https://pl30535374.effectivecpmnetwork.com/1d2ba142d45711f0a921efe79da70f9d/invoke.js"></script>
+            <div id="container-1d2ba142d45711f0a921efe79da70f9d"></div>
+        </div>
+
         <!-- NEW RELEASES SECTION -->
         <div class="section-header" id="newReleaseHeader">
             <div class="section-title" id="mainSectionTitle">नयी रिलीज़</div>
@@ -406,95 +424,32 @@
 
         <!-- PAGINATION BUTTONS -->
         <div class="pagination-container" id="paginationContainer"></div>
-
-        <!-- SMALL BANNER ADS -->
-        <div class="bottom-ads-wrapper">
-            <div class="ad-banner-box">
-                <script type="text/javascript">
-                  atOptions = {
-                    'key' : '52325b40c9032b9871a6fa304d438d23',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                  };
-                </script>
-                <script type="text/javascript" src="https://www.highperformanceformat.com/52325b40c9032b9871a6fa304d438d23/invoke.js"></script>
-            </div>
-
-            <div class="ad-banner-box">
-                <script type="text/javascript">
-                  atOptions = {
-                    'key' : 'b41da5190ad5d7ef489c5c08fecddb13',
-                    'format' : 'iframe',
-                    'height' : 50,
-                    'width' : 320,
-                    'params' : {}
-                  };
-                </script>
-                <script type="text/javascript" src="https://www.highperformanceformat.com/b41da5190ad5d7ef489c5c08fecddb13/invoke.js"></script>
-            </div>
-        </div>
     </div>
 
-    <!-- SIDE MENU OVERLAY -->
+    <!-- SIDE MENU OVERLAY (3-LINES) -->
     <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()">
         <div class="menu-box" onclick="event.stopPropagation()">
             <div class="menu-header">
                 <h3>Sk CineBuzz</h3>
                 <button class="menu-close-btn" onclick="closeMenu()">✕</button>
             </div>
-            <!-- FIXED TELEGRAM MESSAGE BUTTON -->
+            <a href="https://www.appcreator24.com/app4130809-xb3zpc" target="_blank" class="menu-item app-download-item">📲 Download Android App (APK)</a>
             <div class="menu-item" onclick="closeMenu(); openTelegramLink('skcinebuzz');">💬 Support / Message</div>
             <a href="#" class="menu-item" onclick="closeMenu(); alert('Privacy Policy जल्द ही अपडेट की जाएगी!'); return false;">📜 Privacy Policy</a>
         </div>
     </div>
 
-    <!-- AD OVERLAY WITH TIMER -->
+    <!-- BEAUTIFIED FULLSCREEN AD TIMER OVERLAY -->
     <div class="ad-timer-overlay" id="adTimerOverlay">
         <div class="ad-timer-box">
-            <div class="top-right-timer" id="timerBadge">⏱️ 5s</div>
-            <button class="top-right-close-btn" id="closeTimerBtn" onclick="closeTimerAndPlay()">✕</button>
+            <button class="top-right-close-btn" onclick="cancelTimerOverlay()">✕</button>
+            
+            <div style="font-size: 42px;">🎬</div>
+            <p class="timer-status-text" id="timerBadge">कृपया 5 सेकंड प्रतीक्षा करें...</p>
+            <p style="color: #888; font-size: 12px; margin-top: -5px;">आपका HD वीडियो लिंक प्रोसेस किया जा रहा है</p>
 
-            <!-- 3 LARGE BANNER ADS -->
-            <div class="ad-banner-300x250">
-                <script type="text/javascript">
-                  atOptions = {
-                    'key' : 'ac2306387b7d15e5d75103718aeed39a',
-                    'format' : 'iframe',
-                    'height' : 250,
-                    'width' : 300,
-                    'params' : {}
-                  };
-                </script>
-                <script type="text/javascript" src="https://www.highperformanceformat.com/ac2306387b7d15e5d75103718aeed39a/invoke.js"></script>
-            </div>
-
-            <div class="ad-banner-300x250">
-                <script type="text/javascript">
-                  atOptions = {
-                    'key' : '0f5e50a05f23a0d093267b4fea3c0baf',
-                    'format' : 'iframe',
-                    'height' : 250,
-                    'width' : 300,
-                    'params' : {}
-                  };
-                </script>
-                <script type="text/javascript" src="https://www.highperformanceformat.com/0f5e50a05f23a0d093267b4fea3c0baf/invoke.js"></script>
-            </div>
-
-            <div class="ad-banner-300x250">
-                <script type="text/javascript">
-                  atOptions = {
-                    'key' : '56780a93291989c859f78c5d0c642b91',
-                    'format' : 'iframe',
-                    'height' : 250,
-                    'width' : 300,
-                    'params' : {}
-                  };
-                </script>
-                <script type="text/javascript" src="https://www.highperformanceformat.com/56780a93291989c859f78c5d0c642b91/invoke.js"></script>
-            </div>
+            <!-- CONTINUE BUTTON -->
+            <button class="continue-btn-red" id="continueToVideoBtn" onclick="closeTimerAndPlay()">▶ CONTINUE TO VIDEO</button>
         </div>
     </div>
 
@@ -527,6 +482,9 @@
     <!-- JAVASCRIPT LOGIC -->
     <script>
         const WORKER_URL = "https://cold-resonance-fff9skcinebuzz-like.sunnisk807325.workers.dev"; 
+        const DIRECT_AD_LINK = "https://www.effectivecpmnetwork.com/z7ugfp2gvg?key=51056f24c227b56e23ae1d945bcf496b";
+        
+        const AD_INTERVAL_MS = 10 * 60 * 1000; 
 
         let currentCategory = 'movie'; 
         let movieList = []; 
@@ -535,7 +493,7 @@
         let slideInterval = null;
         let currentSlideIndex = 0;
         let isUserInteracting = false; 
-        
+
         let currentPage = 1;
         const itemsPerPage = 50; 
 
@@ -545,18 +503,32 @@
         const trendingCarouselContainer = document.getElementById('trendingCarouselContainer');
         const paginationContainer = document.getElementById('paginationContainer');
 
-        /* TELEGRAM LINK HANDLER FUNCTION (PREVENTS ERR_UNKNOWN_URL_SCHEME) */
+        function checkAndTriggerAd() {
+            const lastAdTime = localStorage.getItem('last_ad_trigger_time');
+            const currentTime = new Date().getTime();
+
+            if (!lastAdTime || (currentTime - parseInt(lastAdTime)) >= AD_INTERVAL_MS) {
+                localStorage.setItem('last_ad_trigger_time', currentTime.toString());
+                try {
+                    window.open(DIRECT_AD_LINK, "_blank");
+                } catch(e) {
+                    console.log("Ad link blocked or failed to open");
+                }
+                return true; 
+            }
+            return false; 
+        }
+
+        function triggerSearchAd() {
+            checkAndTriggerAd();
+        }
+
         function openTelegramLink(username) {
             const webUrl = `https://t.me/${username}`;
             const appUrl = `tg://resolve?domain=${username}`;
 
-            // 1. Try launching Telegram App using Intent / window.location
             window.location.href = appUrl;
-
-            // 2. Fallback to web link if Telegram App is not installed or fails
-            setTimeout(() => {
-                window.open(webUrl, '_system');
-            }, 1000);
+            setTimeout(() => { window.open(webUrl, '_system'); }, 1000);
         }
 
         function openMenu() { 
@@ -692,9 +664,7 @@
                 const cardWidth = 152; 
                 const maxIndex = totalItems - 2;
 
-                if (currentSlideIndex > maxIndex) {
-                    currentSlideIndex = 0;
-                }
+                if (currentSlideIndex > maxIndex) currentSlideIndex = 0;
 
                 trendingCarouselContainer.scrollTo({
                     left: currentSlideIndex * cardWidth,
@@ -726,7 +696,6 @@
 
                 const yearInfo = movie.year ? `<span>${movie.year}</span>` : '';
                 const isSeriesItem = movie.isSeries || (movie.episodes && movie.episodes.length > 0);
-                
                 const buttonText = isSeriesItem ? "▶ Watch Episodes" : "▶ Watch Now";
 
                 card.innerHTML = `
@@ -841,10 +810,14 @@
                         triggerTimerAdAndPlay(ep.url); 
                     };
                     
+                    const epImage = ep.image || movie.image;
+                    const epDetailText = ep.detail || movie.genre || movie.detail || 'Episode Details';
+                    
                     epCard.innerHTML = `
-                        <img src="${movie.image}" alt="${ep.title}">
+                        <img src="${epImage}" alt="${ep.title}">
                         <div class="movie-info">
                             <h3>${ep.title}</h3>
+                            <div class="card-genre">${epDetailText}</div>
                             <div class="play-btn">▶ Watch Now</div>
                         </div>
                     `;
@@ -871,31 +844,39 @@
             }
             pendingVideoUrl = videoUrl;
 
+            checkAndTriggerAd();
+
             pushModalState();
             const overlay = document.getElementById('adTimerOverlay');
             const timerBadge = document.getElementById('timerBadge');
-            const closeBtn = document.getElementById('closeTimerBtn');
+            const continueBtn = document.getElementById('continueToVideoBtn');
 
             overlay.style.display = 'flex';
             document.getElementById('main-body').classList.add('body-locked');
 
             let timeLeft = 5; 
-            timerBadge.innerText = `⏱️ ${timeLeft}s`;
-            timerBadge.style.display = 'block';
-            closeBtn.style.display = 'none';
+            timerBadge.innerText = `⏱️ कृपया ${timeLeft} सेकंड प्रतीक्षा करें...`;
+            continueBtn.style.display = 'none';
 
             if (timerInterval) clearInterval(timerInterval);
 
             timerInterval = setInterval(() => {
                 timeLeft--;
                 if (timeLeft > 0) {
-                    timerBadge.innerText = `⏱️ ${timeLeft}s`;
+                    timerBadge.innerText = `⏱️ कृपया ${timeLeft} सेकंड प्रतीक्षा करें...`;
                 } else {
                     clearInterval(timerInterval);
-                    timerBadge.style.display = 'none'; 
-                    closeBtn.style.display = 'flex';  
+                    timerBadge.innerText = "🎉 लिंक तैयार है! नीचे क्लिक करें:";
+                    continueBtn.style.display = 'block'; 
                 }
             }, 1000);
+        }
+
+        function cancelTimerOverlay() {
+            document.getElementById('adTimerOverlay').style.display = 'none';
+            document.getElementById('main-body').classList.remove('body-locked');
+            if (timerInterval) clearInterval(timerInterval);
+            pendingVideoUrl = "";
         }
 
         function closeTimerAndPlay() {
@@ -943,8 +924,7 @@
             const menuOverlay = document.getElementById('menuOverlay');
 
             if (timerOverlay && timerOverlay.style.display === 'flex') {
-                timerOverlay.style.display = 'none';
-                if(timerInterval) clearInterval(timerInterval);
+                cancelTimerOverlay();
                 return;
             }
 
