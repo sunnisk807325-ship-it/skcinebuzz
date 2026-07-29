@@ -290,10 +290,9 @@
         .video-close-btn { position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.3); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; z-index: 200005; }
         #appVideoFrame { width: 100%; height: 100%; max-width: 900px; max-height: 80vh; border: none; margin-top: 50px; }
 
-        /* === IMPROVED FULLSCREEN AD TIMER OVERLAY === */
+        /* === FULLSCREEN AD TIMER OVERLAY === */
         .ad-timer-overlay {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-            /* Full screen gradient background to cover sides properly */
             background: radial-gradient(circle at center, #1a080a 0%, #080808 100%);
             z-index: 500000; display: none;
             flex-direction: column; align-items: center; justify-content: center;
@@ -375,7 +374,6 @@
             </div>
             
             <div class="header-right-actions">
-                <!-- HEADER APP DOWNLOAD BUTTON -->
                 <a href="https://www.appcreator24.com/app4130809-xb3zpc" target="_blank" class="header-app-btn">📲 App</a>
                 <button class="icon-btn" onclick="openTelegramLink('skcinebuzz')">🔔</button>
             </div>
@@ -426,7 +424,7 @@
         <div class="pagination-container" id="paginationContainer"></div>
     </div>
 
-    <!-- SIDE MENU OVERLAY (3-LINES) -->
+    <!-- SIDE MENU OVERLAY -->
     <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()">
         <div class="menu-box" onclick="event.stopPropagation()">
             <div class="menu-header">
@@ -439,7 +437,7 @@
         </div>
     </div>
 
-    <!-- BEAUTIFIED FULLSCREEN AD TIMER OVERLAY -->
+    <!-- AD TIMER OVERLAY -->
     <div class="ad-timer-overlay" id="adTimerOverlay">
         <div class="ad-timer-box">
             <button class="top-right-close-btn" onclick="cancelTimerOverlay()">✕</button>
@@ -448,7 +446,6 @@
             <p class="timer-status-text" id="timerBadge">कृपया 5 सेकंड प्रतीक्षा करें...</p>
             <p style="color: #888; font-size: 12px; margin-top: -5px;">आपका HD वीडियो लिंक प्रोसेस किया जा रहा है</p>
 
-            <!-- CONTINUE BUTTON -->
             <button class="continue-btn-red" id="continueToVideoBtn" onclick="closeTimerAndPlay()">▶ CONTINUE TO VIDEO</button>
         </div>
     </div>
@@ -484,7 +481,8 @@
         const WORKER_URL = "https://cold-resonance-fff9skcinebuzz-like.sunnisk807325.workers.dev"; 
         const DIRECT_AD_LINK = "https://www.effectivecpmnetwork.com/z7ugfp2gvg?key=51056f24c227b56e23ae1d945bcf496b";
         
-        const AD_INTERVAL_MS = 10 * 60 * 1000; 
+        // 5 सेकंड का बैकग्राउंड कूलडाउन (5000 ms)
+        const AD_COOL_DOWN_MS = 5 * 1000; 
 
         let currentCategory = 'movie'; 
         let movieList = []; 
@@ -507,12 +505,13 @@
             const lastAdTime = localStorage.getItem('last_ad_trigger_time');
             const currentTime = new Date().getTime();
 
-            if (!lastAdTime || (currentTime - parseInt(lastAdTime)) >= AD_INTERVAL_MS) {
+            // अगर 5 सेकंड बीत चुके हैं तभी नया एड पॉप-अप खोलेगा
+            if (!lastAdTime || (currentTime - parseInt(lastAdTime)) >= AD_COOL_DOWN_MS) {
                 localStorage.setItem('last_ad_trigger_time', currentTime.toString());
                 try {
                     window.open(DIRECT_AD_LINK, "_blank");
                 } catch(e) {
-                    console.log("Ad link blocked or failed to open");
+                    console.log("Ad popup blocked or failed to open");
                 }
                 return true; 
             }
@@ -844,6 +843,7 @@
             }
             pendingVideoUrl = videoUrl;
 
+            // बैकग्राउंड टाइमर चेक - 5 सेकंड कूलडाउन
             checkAndTriggerAd();
 
             pushModalState();
@@ -893,7 +893,7 @@
                 const win = window.open(targetUrl, '_blank');
                 
                 if (!win || win.closed || typeof win.closed == 'undefined') {
-                    playInAppVideo(targetUrl);
+                    window.location.href = targetUrl;
                 }
             }
             pendingVideoUrl = "";
