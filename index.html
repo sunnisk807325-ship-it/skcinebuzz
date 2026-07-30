@@ -1,13 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sk CineBuzz</title>
-
-    <!-- ADSTERRA AD SCRIPTS (Popunder & Social Bar) -->
-    <script src="https://pl30535111.effectivecpmnetwork.com/3a/cc/80/3acc80e735248b17e16fe8fda2aa0597.js"></script>
-    <script src="https://pl30535406.effectivecpmnetwork.com/d6/d3/c9/d6d3c9a7312baafb451101e6db87ff49.js"></script>
 
     <style>
         /* --- GLOBAL & APP DESIGN --- */
@@ -163,7 +160,19 @@
 
         .search-input:focus { border-color: #E50914; }
 
-        /* --- CATEGORIES --- */
+        /* --- BANNER AD CONTAINERS --- */
+        .ad-banner-wrapper {
+            margin: 10px auto;
+            text-align: center;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            min-height: 52px;
+        }
+
+        /* --- CATEGories --- */
         .category-container {
             display: flex; justify-content: center; align-items: center; gap: 8px;
             padding: 0 16px; margin-bottom: 20px; overflow-x: auto; scrollbar-width: none;
@@ -223,15 +232,6 @@
         .meta-info { display: flex; align-items: center; gap: 10px; font-size: 11px; color: #aaa; }
 
         .like-display { color: #ff3366; font-size: 12px; display: inline-flex; align-items: center; gap: 3px; }
-
-        /* --- NATIVE BANNER AD CONTAINER --- */
-        .native-ad-wrapper {
-            padding: 0 16px;
-            margin: 15px 0;
-            text-align: center;
-            width: 100%;
-            overflow: hidden;
-        }
 
         /* --- VERTICAL GRID FOR MOVIES & EPISODES --- */
         .movie-grid {
@@ -295,19 +295,21 @@
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
             background: radial-gradient(circle at center, #1a080a 0%, #080808 100%);
             z-index: 500000; display: none;
-            flex-direction: column; align-items: center; justify-content: center;
+            flex-direction: column; align-items: center; justify-content: flex-start;
+            padding-top: 20px; overflow-y: auto;
         }
 
         .ad-timer-box { 
-            position: relative; width: 90%; max-width: 380px; 
-            background: rgba(22, 22, 22, 0.85); 
+            position: relative; width: 95%; max-width: 420px; 
+            background: rgba(22, 22, 22, 0.95); 
             backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 20px;
-            padding: 40px 20px 30px 20px; 
+            padding: 25px 15px 20px 15px; 
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            text-align: center; gap: 15px;
+            text-align: center; gap: 10px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(229, 9, 20, 0.15);
+            margin-bottom: 30px;
         }
 
         .top-right-close-btn {
@@ -319,7 +321,7 @@
         }
 
         .timer-status-text {
-            color: #ffcc00; font-size: 17px; font-weight: 700;
+            color: #ffcc00; font-size: 16px; font-weight: 700;
         }
 
         .continue-btn-red {
@@ -328,7 +330,7 @@
             font-size: 15px; font-weight: 800; border: none; cursor: pointer;
             box-shadow: 0 4px 15px rgba(229, 9, 20, 0.5);
             display: none; animation: pulse 1.5s infinite;
-            width: 100%;
+            width: 100%; margin: 5px 0 10px 0;
         }
 
         @keyframes pulse {
@@ -383,16 +385,16 @@
         <div class="search-container">
             <div class="search-wrapper">
                 <span>🔍</span>
-                <input type="text" id="searchBox" class="search-input" placeholder="मूवी, वेब सीरीज या एनीमे खोजें..." onfocus="triggerSearchAd()" oninput="filterMovies()">
+                <input type="text" id="searchBox" class="search-input" placeholder="मूवी, वेब सीरीज या एनीमे खोजें..." oninput="filterMovies()">
             </div>
         </div>
 
         <!-- CATEGORY BUTTONS -->
         <div class="category-container">
-            <button class="cat-btn active" id="btn-movie" onclick="changeCategory('movie')">Movie</button>
-            <button class="cat-btn" id="btn-series" onclick="changeCategory('series')">Web Series</button>
-            <button class="cat-btn" id="btn-anime" onclick="changeCategory('anime')">Anime</button>
-            <button class="cat-btn" id="btn-kids" onclick="changeCategory('kids')">Kids</button>
+            <button class="cat-btn active" id="btn-movie" onclick="changeCategory('movie', true)">Movie</button>
+            <button class="cat-btn" id="btn-series" onclick="changeCategory('series', true)">Web Series</button>
+            <button class="cat-btn" id="btn-anime" onclick="changeCategory('anime', true)">Anime</button>
+            <button class="cat-btn" id="btn-kids" onclick="changeCategory('kids', true)">Kids</button>
         </div>
 
         <!-- TRENDING MOVIES SECTION -->
@@ -406,12 +408,6 @@
             </div>
         </div>
 
-        <!-- NATIVE BANNER AD -->
-        <div class="native-ad-wrapper">
-            <script async="async" data-cfasync="false" src="https://pl30535374.effectivecpmnetwork.com/1d2ba142d45711f0a921efe79da70f9d/invoke.js"></script>
-            <div id="container-1d2ba142d45711f0a921efe79da70f9d"></div>
-        </div>
-
         <!-- NEW RELEASES SECTION -->
         <div class="section-header" id="newReleaseHeader">
             <div class="section-title" id="mainSectionTitle">नयी रिलीज़</div>
@@ -422,6 +418,12 @@
 
         <!-- PAGINATION BUTTONS -->
         <div class="pagination-container" id="paginationContainer"></div>
+
+        <!-- 🔴 FIRST BANNER AD CONTAINER (Silent Background Refresh) -->
+        <div class="ad-banner-wrapper" id="bannerAdWrapper1"></div>
+
+        <!-- 🔴 SECOND BANNER AD CONTAINER (Silent Background Refresh) -->
+        <div class="ad-banner-wrapper" id="bannerAdWrapper2"></div>
     </div>
 
     <!-- SIDE MENU OVERLAY -->
@@ -442,11 +444,53 @@
         <div class="ad-timer-box">
             <button class="top-right-close-btn" onclick="cancelTimerOverlay()">✕</button>
             
-            <div style="font-size: 42px;">🎬</div>
+            <div style="font-size: 32px;">🎬</div>
             <p class="timer-status-text" id="timerBadge">कृपया 5 सेकंड प्रतीक्षा करें...</p>
             <p style="color: #888; font-size: 12px; margin-top: -5px;">आपका HD वीडियो लिंक प्रोसेस किया जा रहा है</p>
 
             <button class="continue-btn-red" id="continueToVideoBtn" onclick="closeTimerAndPlay()">▶ CONTINUE TO VIDEO</button>
+
+            <!-- Large Banner Ad 1 -->
+            <div class="ad-banner-wrapper">
+                <script type="text/javascript">
+                  atOptions = {
+                    'key' : 'ac2306387b7d15e5d75103718aeed39a',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                  };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/ac2306387b7d15e5d75103718aeed39a/invoke.js"></script>
+            </div>
+
+            <!-- Large Banner Ad 2 -->
+            <div class="ad-banner-wrapper">
+                <script type="text/javascript">
+                  atOptions = {
+                    'key' : '0f5e50a05f23a0d093267b4fea3c0baf',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                  };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/0f5e50a05f23a0d093267b4fea3c0baf/invoke.js"></script>
+            </div>
+
+            <!-- Large Banner Ad 3 -->
+            <div class="ad-banner-wrapper">
+                <script type="text/javascript">
+                  atOptions = {
+                    'key' : '56780a93291989c859f78c5d0c642b91',
+                    'format' : 'iframe',
+                    'height' : 250,
+                    'width' : 300,
+                    'params' : {}
+                  };
+                </script>
+                <script type="text/javascript" src="https://www.highperformanceformat.com/56780a93291989c859f78c5d0c642b91/invoke.js"></script>
+            </div>
         </div>
     </div>
 
@@ -479,10 +523,6 @@
     <!-- JAVASCRIPT LOGIC -->
     <script>
         const WORKER_URL = "https://cold-resonance-fff9skcinebuzz-like.sunnisk807325.workers.dev"; 
-        const DIRECT_AD_LINK = "https://www.effectivecpmnetwork.com/z7ugfp2gvg?key=51056f24c227b56e23ae1d945bcf496b";
-        
-        // 5 सेकंड का बैकग्राउंड कूलडाउन (5000 ms)
-        const AD_COOL_DOWN_MS = 60 * 1000; 
 
         let currentCategory = 'movie'; 
         let movieList = []; 
@@ -501,37 +541,71 @@
         const trendingCarouselContainer = document.getElementById('trendingCarouselContainer');
         const paginationContainer = document.getElementById('paginationContainer');
 
-        function checkAndTriggerAd() {
-            const lastAdTime = localStorage.getItem('last_ad_trigger_time');
-            const currentTime = new Date().getTime();
-
-            // अगर 5 सेकंड बीत चुके हैं तभी नया एड पॉप-अप खोलेगा
-            if (!lastAdTime || (currentTime - parseInt(lastAdTime)) >= AD_COOL_DOWN_MS) {
-                localStorage.setItem('last_ad_trigger_time', currentTime.toString());
-                try {
-                    window.open(DIRECT_AD_LINK, "_blank");
-                } catch(e) {
-                    console.log("Ad popup blocked or failed to open");
-                }
-                return true; 
+        /* --- 🔄 SILENT BACKGROUND BANNER AD REFRESH --- */
+        function loadBannerAds() {
+            // Banner 1 Key: 52325b40c9032b9871a6fa304d438d23
+            const wrapper1 = document.getElementById('bannerAdWrapper1');
+            if (wrapper1) {
+                wrapper1.innerHTML = '';
+                const iframe1 = document.createElement('iframe');
+                iframe1.style.width = '320px';
+                iframe1.style.height = '50px';
+                iframe1.style.border = 'none';
+                iframe1.style.overflow = 'hidden';
+                iframe1.srcdoc = `
+                    <body style="margin:0;padding:0;">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key' : '52325b40c9032b9871a6fa304d438d23',
+                                'format' : 'iframe',
+                                'height' : 50,
+                                'width' : 320,
+                                'params' : {}
+                            };
+                        <\/script>
+                        <script type="text/javascript" src="https://www.highperformanceformat.com/52325b40c9032b9871a6fa304d438d23/invoke.js"><\/script>
+                    </body>`;
+                wrapper1.appendChild(iframe1);
             }
-            return false; 
+
+            // Banner 2 Key: b41da5190ad5d7ef489c5c08fecddb13
+            const wrapper2 = document.getElementById('bannerAdWrapper2');
+            if (wrapper2) {
+                wrapper2.innerHTML = '';
+                const iframe2 = document.createElement('iframe');
+                iframe2.style.width = '320px';
+                iframe2.style.height = '50px';
+                iframe2.style.border = 'none';
+                iframe2.style.overflow = 'hidden';
+                iframe2.srcdoc = `
+                    <body style="margin:0;padding:0;">
+                        <script type="text/javascript">
+                            atOptions = {
+                                'key' : 'b41da5190ad5d7ef489c5c08fecddb13',
+                                'format' : 'iframe',
+                                'height' : 50,
+                                'width' : 320,
+                                'params' : {}
+                            };
+                        <\/script>
+                        <script type="text/javascript" src="https://www.highperformanceformat.com/b41da5190ad5d7ef489c5c08fecddb13/invoke.js"><\/script>
+                    </body>`;
+                wrapper2.appendChild(iframe2);
+            }
         }
 
-        function triggerSearchAd() {
-            checkAndTriggerAd();
-        }
+        // बिना किसी पॉपअप या रुकावट के हर 2 मिनट (120,000 मिसी) में चुपचाप बैकग्राउंड में रिफ्रेश होगा
+        setInterval(loadBannerAds, 120000);
 
         function openTelegramLink(username) {
             const webUrl = `https://t.me/${username}`;
             const appUrl = `tg://resolve?domain=${username}`;
-
             window.location.href = appUrl;
             setTimeout(() => { window.open(webUrl, '_system'); }, 1000);
         }
 
         function openMenu() { 
-            pushModalState();
+            pushModalState('menu');
             document.getElementById('menuOverlay').style.display = 'flex'; 
         }
         function closeMenu() { document.getElementById('menuOverlay').style.display = 'none'; }
@@ -571,15 +645,18 @@
                 container.innerHTML = "<p style='grid-column: span 2; text-align:center; color:#fff; margin-top:20px;'>डेटा लोड हो रहा है...</p>";
                 const response = await fetch(githubJsonUrl);
                 if (!response.ok) throw new Error("Error loading data");
-                movieList = await response.json();
+                let fetchedData = await response.json();
 
-                const updateItem = movieList.find(item => item.category === "update");
+                const updateItem = fetchedData.find(item => item.category === "update");
                 if (updateItem) {
                     openUpdateBlurModal(updateItem);
                     container.innerHTML = ""; 
                     paginationContainer.innerHTML = "";
                     return; 
                 }
+
+                // ⚡⚡ REVERSE ARRAY: नई मूवी सबसे पहले दिखेगी ⚡⚡
+                movieList = fetchedData.reverse();
 
                 movieList.forEach(m => m.likes = m.likes || 0);
                 filterMovies(); 
@@ -779,7 +856,10 @@
             }
         }
 
-        function changeCategory(category) {
+        function changeCategory(category, isUserAction = false) {
+            if (isUserAction && category !== 'movie' && currentCategory === 'movie') {
+                pushModalState('category');
+            }
             currentCategory = category;
             currentPage = 1; 
             document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
@@ -788,12 +868,13 @@
             filterMovies();
         }
 
-        function pushModalState() {
-            window.history.pushState({ modalOpen: true }, "");
+        /* --- ADVANCED HISTORY MANAGEMENT FOR BACK BUTTON --- */
+        function pushModalState(type) {
+            window.history.pushState({ modalType: type }, "");
         }
 
         function openEpisodeSelector(movie) {
-            pushModalState();
+            pushModalState('episode');
             const overlay = document.getElementById('episodeOverlay');
             document.getElementById('seriesPopupName').innerText = movie.name;
             document.getElementById('seriesPopupDetail').innerText = movie.detail || "";
@@ -833,7 +914,10 @@
 
         function closeEpisodeSelector() {
             document.getElementById('episodeOverlay').style.display = 'none';
-            document.getElementById('main-body').classList.remove('body-locked');
+            if (document.getElementById('adTimerOverlay').style.display !== 'flex' && 
+                document.getElementById('videoPlayerOverlay').classList.contains('active') === false) {
+                document.getElementById('main-body').classList.remove('body-locked');
+            }
         }
 
         function triggerTimerAdAndPlay(videoUrl) {
@@ -843,15 +927,13 @@
             }
             pendingVideoUrl = videoUrl;
 
-            // बैकग्राउंड टाइमर चेक - 5 सेकंड कूलडाउन
-            checkAndTriggerAd();
-
-            pushModalState();
+            pushModalState('adTimer');
             const overlay = document.getElementById('adTimerOverlay');
             const timerBadge = document.getElementById('timerBadge');
             const continueBtn = document.getElementById('continueToVideoBtn');
 
             overlay.style.display = 'flex';
+            overlay.scrollTop = 0; 
             document.getElementById('main-body').classList.add('body-locked');
 
             let timeLeft = 5; 
@@ -874,14 +956,18 @@
 
         function cancelTimerOverlay() {
             document.getElementById('adTimerOverlay').style.display = 'none';
-            document.getElementById('main-body').classList.remove('body-locked');
+            if (document.getElementById('episodeOverlay').style.display !== 'flex') {
+                document.getElementById('main-body').classList.remove('body-locked');
+            }
             if (timerInterval) clearInterval(timerInterval);
             pendingVideoUrl = "";
         }
 
         function closeTimerAndPlay() {
             document.getElementById('adTimerOverlay').style.display = 'none';
-            document.getElementById('main-body').classList.remove('body-locked');
+            if (document.getElementById('episodeOverlay').style.display !== 'flex') {
+                document.getElementById('main-body').classList.remove('body-locked');
+            }
             
             if(pendingVideoUrl) {
                 let targetUrl = pendingVideoUrl;
@@ -900,7 +986,7 @@
         }
 
         function playInAppVideo(embedUrl) {
-            pushModalState();
+            pushModalState('player');
             const overlay = document.getElementById('videoPlayerOverlay');
             document.getElementById('appVideoFrame').src = embedUrl;
             overlay.classList.add('active');
@@ -917,6 +1003,7 @@
             }
         }
 
+        /* --- SMART BACK BUTTON CONTROLLER --- */
         window.addEventListener('popstate', function (e) {
             const timerOverlay = document.getElementById('adTimerOverlay');
             const playerOverlay = document.getElementById('videoPlayerOverlay');
@@ -942,9 +1029,17 @@
                 closeMenu();
                 return;
             }
+
+            if (currentCategory !== 'movie') {
+                changeCategory('movie', false);
+                return;
+            }
         });
 
-        document.addEventListener("DOMContentLoaded", loadMoviesFromGitHub);
+        document.addEventListener("DOMContentLoaded", () => {
+            loadMoviesFromGitHub();
+            loadBannerAds(); // पहली बार ऐड्स लोड करें
+        });
     </script>
 </body>
 </html>
