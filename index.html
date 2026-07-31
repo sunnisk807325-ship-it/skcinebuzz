@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -145,7 +144,7 @@
             color: #ffffff;
         }
 
-        /* --- SEARCH BAR --- */
+        /* --- SEARCH BAR WITH MIC & CLEAR BUTTON --- */
         .search-container { padding: 12px 16px 0 16px; margin-bottom: 15px; }
 
         .search-wrapper { position: relative; display: flex; align-items: center; }
@@ -153,12 +152,99 @@
         .search-wrapper span { position: absolute; left: 15px; color: #888; font-size: 16px; }
 
         .search-input {
-            width: 100%; padding: 12px 15px 12px 42px; font-size: 14px;
+            width: 100%; padding: 12px 85px 12px 42px !important; font-size: 14px;
             border: 1px solid #1f1f1f; border-radius: 25px;
             background-color: #161616; color: white; outline: none; transition: border-color 0.3s;
         }
 
         .search-input:focus { border-color: #E50914; }
+
+        .search-action-btn {
+            position: absolute;
+            right: 10px;
+            background: #222;
+            border: none;
+            color: #aaa;
+            font-size: 15px;
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+        }
+
+        .search-action-btn:active { background: #333; transform: scale(0.9); }
+
+        #clearSearchBtn {
+            right: 48px;
+            color: #E50914;
+            font-weight: bold;
+            background: transparent;
+        }
+
+        /* --- YOUTUBE STYLE VOICE OVERLAY --- */
+        .yt-voice-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(8px);
+            z-index: 999999;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px 20px 80px 20px;
+        }
+
+        .yt-voice-title {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .yt-voice-mic-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .yt-mic-circle {
+            width: 90px;
+            height: 90px;
+            background: #E50914;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7);
+            animation: ytPulse 1.5s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes ytPulse {
+            0% { box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.7); }
+            70% { box-shadow: 0 0 0 35px rgba(229, 9, 20, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(229, 9, 20, 0); }
+        }
+
+        .yt-voice-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+        }
 
         /* --- BANNER AD CONTAINERS --- */
         .ad-banner-wrapper {
@@ -172,7 +258,7 @@
             min-height: 52px;
         }
 
-        /* --- CATEGories --- */
+        /* --- CATEGORIES --- */
         .category-container {
             display: flex; justify-content: center; align-items: center; gap: 8px;
             padding: 0 16px; margin-bottom: 20px; overflow-x: auto; scrollbar-width: none;
@@ -307,7 +393,7 @@
             border-radius: 20px;
             padding: 25px 15px 20px 15px; 
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            text-align: center; gap: 10px;
+            text-align: center; gap: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(229, 9, 20, 0.15);
             margin-bottom: 30px;
         }
@@ -318,10 +404,32 @@
             width: 32px; height: 32px; border-radius: 50%;
             font-size: 14px; font-weight: bold; cursor: pointer;
             display: flex; align-items: center; justify-content: center;
+            z-index: 5;
         }
 
         .timer-status-text {
             color: #ffcc00; font-size: 16px; font-weight: 700;
+        }
+
+        /* --- 🖼️ MOVIE BANNER POSTER IN TIMER --- */
+        .ad-poster-wrapper {
+            width: 100%;
+            max-height: 180px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        }
+
+        .ad-poster-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .continue-btn-red {
@@ -377,15 +485,24 @@
             
             <div class="header-right-actions">
                 <a href="https://www.appcreator24.com/app4130809-xb3zpc" target="_blank" class="header-app-btn">📲 App</a>
-                <button class="icon-btn" onclick="openTelegramLink('skcinebuzz')">🔔</button>
+                <button class="icon-btn" onclick="openTelegramLink('allchannel97')" title="Join Telegram Channel">🔔</button>
             </div>
         </div>
 
-        <!-- SEARCH BAR -->
+        <!-- SEARCH BAR WITH MIC & CLEAR BUTTON -->
         <div class="search-container">
             <div class="search-wrapper">
                 <span>🔍</span>
-                <input type="text" id="searchBox" class="search-input" placeholder="मूवी, वेब सीरीज या एनीमे खोजें..." oninput="filterMovies()">
+                <input type="text" id="searchBox" class="search-input" placeholder="मूवी, एक्टर, इयर या वेब सीरीज खोजें..." oninput="filterMovies()">
+                <button id="clearSearchBtn" class="search-action-btn" onclick="clearSearch()" style="display:none;">✖</button>
+                
+                <button id="micBtn" class="search-action-btn" onclick="startVoiceSearch()" title="बोलकर खोजें">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e0e0e0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="22"></line>
+                    </svg>
+                </button>
             </div>
         </div>
 
@@ -419,11 +536,27 @@
         <!-- PAGINATION BUTTONS -->
         <div class="pagination-container" id="paginationContainer"></div>
 
-        <!-- 🔴 FIRST BANNER AD CONTAINER (Silent Background Refresh) -->
+        <!-- FIRST BANNER AD CONTAINER -->
         <div class="ad-banner-wrapper" id="bannerAdWrapper1"></div>
 
-        <!-- 🔴 SECOND BANNER AD CONTAINER (Silent Background Refresh) -->
+        <!-- SECOND BANNER AD CONTAINER -->
         <div class="ad-banner-wrapper" id="bannerAdWrapper2"></div>
+    </div>
+
+    <!-- YOUTUBE VOICE SEARCH OVERLAY -->
+    <div class="yt-voice-overlay" id="ytVoiceOverlay">
+        <button class="yt-voice-close" onclick="closeVoiceSearch()">✕</button>
+        <div class="yt-voice-title" id="ytVoiceStatus">बोलिए, मैं सुन रहा हूँ...</div>
+        <div class="yt-voice-mic-container">
+            <div class="yt-mic-circle" onclick="restartVoiceSearch()">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="22"></line>
+                </svg>
+            </div>
+        </div>
+        <p style="color:#aaa; font-size:13px;">स्पष्ट और धीरे बोलें</p>
     </div>
 
     <!-- SIDE MENU OVERLAY -->
@@ -434,23 +567,28 @@
                 <button class="menu-close-btn" onclick="closeMenu()">✕</button>
             </div>
             <a href="https://www.appcreator24.com/app4130809-xb3zpc" target="_blank" class="menu-item app-download-item">📲 Download Android App (APK)</a>
-            <div class="menu-item" onclick="closeMenu(); openTelegramLink('skcinebuzz');">💬 Support / Message</div>
+            <div class="menu-item" onclick="closeMenu(); openTelegramLink('allchannel97');">💬 Support / Message</div>
             <a href="#" class="menu-item" onclick="closeMenu(); alert('Privacy Policy जल्द ही अपडेट की जाएगी!'); return false;">📜 Privacy Policy</a>
         </div>
     </div>
 
-    <!-- AD TIMER OVERLAY -->
+    <!-- AD TIMER OVERLAY (UPDATED ORDER: TIMER -> MOVIE POSTER -> CONTINUE -> 3 AD BANNERS) -->
     <div class="ad-timer-overlay" id="adTimerOverlay">
         <div class="ad-timer-box">
             <button class="top-right-close-btn" onclick="cancelTimerOverlay()">✕</button>
             
-            <div style="font-size: 32px;">🎬</div>
-            <p class="timer-status-text" id="timerBadge">कृपया 5 सेकंड प्रतीक्षा करें...</p>
-            <p style="color: #888; font-size: 12px; margin-top: -5px;">आपका HD वीडियो लिंक प्रोसेस किया जा रहा है</p>
+            <!-- 1. TIMER TEXT -->
+            <p class="timer-status-text" id="timerBadge">⏱️ कृपया 5 सेकंड प्रतीक्षा करें...</p>
 
+            <!-- 2. CUSTOM MOVIE BANNER POSTER FROM JSON -->
+            <div class="ad-poster-wrapper">
+                <img id="adMoviePosterImg" src="" alt="Movie Poster">
+            </div>
+
+            <!-- 3. CONTINUE BUTTON -->
             <button class="continue-btn-red" id="continueToVideoBtn" onclick="closeTimerAndPlay()">▶ CONTINUE TO VIDEO</button>
 
-            <!-- Large Banner Ad 1 -->
+            <!-- 4. BANNER ADS SECTION BELOW CONTINUE BUTTON (3 Banner Ads for Income) -->
             <div class="ad-banner-wrapper">
                 <script type="text/javascript">
                   atOptions = {
@@ -464,7 +602,6 @@
                 <script type="text/javascript" src="https://www.highperformanceformat.com/ac2306387b7d15e5d75103718aeed39a/invoke.js"></script>
             </div>
 
-            <!-- Large Banner Ad 2 -->
             <div class="ad-banner-wrapper">
                 <script type="text/javascript">
                   atOptions = {
@@ -478,7 +615,6 @@
                 <script type="text/javascript" src="https://www.highperformanceformat.com/0f5e50a05f23a0d093267b4fea3c0baf/invoke.js"></script>
             </div>
 
-            <!-- Large Banner Ad 3 -->
             <div class="ad-banner-wrapper">
                 <script type="text/javascript">
                   atOptions = {
@@ -541,67 +677,68 @@
         const trendingCarouselContainer = document.getElementById('trendingCarouselContainer');
         const paginationContainer = document.getElementById('paginationContainer');
 
-        /* --- 🔄 SILENT BACKGROUND BANNER AD REFRESH --- */
-        function loadBannerAds() {
-            // Banner 1 Key: 52325b40c9032b9871a6fa304d438d23
-            const wrapper1 = document.getElementById('bannerAdWrapper1');
-            if (wrapper1) {
-                wrapper1.innerHTML = '';
-                const iframe1 = document.createElement('iframe');
-                iframe1.style.width = '320px';
-                iframe1.style.height = '50px';
-                iframe1.style.border = 'none';
-                iframe1.style.overflow = 'hidden';
-                iframe1.srcdoc = `
-                    <body style="margin:0;padding:0;">
-                        <script type="text/javascript">
-                            atOptions = {
-                                'key' : '52325b40c9032b9871a6fa304d438d23',
-                                'format' : 'iframe',
-                                'height' : 50,
-                                'width' : 320,
-                                'params' : {}
-                            };
-                        <\/script>
-                        <script type="text/javascript" src="https://www.highperformanceformat.com/52325b40c9032b9871a6fa304d438d23/invoke.js"><\/script>
-                    </body>`;
-                wrapper1.appendChild(iframe1);
-            }
+        let recognitionInstance = null;
 
-            // Banner 2 Key: b41da5190ad5d7ef489c5c08fecddb13
-            const wrapper2 = document.getElementById('bannerAdWrapper2');
-            if (wrapper2) {
-                wrapper2.innerHTML = '';
-                const iframe2 = document.createElement('iframe');
-                iframe2.style.width = '320px';
-                iframe2.style.height = '50px';
-                iframe2.style.border = 'none';
-                iframe2.style.overflow = 'hidden';
-                iframe2.srcdoc = `
-                    <body style="margin:0;padding:0;">
-                        <script type="text/javascript">
-                            atOptions = {
-                                'key' : 'b41da5190ad5d7ef489c5c08fecddb13',
-                                'format' : 'iframe',
-                                'height' : 50,
-                                'width' : 320,
-                                'params' : {}
-                            };
-                        <\/script>
-                        <script type="text/javascript" src="https://www.highperformanceformat.com/b41da5190ad5d7ef489c5c08fecddb13/invoke.js"><\/script>
-                    </body>`;
-                wrapper2.appendChild(iframe2);
-            }
+        /* --- BACKGROUND BANNER AD REFRESH --- */
+        function loadBannerAds() {
+            setTimeout(() => {
+                const wrapper1 = document.getElementById('bannerAdWrapper1');
+                if (wrapper1) {
+                    wrapper1.innerHTML = '';
+                    const iframe1 = document.createElement('iframe');
+                    iframe1.style.width = '320px';
+                    iframe1.style.height = '50px';
+                    iframe1.style.border = 'none';
+                    iframe1.style.overflow = 'hidden';
+                    iframe1.srcdoc = `
+                        <body style="margin:0;padding:0;">
+                            <script type="text/javascript">
+                                atOptions = {
+                                    'key' : '52325b40c9032b9871a6fa304d438d23',
+                                    'format' : 'iframe',
+                                    'height' : 50,
+                                    'width' : 320,
+                                    'params' : {}
+                                };
+                            <\/script>
+                            <script type="text/javascript" src="https://www.highperformanceformat.com/52325b40c9032b9871a6fa304d438d23/invoke.js"><\/script>
+                        </body>`;
+                    wrapper1.appendChild(iframe1);
+                }
+
+                const wrapper2 = document.getElementById('bannerAdWrapper2');
+                if (wrapper2) {
+                    wrapper2.innerHTML = '';
+                    const iframe2 = document.createElement('iframe');
+                    iframe2.style.width = '320px';
+                    iframe2.style.height = '50px';
+                    iframe2.style.border = 'none';
+                    iframe2.style.overflow = 'hidden';
+                    iframe2.srcdoc = `
+                        <body style="margin:0;padding:0;">
+                            <script type="text/javascript">
+                                atOptions = {
+                                    'key' : 'b41da5190ad5d7ef489c5c08fecddb13',
+                                    'format' : 'iframe',
+                                    'height' : 50,
+                                    'width' : 320,
+                                    'params' : {}
+                                };
+                            <\/script>
+                            <script type="text/javascript" src="https://www.highperformanceformat.com/b41da5190ad5d7ef489c5c08fecddb13/invoke.js"><\/script>
+                        </body>`;
+                    wrapper2.appendChild(iframe2);
+                }
+            }, 2500);
         }
 
-        // बिना किसी पॉपअप या रुकावट के हर 2 मिनट (120,000 मिसी) में चुपचाप बैकग्राउंड में रिफ्रेश होगा
         setInterval(loadBannerAds, 120000);
 
         function openTelegramLink(username) {
             const webUrl = `https://t.me/${username}`;
             const appUrl = `tg://resolve?domain=${username}`;
             window.location.href = appUrl;
-            setTimeout(() => { window.open(webUrl, '_system'); }, 1000);
+            setTimeout(() => { window.open(webUrl, '_blank'); }, 1000);
         }
 
         function openMenu() { 
@@ -609,6 +746,147 @@
             document.getElementById('menuOverlay').style.display = 'flex'; 
         }
         function closeMenu() { document.getElementById('menuOverlay').style.display = 'none'; }
+
+        /* --- 🎙️ SMOOTH VOICE SEARCH --- */
+        function startVoiceSearch() {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+            if (!SpeechRecognition) {
+                alert("आपके डिवाइस में वॉइस सर्च सपोर्टेड नहीं है।");
+                return;
+            }
+
+            const overlay = document.getElementById('ytVoiceOverlay');
+            const statusText = document.getElementById('ytVoiceStatus');
+            overlay.style.display = 'flex';
+            statusText.innerText = 'बोलिए, मैं सुन रहा हूँ...';
+
+            recognitionInstance = new SpeechRecognition();
+            recognitionInstance.lang = 'hi-IN';
+            recognitionInstance.interimResults = false;
+
+            try {
+                recognitionInstance.start();
+            } catch(e) {
+                console.log("Voice start error", e);
+            }
+
+            recognitionInstance.onresult = function(event) {
+                const transcript = event.results[0][0].transcript;
+                document.getElementById('searchBox').value = transcript;
+                statusText.innerText = `"${transcript}"`;
+                setTimeout(() => {
+                    closeVoiceSearch();
+                    filterMovies();
+                }, 600);
+            };
+
+            recognitionInstance.onerror = function() {
+                statusText.innerText = "माफ़ करें, आपकी आवाज़ समझ नहीं आई।";
+            };
+
+            recognitionInstance.onend = function() {
+                if (statusText.innerText === 'बोलिए, मैं सुन रहा हूँ...') {
+                    statusText.innerText = "माईक बंद हो गया। फिर से टच करें।";
+                }
+            };
+        }
+
+        function restartVoiceSearch() {
+            startVoiceSearch();
+        }
+
+        function closeVoiceSearch() {
+            if (recognitionInstance) {
+                try { recognitionInstance.stop(); } catch(e){}
+            }
+            document.getElementById('ytVoiceOverlay').style.display = 'none';
+        }
+
+        /* --- CLEAR SEARCH FUNCTION --- */
+        function clearSearch() {
+            const searchBox = document.getElementById('searchBox');
+            searchBox.value = '';
+            filterMovies();
+        }
+
+        /* --- SEARCH HELPER & LOGIC --- */
+        function normalizeText(str) {
+            if (!str) return '';
+            return str.toLowerCase().replace(/[^a-z0-9]/gi, '');
+        }
+
+        function filterMovies() {
+            const searchInput = document.getElementById('searchBox');
+            const rawSearchText = searchInput.value.trim();
+            const clearBtn = document.getElementById('clearSearchBtn');
+            
+            const trendingSection = document.getElementById('trendingSection');
+            const mainSectionTitle = document.getElementById('mainSectionTitle');
+            const seeAllBtn = document.getElementById('seeAllBtn');
+
+            if (clearBtn) clearBtn.style.display = rawSearchText !== "" ? "block" : "none";
+
+            if (rawSearchText !== "") {
+                if (trendingSection) trendingSection.style.display = 'none';
+                if (seeAllBtn) seeAllBtn.style.display = 'none';
+                if (mainSectionTitle) mainSectionTitle.innerText = `🔍 खोज के परिणाम: "${rawSearchText}"`;
+
+                let query = rawSearchText.toLowerCase();
+
+                const stopWords = ["movie", "movies", "film", "films", "series", "show", "shows", "मूवी", "फिल्म", "सीरीज"];
+                let cleanedQueryWords = query.split(/\s+/).filter(word => !stopWords.includes(word));
+                let cleanedQuery = cleanedQueryWords.join(' ').trim();
+
+                if (cleanedQuery === "") cleanedQuery = query;
+
+                const normalizedQuery = normalizeText(cleanedQuery);
+                const isNewQuery = query.includes("new") || query.includes("latest") || query.includes("नया") || query.includes("नयी");
+
+                let filteredList = movieList.filter(movie => {
+                    const name = (movie.name || '').toLowerCase();
+                    const detail = (movie.detail || movie.genre || '').toLowerCase();
+                    const year = (movie.year || '').toString();
+                    const category = (movie.category || '').toLowerCase();
+
+                    const normName = normalizeText(name);
+                    const normDetail = normalizeText(detail);
+
+                    const yearMatch = year.includes(cleanedQuery) || query.includes(year);
+                    const nameMatch = name.includes(cleanedQuery) || normName.includes(normalizedQuery);
+                    const detailMatch = detail.includes(cleanedQuery) || normDetail.includes(normalizedQuery);
+                    const categoryMatch = category.includes(cleanedQuery);
+
+                    return nameMatch || detailMatch || yearMatch || categoryMatch;
+                });
+
+                if (isNewQuery) {
+                    filteredList.sort((a, b) => (b.year || 0) - (a.year || 0));
+                } else {
+                    filteredList.sort((a, b) => {
+                        if ((b.year || 0) !== (a.year || 0)) {
+                            return (b.year || 0) - (a.year || 0);
+                        }
+                        return (b.likes || 0) - (a.likes || 0);
+                    });
+                }
+
+                currentPage = 1;
+                displayMovies(filteredList);
+
+            } else {
+                if (trendingSection) trendingSection.style.display = 'block';
+                if (seeAllBtn) seeAllBtn.style.display = 'inline-block';
+                if (mainSectionTitle) mainSectionTitle.innerText = 'नयी रिलीज़';
+
+                let categoryFiltered = movieList.filter(movie => 
+                    (movie.category || '').toLowerCase() === currentCategory.toLowerCase()
+                );
+
+                renderTrendingSection(categoryFiltered.length > 0 ? categoryFiltered : movieList);
+                displayMovies(categoryFiltered);
+            }
+        }
 
         async function fetchLikes(movieId) {
             if(!WORKER_URL) return 0;
@@ -642,35 +920,38 @@
 
         async function loadMoviesFromGitHub() {
             try {
-                container.innerHTML = "<p style='grid-column: span 2; text-align:center; color:#fff; margin-top:20px;'>डेटा लोड हो रहा है...</p>";
-                const response = await fetch(githubJsonUrl);
-                if (!response.ok) throw new Error("Error loading data");
-                let fetchedData = await response.json();
+                fetch(githubJsonUrl)
+                    .then(res => res.json())
+                    .then(async fetchedData => {
+                        const updateItem = fetchedData.find(item => item.category === "update");
+                        if (updateItem) {
+                            openUpdateBlurModal(updateItem);
+                            container.innerHTML = ""; 
+                            paginationContainer.innerHTML = "";
+                            return; 
+                        }
 
-                const updateItem = fetchedData.find(item => item.category === "update");
-                if (updateItem) {
-                    openUpdateBlurModal(updateItem);
-                    container.innerHTML = ""; 
-                    paginationContainer.innerHTML = "";
-                    return; 
-                }
+                        movieList = fetchedData.reverse();
+                        movieList.forEach(m => m.likes = m.likes || 0);
+                        
+                        filterMovies(); 
 
-                // ⚡⚡ REVERSE ARRAY: नई मूवी सबसे पहले दिखेगी ⚡⚡
-                movieList = fetchedData.reverse();
-
-                movieList.forEach(m => m.likes = m.likes || 0);
-                filterMovies(); 
-
-                await Promise.all(movieList.map(async (movie) => {
-                    const movieId = movie.id || movie.name;
-                    const likes = await fetchLikes(movieId);
-                    movie.likes = likes;
-                }));
-
-                filterMovies();
+                        movieList.forEach(async (movie) => {
+                            const movieId = movie.id || movie.name;
+                            const likes = await fetchLikes(movieId);
+                            movie.likes = likes;
+                            
+                            document.querySelectorAll(`[data-id="${movieId}"]`).forEach(el => {
+                                el.innerText = likes;
+                            });
+                        });
+                    })
+                    .catch(err => {
+                        console.error("Data load failed", err);
+                    });
 
             } catch (error) {
-                container.innerHTML = "<p style='grid-column: span 2; text-align:center; color:#E50914; margin-top:20px;'>डेटा लोड करने में विफल!</p>";
+                console.error("General Error", error);
             }
         }
 
@@ -690,7 +971,7 @@
             if (movie.isSeries || (movie.episodes && movie.episodes.length > 0)) {
                 openEpisodeSelector(movie);
             } else {
-                triggerTimerAdAndPlay(movie.url);
+                triggerTimerAdAndPlay(movie.url, movie.poster || movie.image);
             }
         }
 
@@ -709,7 +990,7 @@
 
                 trendCard.innerHTML = `
                     <div class="trend-badge">#${index + 1}</div>
-                    <img src="${movie.image}" alt="${movie.name}">
+                    <img src="${movie.image}" alt="${movie.name}" loading="lazy">
                     <h4>${movie.name}</h4>
                     <div class="meta-info">
                         <span class="like-display">👍 <span data-id="${movieId}">${movie.likes || 0}</span></span>
@@ -775,7 +1056,7 @@
                 const buttonText = isSeriesItem ? "▶ Watch Episodes" : "▶ Watch Now";
 
                 card.innerHTML = `
-                    <img src="${movie.image}" alt="${movie.name}">
+                    <img src="${movie.image}" alt="${movie.name}" loading="lazy">
                     <div class="movie-info">
                         <h3>${movie.name}</h3>
                         <div class="card-meta">
@@ -828,34 +1109,6 @@
             }
         }
 
-        function filterMovies() {
-            const searchText = document.getElementById('searchBox').value.toLowerCase().trim();
-            const trendingSection = document.getElementById('trendingSection');
-            const mainSectionTitle = document.getElementById('mainSectionTitle');
-            const seeAllBtn = document.getElementById('seeAllBtn');
-
-            if (searchText !== "") {
-                trendingSection.style.display = 'none';
-                seeAllBtn.style.display = 'none';
-                mainSectionTitle.innerText = `खोज के परिणाम: "${searchText}"`;
-
-                let filteredList = movieList.filter(movie => movie.name.toLowerCase().includes(searchText));
-                currentPage = 1;
-                displayMovies(filteredList);
-            } else {
-                trendingSection.style.display = 'block';
-                seeAllBtn.style.display = 'inline-block';
-                mainSectionTitle.innerText = 'नयी रिलीज़';
-
-                let categoryFiltered = movieList.filter(movie => 
-                    movie.category.toLowerCase() === currentCategory.toLowerCase()
-                );
-
-                renderTrendingSection(categoryFiltered.length > 0 ? categoryFiltered : movieList);
-                displayMovies(categoryFiltered);
-            }
-        }
-
         function changeCategory(category, isUserAction = false) {
             if (isUserAction && category !== 'movie' && currentCategory === 'movie') {
                 pushModalState('category');
@@ -868,7 +1121,7 @@
             filterMovies();
         }
 
-        /* --- ADVANCED HISTORY MANAGEMENT FOR BACK BUTTON --- */
+        /* --- HISTORY MANAGEMENT FOR BACK BUTTON --- */
         function pushModalState(type) {
             window.history.pushState({ modalType: type }, "");
         }
@@ -887,14 +1140,14 @@
                     epCard.className = 'movie-card';
                     epCard.onclick = (e) => { 
                         e.stopPropagation(); 
-                        triggerTimerAdAndPlay(ep.url); 
+                        triggerTimerAdAndPlay(ep.url, ep.poster || ep.image || movie.poster || movie.image); 
                     };
                     
                     const epImage = ep.image || movie.image;
                     const epDetailText = ep.detail || movie.genre || movie.detail || 'Episode Details';
                     
                     epCard.innerHTML = `
-                        <img src="${epImage}" alt="${ep.title}">
+                        <img src="${epImage}" alt="${ep.title}" loading="lazy">
                         <div class="movie-info">
                             <h3>${ep.title}</h3>
                             <div class="card-genre">${epDetailText}</div>
@@ -920,7 +1173,8 @@
             }
         }
 
-        function triggerTimerAdAndPlay(videoUrl) {
+        /* --- TIMER OVERLAY WITH POSTER AND ADS --- */
+        function triggerTimerAdAndPlay(videoUrl, posterUrl) {
             if(!videoUrl) {
                 alert("वीडियो लिंक उपलब्ध नहीं है!");
                 return;
@@ -931,6 +1185,10 @@
             const overlay = document.getElementById('adTimerOverlay');
             const timerBadge = document.getElementById('timerBadge');
             const continueBtn = document.getElementById('continueToVideoBtn');
+            const posterImg = document.getElementById('adMoviePosterImg');
+
+            // Set Poster Image from JSON
+            posterImg.src = posterUrl || "https://via.placeholder.com/400x180/1a1a1a/ffffff?text=Sk+CineBuzz";
 
             overlay.style.display = 'flex';
             overlay.scrollTop = 0; 
@@ -1003,12 +1261,18 @@
             }
         }
 
-        /* --- SMART BACK BUTTON CONTROLLER --- */
+        /* --- BACK BUTTON CONTROLLER --- */
         window.addEventListener('popstate', function (e) {
             const timerOverlay = document.getElementById('adTimerOverlay');
             const playerOverlay = document.getElementById('videoPlayerOverlay');
             const episodeOverlay = document.getElementById('episodeOverlay');
             const menuOverlay = document.getElementById('menuOverlay');
+            const ytVoiceOverlay = document.getElementById('ytVoiceOverlay');
+
+            if (ytVoiceOverlay && ytVoiceOverlay.style.display === 'flex') {
+                closeVoiceSearch();
+                return;
+            }
 
             if (timerOverlay && timerOverlay.style.display === 'flex') {
                 cancelTimerOverlay();
@@ -1038,7 +1302,7 @@
 
         document.addEventListener("DOMContentLoaded", () => {
             loadMoviesFromGitHub();
-            loadBannerAds(); // पहली बार ऐड्स लोड करें
+            loadBannerAds();
         });
     </script>
 </body>
