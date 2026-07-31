@@ -424,6 +424,104 @@
     ]
   },
   {
+  "name": "Jujutsu Kaisen",
+  "category": "anime",
+  "isSeries": true,
+  "year": 2020,
+  "image": "https://i.ibb.co/xVBdMCz/2026-07-26-20-30-56-928-0530.jpg",
+  "detail": "Multi Audio [Hindi-Tamil-Telugu-Eng-Jap] Two Hindi Dubs",
+  "episodes": [
+    {
+      "title": "Episode 1",
+      "detail": "Jujutsu Kaisen Season 1 | Audio: Hindi",
+      "url": "https://jumpshare.com/share/vF7CRcGUmjAva827r0ss"
+    },
+    {
+      "title": "Episode 2",
+      "detail": "Jujutsu Kaisen Season 1 | Audio: Hindi",
+      "url": "https://jumpshare.com/share/XTcNDWzEhetRUYlZZkB3"
+    },
+    {
+      "title": "Episode 3",
+      "detail": "Jujutsu Kaisen Season 1 | Audio: Hindi",
+      "url": "https://jumpshare.com/share/oRQ03JozpJcHMOSjdC2w"
+    },
+    {
+      "title": "Episode 4",
+      "detail": "Jujutsu Kaisen Season 1 | Audio: Hindi",
+      "url": "https://jumpshare.com/share/WhthoFlr8J50XR7fQ08g"
+    },
+    {
+      "title": "Episode 5",
+      "detail": "Jujutsu Kaisen Season 1 | Audio: Hindi",
+      "url": "https://jumpshare.com/share/9jslA7NCz7Ziaecc0sck"
+    },
+    {
+      "title": "Episode 6",
+      "detail": "Jujutsu Kaisen Season 1 | Audio: Hindi",
+      "url": "https://jumpshare.com/share/UHTLckWC573Cq3yR0faW"
+    }
+  ]
+},
+
+
+  
+  {
+  "name": "Demon Slayer: Kimetsu no Yaiba",
+  "category": "anime",
+  "isSeries": true,
+  "year": 2019,
+  "genre": "Action, Fantasy, Animation",
+  "image": "https://i.ibb.co/LDrKvhCq/2026-07-27-08-16-29-849-0530.jpg",
+  "detail": "Multi Audio [Hindi-Tamil-Telugu-Eng-Jap]",
+  "episodes": [
+    {
+      "title": "Episode 1",
+      "detail": "Demon Slayer Season 1 | Audio: Hindi",
+      "url": "https://jumpshare.com/share/cZJLJFMKHBjygiOhZeQQ"
+    },
+    {
+      "title": "Episode 2",
+      "detail": "Demon Slayer Season 1 | Audio: Hindi",
+      "url": "https://jumpshare.com/share/qasiVt8cnGaGE70FRXYu"
+    },
+    {
+      "title": "Episode 3",
+      "detail": "Demon Slayer Season 1 | Audio: Hindi",
+      "url": "https://jumpshare.com/share/oKN82Fw1cJYNhIsU4jhC"
+    }
+  ]
+},
+
+
+  
+  {
+  "name": "One Piece",
+  "category": "anime",
+  "isSeries": true,
+  "year": 1999,
+  "genre": "Action, Adventure, Fantasy",
+  "image": "https://i.ibb.co/hRw6jwP3/2026-07-27-08-21-17-690-0530.jpg",
+  "detail": "Multi Audio [Hindi-Eng-Jap]",
+  "episodes": [
+    {
+      "title": "Episode 1",
+      "detail": "One Piece | Audio: Hindi",
+      "url": "https://jumpshare.com/share/SStx174rpf7p9jCXwxCi"
+    },
+    {
+      "title": "Episode 2",
+      "detail": "One Piece | Audio: Hindi",
+      "url": "https://jumpshare.com/share/pgAME4RvszvntBvQBSKm"
+    },
+    {
+      "title": "Episode 3",
+      "detail": "One Piece | Audio: Hindi",
+      "url": "https://jumpshare.com/share/8VywNI0rKUkmv63QQvL5"
+    }
+  ]
+},
+  {
     "name": "Pritam and Pedro S01",
     "category": "series",
     "isSeries": false,
@@ -1699,6 +1797,7 @@
     "name": "Khuda Haafiz Chapter 2 - Agni Pariksha",
     "category": "movie",
     "isSeries": false,
+    "year": 2022,
     "url": "https://new6.filesdl.top/cloud/2rKsdp4kcx",
     "image": "https://i.ibb.co/4wK87992/Screenshot-20260722-204249-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1707,6 +1806,7 @@
     "name": "Ammu",
     "category": "movie",
     "isSeries": false,
+    "year": 2022,
     "url": "https://new6.filesdl.top/cloud/60i57tTL9G",
     "image": "https://i.ibb.co/8LQG10ds/Screenshot-20260722-204445-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1715,6 +1815,7 @@
     "name": "Khufiya",
     "category": "movie",
     "isSeries": false,
+    "year": 2023,
     "url": "https://new6.filesdl.top/cloud/7LSFri6TzD",
     "image": "https://i.ibb.co/qt55mCC/Screenshot-20260722-204728-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1723,6 +1824,7 @@
     "name": "Khuda Haafiz",
     "category": "movie",
     "isSeries": false,
+    "year": 2020,
     "url": "https://new6.filesdl.top/cloud/zTZ9gmuYtH",
     "image": "https://i.ibb.co/gF9p5hs2/Screenshot-20260722-204610-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1731,6 +1833,7 @@
     "name": "Rustom",
     "category": "movie",
     "isSeries": false,
+    "year": 2016,
     "url": "https://new6.filesdl.top/cloud/KnymY0EXLQ",
     "image": "https://i.ibb.co/pjGnVM4X/Screenshot-20260722-204940-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1739,6 +1842,7 @@
     "name": "Doctor G",
     "category": "movie",
     "isSeries": false,
+    "year": 2022,
     "url": "https://new6.filesdl.top/cloud/CGU1zoK0wO",
     "image": "https://i.ibb.co/wFt0mCJ9/Screenshot-20260722-205136-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1747,6 +1851,7 @@
     "name": "Thank God",
     "category": "movie",
     "isSeries": false,
+    "year": 2022,
     "url": "https://new6.filesdl.top/cloud/rWsetc0udU",
     "image": "https://i.ibb.co/bgVHzgxN/Screenshot-20260722-205300-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1754,7 +1859,8 @@
   {
     "name": "Mukhbir - The Story of a Spy",
     "category": "movie",
-    "isSeries": false,
+    "isSeries": true,
+    "year": 2022,
     "url": "https://new6.filesdl.top/cloud/1lTiRCFGhM",
     "image": "https://i.ibb.co/rGQBN726/Screenshot-20260722-205436-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1763,6 +1869,7 @@
     "name": "Gunjan Saxena - The Kargil Girl",
     "category": "movie",
     "isSeries": false,
+    "year": 2020,
     "url": "https://new6.filesdl.top/cloud/xVhEKj9Z4o",
     "image": "https://i.ibb.co/r2fykSCv/Screenshot-20260722-205549-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1771,6 +1878,7 @@
     "name": "Radhe",
     "category": "movie",
     "isSeries": false,
+    "year": 2021,
     "url": "https://new6.filesdl.top/cloud/aN8fzTy79S",
     "image": "https://i.ibb.co/TBXn3vfz/Screenshot-20260722-205715-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1779,6 +1887,7 @@
     "name": "Bhoot Police",
     "category": "movie",
     "isSeries": false,
+    "year": 2021,
     "url": "https://new6.filesdl.top/cloud/18g4PeAZWf",
     "image": "https://i.ibb.co/JRh3NYzH/Screenshot-20260722-205827-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1787,6 +1896,7 @@
     "name": "Chup Chup Ke",
     "category": "movie",
     "isSeries": false,
+    "year": 2006,
     "url": "https://new6.filesdl.top/cloud/nfFB4rMN03",
     "image": "https://i.ibb.co/6cDCvypJ/Screenshot-20260722-205931-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1795,6 +1905,7 @@
     "name": "Dasvi",
     "category": "movie",
     "isSeries": false,
+    "year": 2022,
     "url": "https://new6.filesdl.top/cloud/NzxAPuHMvc",
     "image": "https://i.ibb.co/gZ5TQ7T2/Screenshot-20260722-210109-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1803,6 +1914,7 @@
     "name": "The Big Bull",
     "category": "movie",
     "isSeries": false,
+    "year": 2021,
     "url": "https://new6.filesdl.top/cloud/6h7KEwV3Wu",
     "image": "https://i.ibb.co/nsfh1Zpz/Screenshot-20260722-210225-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1811,6 +1923,7 @@
     "name": "Pagglait",
     "category": "movie",
     "isSeries": false,
+    "year": 2021,
     "url": "https://new6.filesdl.top/cloud/I6gNsaxzOM",
     "image": "https://i.ibb.co/pjwbxCZm/Screenshot-20260722-210323-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1819,6 +1932,7 @@
     "name": "Chup Revenge of the Artist",
     "category": "movie",
     "isSeries": false,
+    "year": 2022,
     "url": "https://new6.filesdl.top/cloud/IvXpB8NgKy",
     "image": "https://i.ibb.co/239PLPHW/Screenshot-20260722-210413-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1827,22 +1941,16 @@
     "name": "Student of the Year",
     "category": "movie",
     "isSeries": false,
+    "year": 2012,
     "url": "https://new6.filesdl.top/cloud/X0dbi5JkFt",
     "image": "https://i.ibb.co/mFzjbrsk/Screenshot-20260722-210522-Chrome.png",
-    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
-  },
-  {
-    "name": "Satluj",
-    "category": "movie",
-    "isSeries": false,
-    "url": "https://new6.filesdl.top/cloud/Mk8LazDXGb",
-    "image": "https://i.ibb.co/0y0qhcw6/Screenshot-20260722-210618-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
   },
   {
     "name": "Journey of Love 18+",
     "category": "movie",
     "isSeries": false,
+    "year": 2023,
     "url": "https://new6.filesdl.top/cloud/1inac9WKd02mUuK",
     "image": "https://i.ibb.co/Z6R03crT/Screenshot-20260722-231351-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1851,6 +1959,7 @@
     "name": "Agent",
     "category": "movie",
     "isSeries": false,
+    "year": 2023,
     "url": "https://new6.filesdl.top/cloud/Vk5IfsPER7",
     "image": "https://i.ibb.co/TBjSJs0m/Screenshot-20260723-144204-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1858,7 +1967,8 @@
   {
     "name": "Elite Force S01",
     "category": "movie",
-    "isSeries": false,
+    "isSeries": true,
+    "year": 2025,
     "url": "https://new6.filesdl.top/cloud/evORIwnhpB",
     "image": "https://i.ibb.co/tpR9fSq5/Screenshot-20260723-160858-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1867,6 +1977,7 @@
     "name": "Pallichattambi",
     "category": "movie",
     "isSeries": false,
+    "year": 2024,
     "url": "https://new6.filesdl.top/cloud/dcLeyWKThR",
     "image": "https://i.ibb.co/vCvgxxp9/Screenshot-20260723-224002-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1875,6 +1986,7 @@
     "name": "India Lockdown",
     "category": "movie",
     "isSeries": false,
+    "year": 2022,
     "url": "https://new6.filesdl.top/cloud/oROcBnFYw2",
     "image": "https://i.ibb.co/3Yr7tP2W/Screenshot-20260723-235319-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1883,6 +1995,7 @@
     "name": "Tavvai",
     "category": "movie",
     "isSeries": false,
+    "year": 2025,
     "url": "https://new6.filesdl.top/cloud/Ofq2PY0ZWy",
     "image": "https://i.ibb.co/v6fMKdbz/Screenshot-20260723-235533-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1891,6 +2004,7 @@
     "name": "Welcome to the Jungle",
     "category": "movie",
     "isSeries": false,
+    "year": 2026,
     "url": "https://new6.filesdl.top/cloud/x4Sq7Cmtnz",
     "image": "https://i.ibb.co/tw8zQ9vP/Screenshot-20260723-235605-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1899,6 +2013,7 @@
     "name": "Raja Shivaji",
     "category": "movie",
     "isSeries": false,
+    "year": 2026,
     "url": "https://new6.filesdl.top/cloud/4pmzxOTag6",
     "image": "https://i.ibb.co/zWrRwqVc/Screenshot-20260723-235711-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1907,6 +2022,7 @@
     "name": "Welcome Back",
     "category": "movie",
     "isSeries": false,
+    "year": 2015,
     "url": "https://new6.filesdl.top/cloud/04YXO19Vkj",
     "image": "https://i.ibb.co/9H79ysx3/Screenshot-20260723-235827-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1915,6 +2031,7 @@
     "name": "Double Dhamaal",
     "category": "movie",
     "isSeries": false,
+    "year": 2011,
     "url": "https://new6.filesdl.top/cloud/R2YlQjgoCy",
     "image": "https://i.ibb.co/QFVn3tWQ/Screenshot-20260723-235921-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1923,6 +2040,7 @@
     "name": "Dhamaal",
     "category": "movie",
     "isSeries": false,
+    "year": 2007,
     "url": "https://new6.filesdl.top/cloud/G2EAJ0rszL",
     "image": "https://i.ibb.co/TBCP206p/Screenshot-20260724-000022-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1931,6 +2049,7 @@
     "name": "Cocktail",
     "category": "movie",
     "isSeries": false,
+    "year": 2012,
     "url": "https://new6.filesdl.top/cloud/DT7wv6NYGn",
     "image": "https://i.ibb.co/xtp1cSWC/Screenshot-20260724-000137-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1939,6 +2058,7 @@
     "name": "Drishyam 2",
     "category": "movie",
     "isSeries": false,
+    "year": 2022,
     "url": "https://new6.filesdl.top/cloud/ybNTDurlQM",
     "image": "https://i.ibb.co/PGDtT6x4/Screenshot-20260724-000243-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1947,6 +2067,7 @@
     "name": "Drishyam",
     "category": "movie",
     "isSeries": false,
+    "year": 2015,
     "url": "https://new6.filesdl.top/cloud/Hqin5sbwEr",
     "image": "https://i.ibb.co/Hf0YbGNk/Screenshot-20260724-000349-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1955,6 +2076,7 @@
     "name": "Con City",
     "category": "movie",
     "isSeries": false,
+    "year": 2024,
     "url": "https://new6.filesdl.top/cloud/Cdy0KAMZS4",
     "image": "https://i.ibb.co/Fqy1h8XJ/Screenshot-20260724-110039-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1963,6 +2085,7 @@
     "name": "Bhooth Bangla",
     "category": "movie",
     "isSeries": false,
+    "year": 2026,
     "url": "https://new6.filesdl.top/cloud/BOm0TZRovD",
     "image": "https://i.ibb.co/xqr80Lcy/Screenshot-20260724-110302-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1971,6 +2094,7 @@
     "name": "Ram Setu",
     "category": "movie",
     "isSeries": false,
+    "year": 2022,
     "url": "https://new6.filesdl.top/cloud/uTzF5jSRhA",
     "image": "https://i.ibb.co/Cps6hxVk/Screenshot-20260724-110406-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1979,6 +2103,7 @@
     "name": "Bandar",
     "category": "movie",
     "isSeries": false,
+    "year": 2025,
     "url": "https://new6.filesdl.top/cloud/5oQR1h7qZj",
     "image": "https://i.ibb.co/4RVTBkJQ/Screenshot-20260724-110507-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1987,6 +2112,7 @@
     "name": "Well Done C.A. Sahab",
     "category": "movie",
     "isSeries": false,
+    "year": 2024,
     "url": "https://new6.filesdl.top/cloud/yMSTQRGDnP",
     "image": "https://i.ibb.co/DHh9nYds/Screenshot-20260724-110611-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -1995,14 +2121,16 @@
     "name": "Hai Jawani Toh Ishq Hona Hai",
     "category": "movie",
     "isSeries": false,
+    "year": 2026,
     "url": "https://new6.filesdl.top/cloud/QOIhjHUgYn",
     "image": "https://i.ibb.co/7tbZKT7V/Screenshot-20260724-110719-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
   },
   {
-    "name": "Ginny Wedss Sunny 2",
+    "name": "Ginny Weds Sunny 2",
     "category": "movie",
     "isSeries": false,
+    "year": 2025,
     "url": "https://new6.filesdl.top/cloud/0AyUjcuSL2",
     "image": "https://i.ibb.co/bR8Nr865/Screenshot-20260724-110826-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2011,6 +2139,7 @@
     "name": "Maa Behen",
     "category": "movie",
     "isSeries": false,
+    "year": 2024,
     "url": "https://new6.filesdl.top/cloud/Vcq1UiLWGk",
     "image": "https://i.ibb.co/NgbhyJF3/Screenshot-20260724-110935-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2019,6 +2148,7 @@
     "name": "One Two Cha Cha Chaa",
     "category": "movie",
     "isSeries": false,
+    "year": 2024,
     "url": "https://new6.filesdl.top/cloud/2NjdQYEpIi",
     "image": "https://i.ibb.co/zHFhnQBC/Screenshot-20260724-111050-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2027,6 +2157,7 @@
     "name": "Mard Ko Dard Nahi Hota",
     "category": "movie",
     "isSeries": false,
+    "year": 2018,
     "url": "https://new6.filesdl.top/cloud/I02gRQXhPw",
     "image": "https://i.ibb.co/xKrKjk9V/Screenshot-20260724-111156-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2035,6 +2166,7 @@
     "name": "Luka Chuppi",
     "category": "movie",
     "isSeries": false,
+    "year": 2019,
     "url": "https://new6.filesdl.top/cloud/mv0SzqJGey",
     "image": "https://i.ibb.co/Kj2W0G6D/Screenshot-20260724-111304-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2043,6 +2175,7 @@
     "name": "Photograph",
     "category": "movie",
     "isSeries": false,
+    "year": 2019,
     "url": "https://new6.filesdl.top/cloud/LEwdza7UhT",
     "image": "https://i.ibb.co/5h4cL4x4/Screenshot-20260724-111411-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2051,6 +2184,7 @@
     "name": "Jana Nayagan",
     "category": "movie",
     "isSeries": false,
+    "year": 2025,
     "url": "https://new6.filesdl.top/cloud/T2i9NU0dlX",
     "image": "https://i.ibb.co/zHtZGX8c/Jana-Nayagan-Poster-ba859210-ea04-11f0-b4ba-9ba258b05cd6.jpg",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2059,6 +2193,7 @@
     "name": "Genius",
     "category": "movie",
     "isSeries": false,
+    "year": 2018,
     "url": "https://new6.filesdl.top/cloud/C4fuaQ9SDo",
     "image": "https://i.ibb.co/d4gk3Zyt/Screenshot-20260725-184616-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2067,6 +2202,7 @@
     "name": "Bharat",
     "category": "movie",
     "isSeries": false,
+    "year": 2019,
     "url": "https://new6.filesdl.top/cloud/viqMuRQZd1",
     "image": "https://i.ibb.co/3mHxFP61/Screenshot-20260725-184847-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2075,6 +2211,7 @@
     "name": "Article 15",
     "category": "movie",
     "isSeries": false,
+    "year": 2019,
     "url": "https://new6.filesdl.top/cloud/LOqeRmDtg3",
     "image": "https://i.ibb.co/0RFtMp79/Screenshot-20260725-184953-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2083,6 +2220,7 @@
     "name": "Lord Curzon Ki Haveli",
     "category": "movie",
     "isSeries": false,
+    "year": 2023,
     "url": "https://new6.filesdl.top/cloud/QGxk5WO9ci",
     "image": "https://i.ibb.co/sp2hsMc3/Screenshot-20260725-185254-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2091,6 +2229,7 @@
     "name": "Marudhar Express",
     "category": "movie",
     "isSeries": false,
+    "year": 2019,
     "url": "https://new6.filesdl.top/cloud/m8FyOUhTlR",
     "image": "https://i.ibb.co/F41P7z3w/Screenshot-20260725-185416-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2099,6 +2238,7 @@
     "name": "Unbroken- The Unmukt Chand Story",
     "category": "movie",
     "isSeries": false,
+    "year": 2024,
     "url": "https://new6.filesdl.top/cloud/j3VrKolAtb",
     "image": "https://i.ibb.co/wFxG3v2J/Screenshot-20260725-185525-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2107,6 +2247,16 @@
     "name": "Romeo Akbar Walter",
     "category": "movie",
     "isSeries": false,
+    "year": 2019,
+    "url": "https://new6.filesdl.top/cloud/sz0ynai3gU",
+    "image": "https://i.ibb.co/yFq7s8V8/Screenshot-20260725-185657-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Romeo Akbar Walter",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2019,
     "url": "https://new6.filesdl.top/cloud/sz0ynai3gU",
     "image": "https://i.ibb.co/yFq7s8V8/Screenshot-20260725-185657-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2115,6 +2265,7 @@
     "name": "Bholaa",
     "category": "movie",
     "isSeries": false,
+    "year": 2023,
     "url": "https://new6.filesdl.top/cloud/X8vCynlYBR",
     "image": "https://i.ibb.co/qYsPWFbx/Screenshot-20260725-185838-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2123,6 +2274,7 @@
     "name": "Phantom",
     "category": "movie",
     "isSeries": false,
+    "year": 2015,
     "url": "https://new6.filesdl.top/cloud/buDndpAxr1",
     "image": "https://i.ibb.co/TDRmRH7z/Screenshot-20260725-190026-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2131,6 +2283,7 @@
     "name": "Secret Superstar",
     "category": "movie",
     "isSeries": false,
+    "year": 2017,
     "url": "https://new6.filesdl.top/cloud/nbJa8qNp3P",
     "image": "https://i.ibb.co/1G8sphZS/Screenshot-20260725-190156-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2139,6 +2292,7 @@
     "name": "System",
     "category": "movie",
     "isSeries": false,
+    "year": 2026,
     "url": "https://new6.filesdl.top/cloud/bEpqSAPNMh",
     "image": "https://i.ibb.co/4RxhLjhz/Screenshot-20260725-190323-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2147,6 +2301,7 @@
     "name": "Fukrey",
     "category": "movie",
     "isSeries": false,
+    "year": 2013,
     "url": "https://new6.filesdl.top/cloud/dwx1u9sjgi",
     "image": "https://i.ibb.co/sppTy7Rf/Screenshot-20260725-190437-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2155,6 +2310,7 @@
     "name": "Indian Institute of Zombies",
     "category": "movie",
     "isSeries": false,
+    "year": 2026,
     "url": "https://new6.filesdl.top/cloud/rHh49zbAIF",
     "image": "https://i.ibb.co/7NtWzpwV/Screenshot-20260725-190535-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2163,6 +2319,7 @@
     "name": "Bala",
     "category": "movie",
     "isSeries": false,
+    "year": 2019,
     "url": "https://new6.filesdl.top/cloud/YJ2z0knlp7",
     "image": "https://i.ibb.co/q3T5v0pG/Screenshot-20260725-190801-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2171,6 +2328,7 @@
     "name": "Antim - The Final Truth",
     "category": "movie",
     "isSeries": false,
+    "year": 2021,
     "url": "https://new6.filesdl.top/cloud/vNIUDshyJ0",
     "image": "https://i.ibb.co/3yqCPs0q/Screenshot-20260725-190917-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
@@ -2179,8 +2337,1081 @@
     "name": "Kartavya",
     "category": "movie",
     "isSeries": false,
+    "year": 1979,
     "url": "https://new6.filesdl.top/cloud/f5oZAKHwRN",
     "image": "https://i.ibb.co/RG6bR2DB/Screenshot-20260725-191142-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Bank Chor",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2017,
+    "url": "https://new6.filesdl.top/cloud/bQz7UmC1Wj",
+    "image": "https://i.ibb.co/20WRJZcz/Screenshot-20260726-151140-Chrome.png",
+    "detail": "रितेश देशमुख की एक कॉमेडी और ड्रामा फिल्म, जिसमें बैंक लूटने की एक मजेदार और हास्यास्पद कहानी दिखाई गई है."
+  },
+  {
+    "name": "The India Story",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/hLGbr7cVFg",
+    "image": "https://i.ibb.co/B22fjkTq/Screenshot-20260726-151244-Chrome.png",
+    "detail": "श्रेयस तलपड़े और काजल अग्रवाल की मुख्य भूमिकाओं से सजी एक दिलचस्प ड्रामा फिल्म."
+  },
+  {
+    "name": "Krishnavataram Part 1- The Heart",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/7E69P3JuMU",
+    "image": "https://i.ibb.co/9HvsvNs1/Screenshot-20260726-151419-Chrome.png",
+    "detail": "भगवान श्री कृष्ण के जीवन और दर्शन पर आधारित एक भव्य पौराणिक फिल्म."
+  },
+  {
+    "name": "Khoobsurat",
+    "category": "movie",
+    "isSeries": false,
+    "year": 1999,
+    "url": "https://new6.filesdl.top/cloud/Fvf0jgDCHO",
+    "image": "https://i.ibb.co/ksCVND35/Screenshot-20260726-151557-Chrome.png",
+    "detail": "संजय दत्त और उर्मिला मातोंडकर की यह फिल्म कॉमेडी, रोमांस और भरपूर मनोरंजन से भरपूर है."
+  },
+  {
+    "name": "Tapak",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/EKhgDJYZV8",
+    "image": "https://i.ibb.co/jZ6LxX2W/Screenshot-20260726-151653-Chrome.png",
+    "detail": "रोमांच और रहस्य से भरी एक बेहतरीन ड्रामा फिल्म."
+  },
+  {
+    "name": "Khichdi 2 - Mission Paanthukistan",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/yYf5UGAc0h",
+    "image": "https://i.ibb.co/ychQY66f/Screenshot-20260726-151749-Chrome.png",
+    "detail": "पारेख परिवार की पागलपंती और हंसा-प्रफुल्ल की जोड़ी के साथ एक मजेदार कॉमेडी फिल्म."
+  },
+  {
+    "name": "Rishton Ki Aakhari Baazi",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/B6Tzv5oNaU",
+    "image": "https://i.ibb.co/b5FDZPJZ/Screenshot-20260726-151848-Chrome.png",
+    "detail": "रिश्तों की उलझनों और भावनाओं पर आधारित एक पारिवारिक ड्रामा फिल्म."
+  },
+  {
+    "name": "The Kerala Story 2 Goes Beyond",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/e473udPO9z",
+    "image": "https://i.ibb.co/27L3W7c0/Screenshot-20260726-151945-Chrome.png",
+    "detail": "सच्ची घटनाओं और सामाजिक मुद्दों पर आधारित एक झकझोर देने वाली थ्रिलर फिल्म."
+  },
+  {
+    "name": "Nukkad Naatak",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2025,
+    "url": "https://new6.filesdl.top/cloud/G1p7sIrtwS",
+    "image": "https://i.ibb.co/ynsJdvHS/Screenshot-20260726-152056-Chrome.png",
+    "detail": "आम आदमी के संघर्ष और जीवन की सच्चाइयों को दर्शाती एक प्रेरणादायक फिल्म."
+  },
+  {
+    "name": "Badass Ravi Kumar",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/GNrQ60pP3x",
+    "image": "https://i.ibb.co/8nkFtDWx/Screenshot-20260726-152209-Chrome.png",
+    "detail": "हिमेश रेशमिया की एक्शन, स्वैग और डायलॉगबाजी से भरपूर मसाला एंटरटेनर फिल्म."
+  },
+  {
+    "name": "Assi",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/lkbMAJ3hqE",
+    "image": "https://i.ibb.co/SwTL7jsr/Screenshot-20260726-152305-Chrome.png",
+    "detail": "राजनीति और ड्रामा से जुड़ी एक गंभीर और मार्मिक कहानी."
+  },
+  {
+    "name": "Do Deewane Seher Mein",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/89s1iLtHRa",
+    "image": "https://i.ibb.co/fGY4GqwV/Screenshot-20260726-152400-Chrome.png",
+    "detail": "शहरी जीवन और प्रेम प्रसंगों पर आधारित एक प्यारी सी रोमांटिक फिल्म."
+  },
+  {
+    "name": "Agra",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/b9f7Wx4lCK",
+    "image": "https://i.ibb.co/BHD9wtG8/Screenshot-20260726-152503-Chrome.png",
+    "detail": "पारिवारिक रिश्तों और मानसिक स्थिति की जटिलताओं को उजागर करती एक आर्ट-हाउस फिल्म."
+  },
+  {
+    "name": "Toaster",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/uaegrGXQi4",
+    "image": "https://i.ibb.co/9mhQgfyR/Screenshot-20260726-152600-Chrome.png",
+    "detail": "एक अनोखी और दिलचस्प कहानी जो दर्शकों को बांध कर रखती है."
+  },
+  {
+    "name": "Half Girlfriend",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2017,
+    "url": "https://new6.filesdl.top/cloud/Or2LPiZDI7",
+    "image": "https://i.ibb.co/Vcx3VLwD/Screenshot-20260726-152702-Chrome.png",
+    "detail": "चेतन भगत के उपन्यास पर आधारित, अर्जुन कपूर और श्रद्धा कपूर की एक इमोशनल लव स्टोरी."
+  },
+  {
+    "name": "Hellaro",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2019,
+    "url": "https://new6.filesdl.top/cloud/a5tWZSzn76",
+    "image": "https://i.ibb.co/h6C6Bwk/Screenshot-20260726-152805-Chrome.png",
+    "detail": "राष्ट्रीय पुरस्कार विजेता गुजराती फिल्म जो महिलाओं की स्वतंत्रता और गरबा पर आधारित है."
+  },
+  {
+    "name": "Everybody Loves Sohrab Handa",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/sZp7iSl1Aw",
+    "image": "https://i.ibb.co/Vc0bHHJj/Screenshot-20260726-152906-Chrome.png",
+    "detail": "मानवीय स्वभाव और रिश्तों की खट्टी-मीठी नोकझोक पर बनी एक आकर्षक फिल्म."
+  },
+  {
+    "name": "Toh Ti Ani Fuji",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2018,
+    "url": "https://new6.filesdl.top/cloud/ZgcLFATb62",
+    "image": "https://i.ibb.co/XfVzrFCS/Screenshot-20260726-153115-Chrome.png",
+    "detail": "एक खूबसूरत मराठी रोमांटिक और इमोशनल फिल्म."
+  },
+  {
+    "name": "Tu Yaa Main",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/nIdXwoM2AR",
+    "image": "https://i.ibb.co/rRD7zwFh/Screenshot-20260726-153223-Chrome.png",
+    "detail": "दो दोस्तों और उनके बीच की परिस्थितियों पर आधारित एक मनोरंजक फिल्म."
+  },
+  {
+    "name": "Bhabhiji Ghar Par Hain Fun On The Run",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/uY2JEQZktG",
+    "image": "https://i.ibb.co/spQFy3Bv/Screenshot-20260726-184211-Chrome.png",
+    "detail": "लोकप्रिय टीवी शो के किरदारों पर आधारित एक गुदगुदाने वाली कॉमेडी फिल्म."
+  },
+  {
+    "name": "Vadh 2",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2025,
+    "url": "https://new6.filesdl.top/cloud/ZFYVDWBIw1",
+    "image": "https://i.ibb.co/pBZ5D4qM/Screenshot-20260726-184318-Chrome.png",
+    "detail": "संजय मिश्रा की बेहतरीन अदाकारी से सजी एक सस्पेंस और थ्रिलर फिल्म."
+  },
+  {
+    "name": "Vadh",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2022,
+    "url": "https://new6.filesdl.top/cloud/0KAjkB4cSo",
+    "image": "https://i.ibb.co/PZdbD5S3/Screenshot-20260726-184411-Chrome.png",
+    "detail": "एक बुजुर्ग दंपत्ति के जीवन की अनपेक्षित घटनाओं और न्याय की तलाश पर आधारित थ्रिलर."
+  },
+  {
+    "name": "Match Fixing",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2025,
+    "url": "https://new6.filesdl.top/cloud/NveE2KF7mQ",
+    "image": "https://i.ibb.co/ycFrbmbg/Screenshot-20260726-184526-Chrome.png",
+    "detail": "क्रिकेट जगत के काले सच और मैच फिक्सिंग के रहस्यों को उजागर करती फिल्म."
+  },
+  {
+    "name": "Happy Patel - Khatarnak Jasoos",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2025,
+    "url": "https://new6.filesdl.top/cloud/jh5AiBbVCP",
+    "image": "https://i.ibb.co/zTBb1yTr/Screenshot-20260726-184629-Chrome.png",
+    "detail": "इमरान खान और कॉमेडी से भरपूर एक जासूसी और हास्यप्रद एडवेंचर फिल्म."
+  },
+  {
+    "name": "Mardaani 3",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/5BW7HPd23u",
+    "image": "https://i.ibb.co/JRD30vyv/Screenshot-20260726-184725-Chrome.png",
+    "detail": "रानी मुखर्जी की दमदार एक्शन और क्राइम थ्रिलर फ्रेंचाइजी की शानदार फिल्म."
+  },
+  {
+    "name": "O Romeo",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2025,
+    "url": "https://new6.filesdl.top/cloud/R28O3UNyi6",
+    "image": "https://i.ibb.co/yc6Mfrhs/Screenshot-20260726-184822-Chrome.png",
+    "detail": "प्यार, तकरार और आधुनिक रोमांस से भरपूर एक आकर्षक फिल्म."
+  },
+  {
+    "name": "Aayushmati Geeta Matric Pass",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/3BMogXtOda",
+    "image": "https://i.ibb.co/wN1prHfw/Screenshot-20260726-184924-Chrome.png",
+    "detail": "शिक्षा और महिला सशक्तिकरण की प्रेरणादायक कहानी."
+  },
+  {
+    "name": "Class of 83",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2020,
+    "url": "https://new6.filesdl.top/cloud/JdfmxIhaMC",
+    "image": "https://i.ibb.co/gZfcJQGF/Screenshot-20260726-185032-Chrome.png",
+    "detail": "बॉबी देओल की मुख्य भूमिका वाली, मुंबई पुलिस के एनकाउंटर स्पेशलिस्ट्स पर आधारित एक्शन फिल्म."
+  },
+  {
+    "name": "Border 2",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/8sqdwZvoi1",
+    "image": "https://i.ibb.co/BHfSgw6W/Screenshot-20260726-185211-Chrome.png",
+    "detail": "देशभक्ति और भारतीय सेना के अदम्य साहस को समर्पित एक मेगा बजट वॉर फिल्म."
+  },
+  {
+    "name": "Taare Zameen Par",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2007,
+    "url": "https://new6.filesdl.top/cloud/SjLsJUGDoM",
+    "image": "https://i.ibb.co/3m7TNdw5/Screenshot-20260726-185306-Chrome.png",
+    "detail": "बच्चों की विशेष ज़रूरतों और उनकी प्रतिभा को समझती एक मार्मिक फिल्म."
+  },
+  {
+    "name": "Machine",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2017,
+    "url": "https://new6.filesdl.top/cloud/p2jP8WbMim",
+    "image": "https://i.ibb.co/dJxSxvNC/Screenshot-20260726-185401-Chrome.png",
+    "detail": "मुस्तफा और मुस्तफा बर्मावाला की रोमांटिक एक्शन थ्रिलर फिल्म."
+  },
+  {
+    "name": "Badla",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2019,
+    "url": "https://new6.filesdl.top/cloud/4MhKsLD38F",
+    "image": "https://i.ibb.co/3Yc2VzYr/Screenshot-20260726-185504-Chrome.png",
+    "detail": "अमिताभ बच्चन और तापसी पन्नू की एक बेहतरीन सस्पेंस थ्रिलर फिल्म."
+  },
+  {
+    "name": "Firangi",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2017,
+    "url": "https://new6.filesdl.top/cloud/jTu0EqRiIh",
+    "image": "https://i.ibb.co/XrRPtqD4/Screenshot-20260726-185558-Chrome.png",
+    "detail": "कपिल शर्मा की मुख्य भूमिका वाली ब्रिटिश काल की पृष्ठभूमि पर बनी कॉमेडी-ड्रामा फिल्म."
+  },
+  {
+    "name": "Setters",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2019,
+    "url": "https://new6.filesdl.top/cloud/dNsVQq4n50",
+    "image": "https://i.ibb.co/TMysFD68/Screenshot-20260726-185655-Chrome.png",
+    "detail": "शिक्षा प्रणाली में होने वाली धांधली और रैकेट पर आधारित क्राइम थ्रिलर फिल्म."
+  },
+  {
+    "name": "Baadshaho",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2017,
+    "url": "https://new6.filesdl.top/cloud/JIpj3iCV91",
+    "image": "https://i.ibb.co/5hQBLWr7/Screenshot-20260726-185746-Chrome.png",
+    "detail": "अजय देवगन और इमरान हाशमी की ऐक्शन और थ्रिलर से भरपूर पीरियड हेइस्ट फिल्म."
+  },
+  {
+    "name": "The Kashmir Files",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2022,
+    "url": "https://new6.filesdl.top/cloud/61KYgnJCRZ",
+    "image": "https://i.ibb.co/HDZddZmm/Screenshot-20260726-185844-Chrome.png",
+    "detail": "कश्मीरी पंडितों के पलायन और दर्दनाक सच्चाई पर आधारित चर्चित ड्रामा फिल्म."
+  },
+  {
+    "name": "Raakh S01",
+    "category": "series",
+    "isSeries": true,
+    "year": 2025,
+    "url": "https://new6.filesdl.top/cloud/TrYjlMCOoh",
+    "image": "https://i.ibb.co/VpqSVLm1/Screenshot-20260726-190038-Chrome.png",
+    "detail": "रहस्य और रोमांच से भरपूर एक दमदार क्राइम वेब सीरीज."
+  },
+  {
+    "name": "Jailer",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/IBUCxOFwieeKzKS",
+    "image": "https://i.ibb.co/9mGZYfN2/Screenshot-20260726-191437-Chrome.png",
+    "detail": "रजनीकांत की मुख्य भूमिका वाली एक ब्लॉकबस्टर एक्शन और थ्रिलर फिल्म, जिसमें एक सेवानिवृत्त जेलर अपने बेटे की मौत का बदला लेता है।"
+  },
+  {
+    "name": "Sarkar",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2018,
+    "url": "https://new6.filesdl.top/cloud/jmv70B1yOA",
+    "image": "https://i.ibb.co/V0WRR4sN/Screenshot-20260726-191738-Chrome.png",
+    "detail": "राजनीतिक भ्रष्टाचार और सिस्टम के खिलाफ जंग पर आधारित एक दमदार एक्शन ड्रामा फिल्म।"
+  },
+  {
+    "name": "Jaat",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2018,
+    "url": "https://new6.filesdl.top/cloud/U4TAgBupsf",
+    "image": "https://i.ibb.co/4ZXp11Ft/Screenshot-20260727-132535-Chrome.png",
+    "detail": "राजनीतिक भ्रष्टाचार और सिस्टम के खिलाफ जंग पर आधारित एक दमदार एक्शन ड्रामा फिल्म।"
+  },
+  {
+    "name": "Adarsh Baal Vidyalaya (Season 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://hubcloud.cx/drive/zet6yzy1bazwkkj",
+    "image": "https://i.ibb.co/MkhZ6wLd/Screenshot-20260727-191735-Chrome.png",
+    "detail": "Adarsh Baal Vidyalaya Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "Musafir Cafe (Season 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2018,
+    "url": "https://new6.filesdl.top/cloud/SeMAcw8QEj",
+    "image": "https://i.ibb.co/jvt5hgsw/Screenshot-20260727-193020-Chrome.png",
+    "detail": "Musafir Cafe Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "Every Year After (Season 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/K5MFYS81P0",
+    "image": "https://i.ibb.co/qYnjkckg/Screenshot-20260727-193625-Chrome.png",
+    "detail": "Every Year After Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "Brown (Season 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/RHJ3r4QaUW",
+    "image": "https://i.ibb.co/KpJ1dj5v/Screenshot-20260727-194130-Chrome.png",
+    "detail": "Brown Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "The Pyramid Scheme (Season 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/o6dtpJIDYi",
+    "image": "https://i.ibb.co/xKRNZVVz/Screenshot-20260727-194300-Chrome.png",
+    "detail": "The Pyramid Scheme Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "Made in India - A Titan Story (Season 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/PBxQR5rCbf",
+    "image": "https://i.ibb.co/4nZgHdrF/Screenshot-20260727-194419-Chrome.png",
+    "detail": "Made in India - A Titan Story Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "Spider Noir (Season 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/ZykgApcRdP",
+    "image": "https://i.ibb.co/HfTdSWzv/Screenshot-20260727-194530-Chrome.png",
+    "detail": "Spider Noir Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "Who's Your Gynac (Season 2)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/oRwmYqXTaP",
+    "image": "https://i.ibb.co/4nKz1FTv/Screenshot-20260727-194632-Chrome.png",
+    "detail": "Who's Your Gynac Season 2 | Audio: Hindi"
+  },
+  {
+    "name": "Satrangi Badle ka Khel (Season 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/h4Wigr8d2C",
+    "image": "https://i.ibb.co/Zpxn69z8/Screenshot-20260727-194725-Chrome.png",
+    "detail": "Satrangi Badle ka Khel Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "Vimal Khanna (Season 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/V4oGpZnbMS",
+    "image": "https://i.ibb.co/Wds39nf/Screenshot-20260727-194822-Chrome.png",
+    "detail": "Vimal Khanna Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "Undekhi (Season 4)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/GC8uDRfY7t",
+    "image": "https://i.ibb.co/1cjbL0J/Screenshot-20260727-194917-Chrome.png",
+    "detail": "Undekhi Season 4 | Audio: Hindi"
+  },
+  {
+    "name": "Beinteha Ek Anokhi Dastaan (Season 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/otLKbrmBWz",
+    "image": "https://i.ibb.co/HL43Mnwf/Screenshot-20260727-195038-Chrome.png",
+    "detail": "Beinteha Ek Anokhi Dastaan Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "The Boroughs (Season 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/gb31JDlMGu",
+    "image": "https://i.ibb.co/7xBLwbrf/Screenshot-20260727-195145-Chrome.png",
+    "detail": "The Boroughs Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "Business Proposal (Part 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/7eIUqWTiFy",
+    "image": "https://i.ibb.co/YFqG0xKK/Screenshot-20260727-195243-Chrome.png",
+    "detail": "Business Proposal Season 1 Part-01 Ep.01-06 | Audio: Hindi"
+  },
+  {
+    "name": "(Part 2) Business Proposal",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/kmqcI5jAlY",
+    "image": "https://i.ibb.co/YFqG0xKK/Screenshot-20260727-195243-Chrome.png",
+    "detail": "Business Proposal Season 1 Part-02 Ep.07-12 | Audio: Hindi"
+  },
+  {
+    "name": "Looteri Dulhan (Season 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/nLltv5mpco",
+    "image": "https://i.ibb.co/93cP4CJg/Screenshot-20260727-200836-Chrome.png",
+    "detail": "Looteri Dulhan Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "Berlin and the Lady with an Ermine (Season 1)",
+    "category": "series",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/YcpkI2AhjJ",
+    "image": "https://i.ibb.co/4RLkqq27/Screenshot-20260727-201003-Chrome.png",
+    "detail": "Berlin and the Lady with an Ermine Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "Animal",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/XZomKW5Zz18ZJvK",
+    "image": "https://i.ibb.co/DjZnzxC/Screenshot-20260727-235346-Chrome.png",
+    "detail": "Animal | Audio: Hindi"
+  },
+  {
+    "name": "Chinna Chinna Aasai",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2021,
+    "url": "https://new6.filesdl.top/cloud/rFVXK7Ob2Y",
+    "image": "https://i.ibb.co/pBQwL7vx/Screenshot-20260728-125946-Chrome.png",
+    "detail": "Chinna Chinna Aasai | Audio: Hindi"
+  },
+  {
+    "name": "GodFather",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2022,
+    "url": "https://new6.filesdl.top/cloud/U8gt7oyH6W",
+    "image": "https://i.ibb.co/5XqrHBS5/Screenshot-20260728-133229-Chrome.png",
+    "detail": "GodFather | Audio: Hindi"
+  },
+  {
+    "name": "Family Ek Deal (Nannaku Prematho)",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2016,
+    "url": "https://new6.filesdl.top/cloud/Yrz0inOIsK",
+    "image": "https://i.ibb.co/FbW83b7C/Screenshot-20260728-133342-Chrome.png",
+    "detail": "Family Ek Deal (Nannaku Prematho) | Audio: Hindi"
+  },
+  {
+    "name": "Big Brother",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2020,
+    "url": "https://new6.filesdl.top/cloud/CjPSVLsQtI",
+    "image": "https://i.ibb.co/svj9M8Xb/Screenshot-20260728-133503-Chrome.png",
+    "detail": "Big Brother | Audio: Hindi"
+  },
+  {
+    "name": "Ek Ajeeb Dastan Shaapit (Karthikeya)",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2014,
+    "url": "https://new6.filesdl.top/cloud/S1QE4MdxJk",
+    "image": "https://i.ibb.co/B20f3njL/Screenshot-20260728-133553-Chrome.png",
+    "detail": "Ek Ajeeb Dastan Shaapit (Karthikeya) | Audio: Hindi"
+  },
+  {
+    "name": "Bimbisara",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2022,
+    "url": "https://new6.filesdl.top/cloud/4fr0d8Qsh2",
+    "image": "https://i.ibb.co/GQRRmNKk/Screenshot-20260728-133700-Chrome.png",
+    "detail": "Bimbisara | Audio: Hindi"
+  },
+  {
+    "name": "Magadheera",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2009,
+    "url": "https://new6.filesdl.top/cloud/iwDda0KqU8",
+    "image": "https://i.ibb.co/R4Z7N66f/Screenshot-20260728-133818-Chrome.png",
+    "detail": "Magadheera | Audio: Hindi"
+  },
+  {
+    "name": "Night Drive",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2022,
+    "url": "https://new6.filesdl.top/cloud/kJhRB1WPsb",
+    "image": "https://i.ibb.co/B5f7GZbf/Screenshot-20260728-133910-Chrome.png",
+    "detail": "Night Drive | Audio: Hindi"
+  },
+  {
+    "name": "Ammu",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2022,
+    "url": "https://new6.filesdl.top/cloud/60i57tTL9G",
+    "image": "https://i.ibb.co/C5ZvCc7K/Screenshot-20260728-134014-Chrome.png",
+    "detail": "Ammu | Audio: Hindi"
+  },
+  {
+    "name": "M4M - Motive for Murder",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/SUCLeW9gxz",
+    "image": "https://i.ibb.co/BKT96h4X/Screenshot-20260728-134108-Chrome.png",
+    "detail": "M4M - Motive for Murder | Audio: Hindi"
+  },
+  {
+    "name": "Vasco The Rebel (Romantic)",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2021,
+    "url": "https://new6.filesdl.top/cloud/KC67srJWqd",
+    "image": "https://i.ibb.co/9mwSGQJm/Screenshot-20260728-134213-Chrome.png",
+    "detail": "Vasco The Rebel (Romantic) | Audio: Hindi"
+  },
+  {
+    "name": "Michael",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/OjMHuP10p8",
+    "image": "https://i.ibb.co/fGnDjt91/Screenshot-20260728-134812-Chrome.png",
+    "detail": "Michael | Audio: Hindi"
+  },
+  {
+    "name": "Kurup",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2021,
+    "url": "https://new6.filesdl.top/cloud/Qqtn1Zd2PU",
+    "image": "https://i.ibb.co/yctT0f3v/Screenshot-20260728-182851-Chrome.png",
+    "detail": "Kurup | Audio: Hindi"
+  },
+  {
+    "name": "Dose",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/EYBPv2octz",
+    "image": "https://i.ibb.co/Z1R5MQZt/Screenshot-20260728-183009-Chrome.png",
+    "detail": "Dose | Audio: Hindi"
+  },
+  {
+    "name": "Parimala And Co",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/1xqBERaVkG",
+    "image": "https://i.ibb.co/LdxD8dXB/Screenshot-20260728-183110-Chrome.png",
+    "detail": "Parimala And Co | Audio: Hindi"
+  },
+  {
+    "name": "The Heist Of The Century",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2020,
+    "url": "https://new6.filesdl.top/cloud/JqFucGielk",
+    "image": "https://i.ibb.co/YTpvT66v/Screenshot-20260728-183219-Chrome.png",
+    "detail": "The Heist Of The Century | Audio: Hindi"
+  },
+  {
+    "name": "Sing Geetham",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/xhdMmJycq1",
+    "image": "https://i.ibb.co/jkX4S6w0/Screenshot-20260728-183410-Chrome.png",
+    "detail": "Sing Geetham | Audio: Hindi"
+  },
+  {
+    "name": "Kaithi",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2019,
+    "url": "https://new6.filesdl.top/cloud/6ZFVTvGNHC",
+    "image": "https://i.ibb.co/MyjRzRVK/Screenshot-20260728-183529-Chrome.png",
+    "detail": "Kaithi | Audio: Hindi"
+  },
+  {
+    "name": "Razor",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/YEFM6KaLI1",
+    "image": "https://i.ibb.co/zWjrDBsp/Screenshot-20260728-183738-Chrome.png",
+    "detail": "Razor | Audio: Hindi"
+  },
+  {
+    "name": "Mario",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/fz46bdKcva",
+    "image": "https://i.ibb.co/8L1dcB7Y/Screenshot-20260728-183906-Chrome.png",
+    "detail": "Mario | Audio: Hindi"
+  },
+  {
+    "name": "The Ghost",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2022,
+    "url": "https://new6.filesdl.top/cloud/F0vXDinOys",
+    "image": "https://i.ibb.co/B53dC3Hs/Screenshot-20260728-184042-Chrome.png",
+    "detail": "The Ghost | Audio: Hindi"
+  },
+  {
+    "name": "Mollywood Times",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2021,
+    "url": "https://new6.filesdl.top/cloud/icReL0Xvky",
+    "image": "https://i.ibb.co/YByFM6QS/Screenshot-20260728-184141-Chrome.png",
+    "detail": "Mollywood Times | Audio: Hindi"
+  },
+  {
+    "name": "Karakkam",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/SiY3elBdpD",
+    "image": "https://i.ibb.co/qMt93NPW/Screenshot-20260728-184256-Chrome.png",
+    "detail": "Karakkam | Audio: Hindi"
+  },
+  {
+    "name": "KD - The Devil",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2025,
+    "url": "https://new6.filesdl.top/cloud/iJuQW5kEaD",
+    "image": "https://i.ibb.co/hRnwrL5W/Screenshot-20260728-184410-Chrome.png",
+    "detail": "KD - The Devil | Audio: Hindi"
+  },
+  {
+    "name": "Ini Utharam",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2022,
+    "url": "https://new6.filesdl.top/cloud/WzE1rnk5Gw",
+    "image": "https://i.ibb.co/GvhYYCvq/Screenshot-20260728-184633-Chrome.png",
+    "detail": "Ini Utharam | Audio: Hindi"
+  },
+  {
+    "name": "Gurthukosthunnayi (Season 1)",
+    "category": "series",
+    "isSeries": true,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/itYCV8SLe4",
+    "image": "https://i.ibb.co/nMxSm104/Screenshot-20260728-195945-Chrome.png",
+    "detail": "Gurthukosthunnayi Season 1 | Audio: Hindi"
+  },
+  {
+    "name": "Section 375",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2019,
+    "url": "https://new6.filesdl.top/cloud/soJLTMSdXk",
+    "image": "https://i.ibb.co/0jjV6QjB/Screenshot-20260728-200218-Chrome.png",
+    "detail": "Section 375 | Audio: Hindi"
+  },
+  {
+    "name": "Rudhramadevi",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2015,
+    "url": "https://new6.filesdl.top/cloud/3znw4bXJoI",
+    "image": "https://i.ibb.co/tprHrh7J/Screenshot-20260728-200322-Chrome.png",
+    "detail": "Rudhramadevi | Audio: Hindi"
+  },
+  {
+    "name": "Freddy",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2022,
+    "url": "https://new6.filesdl.top/cloud/HyhYtOWa2U",
+    "image": "https://i.ibb.co/XfKMKSMj/Screenshot-20260728-200432-Chrome.png",
+    "detail": "Freddy | Audio: Hindi"
+  },
+  {
+    "name": "Blast",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/KZr3jB1nD7",
+    "image": "https://i.ibb.co/HD5frqwh/Screenshot-20260728-200557-Chrome.png",
+    "detail": "Blast | Audio: Hindi"
+  },
+  {
+    "name": "Dhoom Dhaam",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/TLZ6sOIVja",
+    "image": "https://i.ibb.co/dsT9v7dh/Screenshot-20260729-080715-Chrome.png",
+    "detail": "Dhoom Dhaam | Audio: Hindi"
+  },
+  {
+    "name": "Dhoom Dhaam (Alternative Version)",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/JUtMqdLrW5",
+    "image": "https://i.ibb.co/v46mfhQK/Screenshot-20260729-080841-Chrome.png",
+    "detail": "Dhoom Dhaam | Audio: Hindi"
+  },
+  {
+    "name": "Dhoomam",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/GUr39qKXkaMwdrh",
+    "image": "https://i.ibb.co/VYdrp7zx/Screenshot-20260729-080948-Chrome.png",
+    "detail": "Dhoomam | Audio: Hindi"
+  },
+  {
+    "name": "Dhoom 3",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2013,
+    "url": "https://new6.filesdl.top/cloud/29J70Pdn5W",
+    "image": "https://i.ibb.co/27fVqMPv/Screenshot-20260729-082956-Chrome.png",
+    "detail": "Dhoom 3 | Audio: Hindi"
+  },
+  {
+    "name": "Dhoom 2",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2006,
+    "url": "https://new6.filesdl.top/cloud/ZVSHhelsAB",
+    "image": "https://i.ibb.co/LD5h1r5c/Screenshot-20260729-083211-Chrome.png",
+    "detail": "Dhoom 2 | Audio: Hindi"
+  },
+  {
+    "name": "Dhoom",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2004,
+    "url": "https://new6.filesdl.top/cloud/PIB29mf4ab",
+    "image": "https://i.ibb.co/9HSg4fkt/Screenshot-20260729-083300-Chrome.png",
+    "detail": "Dhoom | Audio: Hindi"
+  },
+  {
+    "name": "Spider Noir S01",
+    "category": "series",
+    "isSeries": true,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/ZykgApcRdP",
+    "image": "https://i.ibb.co/KjCPpmqN/Screenshot-20260730-183734-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster वेब सीरीज़"
+  },
+  {
+    "name": "Spider-Man - No Way Home",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2021,
+    "url": "https://new6.filesdl.top/cloud/8g9y2Ridf4",
+    "image": "https://i.ibb.co/MkP4kFqV/Screenshot-20260730-184011-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Spider-Man - Far from Home",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2019,
+    "url": "https://new6.filesdl.top/cloud/BFIaN6UnTW",
+    "image": "https://i.ibb.co/Tx8qphnY/Screenshot-20260730-184139-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Spider-Man - Homecoming",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2017,
+    "url": "https://new6.filesdl.top/cloud/Mn9lu2iGZR",
+    "image": "https://i.ibb.co/GfbNmR4v/Screenshot-20260730-184346-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "The Amazing Spider-Man 2",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2014,
+    "url": "https://new6.filesdl.top/cloud/57Aaes9jIk",
+    "image": "https://i.ibb.co/ycbDC7Tt/Screenshot-20260730-184447-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "The Amazing Spider-Man",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2012,
+    "url": "https://new6.filesdl.top/cloud/oNMifFw64z",
+    "image": "https://i.ibb.co/G420Fr5N/Screenshot-20260730-184549-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Spider-Man 3",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2007,
+    "url": "https://new6.filesdl.top/cloud/r9a8ne1mNk",
+    "image": "https://i.ibb.co/xKqWYbS5/Screenshot-20260730-184659-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Spider-Man 2",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2004,
+    "url": "https://new6.filesdl.top/cloud/87mtiqg1no",
+    "image": "https://i.ibb.co/pvmykNN1/Screenshot-20260730-184815-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Spider-Man",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2002,
+    "url": "https://new6.filesdl.top/cloud/jiP1E0RFnH",
+    "image": "https://i.ibb.co/zH0v25Ns/Screenshot-20260730-184928-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Peddi",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/ZBI7ywR2hm",
+    "image": "https://i.ibb.co/MxSYGzCJ/Screenshot-20260730-185055-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Maa Inti Bangaram",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/bxrCiPdAhL",
+    "image": "https://i.ibb.co/gbVK7XCt/Screenshot-20260730-185151-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  [
+  {
+    "name": "Spider-Man - Brand New Day",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2026,
+    "url": "https://new6.filesdl.top/cloud/8W6LJEUANb",
+    "image": "https://i.ibb.co/Pv12GNP0/Screenshot-20260731-133535-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "You Always",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/bpySmqXcdZ",
+    "image": "https://i.ibb.co/RpXM9jp3/Screenshot-20260731-190745-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Rao Bahadur",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/IzX8A1kg37",
+    "image": "https://i.ibb.co/vCtbwy5C/Screenshot-20260731-190902-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Gatta Kusthi 2",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2025,
+    "url": "https://new6.filesdl.top/cloud/lSWGF3ZfjX",
+    "image": "https://i.ibb.co/SXSr4vrR/Screenshot-20260731-190952-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Gatta Kusthi",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2022,
+    "url": "https://new6.filesdl.top/cloud/5m1KvEZ4NC",
+    "image": "https://i.ibb.co/ZkJ5VDX/Screenshot-20260731-191046-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Hai Jawani toh Ishq Hona Hai",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2025,
+    "url": "https://new6.filesdl.top/cloud/bqo6r9Qjeu",
+    "image": "https://i.ibb.co/xtjjHkPQ/Screenshot-20260731-191135-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Sex Education S04",
+    "category": "series",
+    "isSeries": true,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/4FwPxyisL6",
+    "image": "https://i.ibb.co/WWBfv9xP/Screenshot-20260731-191233-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster वेब सीरीज़"
+  },
+  {
+    "name": "Sex Education S03",
+    "category": "series",
+    "isSeries": true,
+    "year": 2021,
+    "url": "https://new6.filesdl.top/cloud/Ul2OhiVpxb",
+    "image": "https://i.ibb.co/BKP0Rf0Z/Screenshot-20260731-191358-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster वेब सीरीज़"
+  },
+  {
+    "name": "Sex Education S02",
+    "category": "series",
+    "isSeries": true,
+    "year": 2020,
+    "url": "https://new6.filesdl.top/cloud/thwRxXLA4n",
+    "image": "https://i.ibb.co/tTYGZkXr/Screenshot-20260731-191434-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster वेब सीरीज़"
+  },
+  {
+    "name": "Chal Mera Putt 4",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2024,
+    "url": "https://new6.filesdl.top/cloud/7pBD6sA29G",
+    "image": "https://i.ibb.co/YBR70fpy/Screenshot-20260731-191544-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "The Loved One",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/yeicwHoJtE",
+    "image": "https://i.ibb.co/QFDGr9m4/Screenshot-20260731-191634-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Sex Education S01",
+    "category": "series",
+    "isSeries": true,
+    "year": 2019,
+    "url": "https://new6.filesdl.top/cloud/CUakI7SHmY",
+    "image": "https://i.ibb.co/XxYd81m0/Screenshot-20260731-191752-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster वेब सीरीज़"
+  },
+  {
+    "name": "Chal Mera Putt 2",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2020,
+    "url": "https://new6.filesdl.top/cloud/vt6RgejS2y",
+    "image": "https://i.ibb.co/v4dwkpG5/Screenshot-20260731-192034-Chrome.png",
+    "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
+  },
+  {
+    "name": "Chal Mera Putt 3",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2021,
+    "url": "https://new6.filesdl.top/cloud/cQ40sd2yL3",
+    "image": "https://i.ibb.co/sv4tYfwm/Screenshot-20260731-192127-Chrome.png",
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
   }
 ]
