@@ -411,24 +411,27 @@
             color: #ffcc00; font-size: 16px; font-weight: 700;
         }
 
-        /* --- 🖼️ MOVIE BANNER POSTER IN TIMER --- */
+        /* --- 🖼️ MOVIE BANNER POSTER IN TIMER (SQUARE 1:1 RATIO + WHITE BORDER CROP) --- */
         .ad-poster-wrapper {
             width: 100%;
-            max-height: 180px;
-            border-radius: 12px;
+            max-width: 320px;
+            aspect-ratio: 1 / 1;          /* 1:1 स्क्वायर साइज़ */
+            border-radius: 14px;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.1);
             background: #000;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+            margin: 5px auto;
         }
 
         .ad-poster-wrapper img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover;            /* साइड की सफेदी/बॉर्डर को ऑटो-क्रॉप करेगा */
+            object-position: center;
             display: block;
         }
 
@@ -493,10 +496,10 @@
         <div class="search-container">
             <div class="search-wrapper">
                 <span>🔍</span>
-                <input type="text" id="searchBox" class="search-input" placeholder="मूवी, एक्टर, इयर या वेब सीरीज खोजें..." oninput="filterMovies()">
+                <input type="text" id="searchBox" class="search-input" placeholder="Search Movie, Actor or Web Series..." oninput="filterMovies()">
                 <button id="clearSearchBtn" class="search-action-btn" onclick="clearSearch()" style="display:none;">✖</button>
                 
-                <button id="micBtn" class="search-action-btn" onclick="startVoiceSearch()" title="बोलकर खोजें">
+                <button id="micBtn" class="search-action-btn" onclick="startVoiceSearch()" title="Speak to Search">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e0e0e0" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"></path>
                         <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
@@ -517,8 +520,8 @@
         <!-- TRENDING MOVIES SECTION -->
         <div id="trendingSection">
             <div class="section-header">
-                <div class="section-title">🔥 ट्रेंडिंग कंटेंट</div>
-                <a href="#" class="see-all">सभी देखें &gt;</a>
+                <div class="section-title">🔥 Trending Content</div>
+                <a href="#" class="see-all">See All &gt;</a>
             </div>
             <div class="trending-carousel-container" id="trendingCarouselContainer">
                 <div class="trending-slider" id="trendingContainer"></div>
@@ -527,8 +530,8 @@
 
         <!-- NEW RELEASES SECTION -->
         <div class="section-header" id="newReleaseHeader">
-            <div class="section-title" id="mainSectionTitle">नयी रिलीज़</div>
-            <a href="#" class="see-all" id="seeAllBtn">सभी देखें &gt;</a>
+            <div class="section-title" id="mainSectionTitle">New Releases</div>
+            <a href="#" class="see-all" id="seeAllBtn">See All &gt;</a>
         </div>
 
         <div class="movie-grid" id="movieContainer"></div>
@@ -546,7 +549,7 @@
     <!-- YOUTUBE VOICE SEARCH OVERLAY -->
     <div class="yt-voice-overlay" id="ytVoiceOverlay">
         <button class="yt-voice-close" onclick="closeVoiceSearch()">✕</button>
-        <div class="yt-voice-title" id="ytVoiceStatus">बोलिए, मैं सुन रहा हूँ...</div>
+        <div class="yt-voice-title" id="ytVoiceStatus">Listening... Speak now</div>
         <div class="yt-voice-mic-container">
             <div class="yt-mic-circle" onclick="restartVoiceSearch()">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -556,7 +559,7 @@
                 </svg>
             </div>
         </div>
-        <p style="color:#aaa; font-size:13px;">स्पष्ट और धीरे बोलें</p>
+        <p style="color:#aaa; font-size:13px;">Speak clearly and slowly</p>
     </div>
 
     <!-- SIDE MENU OVERLAY -->
@@ -568,19 +571,19 @@
             </div>
             <a href="https://www.appcreator24.com/app4130809-xb3zpc" target="_blank" class="menu-item app-download-item">📲 Download Android App (APK)</a>
             <div class="menu-item" onclick="closeMenu(); openTelegramLink('skcinebuzz');">💬 Support / Message</div>
-            <a href="#" class="menu-item" onclick="closeMenu(); alert('Privacy Policy जल्द ही अपडेट की जाएगी!'); return false;">📜 Privacy Policy</a>
+            <a href="#" class="menu-item" onclick="closeMenu(); alert('Privacy Policy will be updated soon!'); return false;">📜 Privacy Policy</a>
         </div>
     </div>
 
-    <!-- AD TIMER OVERLAY (UPDATED ORDER: TIMER -> MOVIE POSTER -> CONTINUE -> 3 AD BANNERS) -->
+    <!-- AD TIMER OVERLAY (TIMER -> MOVIE POSTER -> CONTINUE -> 3 AD BANNERS) -->
     <div class="ad-timer-overlay" id="adTimerOverlay">
         <div class="ad-timer-box">
             <button class="top-right-close-btn" onclick="cancelTimerOverlay()">✕</button>
             
             <!-- 1. TIMER TEXT -->
-            <p class="timer-status-text" id="timerBadge">⏱️ कृपया 5 सेकंड प्रतीक्षा करें...</p>
+            <p class="timer-status-text" id="timerBadge">⏱️ Please wait 5 seconds...</p>
 
-            <!-- 2. CUSTOM MOVIE BANNER POSTER FROM JSON -->
+            <!-- 2. CUSTOM MOVIE BANNER POSTER FROM JSON (1:1 SQUARE) -->
             <div class="ad-poster-wrapper">
                 <img id="adMoviePosterImg" src="" alt="Movie Poster">
             </div>
@@ -588,7 +591,7 @@
             <!-- 3. CONTINUE BUTTON -->
             <button class="continue-btn-red" id="continueToVideoBtn" onclick="closeTimerAndPlay()">▶ CONTINUE TO VIDEO</button>
 
-            <!-- 4. BANNER ADS SECTION BELOW CONTINUE BUTTON (3 Banner Ads for Income) -->
+            <!-- 4. BANNER ADS SECTION BELOW CONTINUE BUTTON (3 BANNERS) -->
             <div class="ad-banner-wrapper">
                 <script type="text/javascript">
                   atOptions = {
@@ -635,7 +638,7 @@
         <div class="update-box">
             <img id="updateImg" src="" alt="Update">
             <h2 id="updateTitle">App Update Available</h2>
-            <p id="updateDetail">नया वर्ज़न उपलब्ध है! कृपया अपडेट करें।</p>
+            <p id="updateDetail">New version available! Please update.</p>
             <a href="#" id="updateBtnLink" target="_blank" class="update-download-btn">UPDATE NOW 🚀</a>
         </div>
     </div>
@@ -747,22 +750,24 @@
         }
         function closeMenu() { document.getElementById('menuOverlay').style.display = 'none'; }
 
-        /* --- 🎙️ SMOOTH VOICE SEARCH --- */
+        /* --- 🎙️ SMOOTH VOICE SEARCH (SET TO ENGLISH - en-IN) --- */
         function startVoiceSearch() {
             const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
             if (!SpeechRecognition) {
-                alert("आपके डिवाइस में वॉइस सर्च सपोर्टेड नहीं है।");
+                alert("Voice search is not supported on your device.");
                 return;
             }
 
             const overlay = document.getElementById('ytVoiceOverlay');
             const statusText = document.getElementById('ytVoiceStatus');
             overlay.style.display = 'flex';
-            statusText.innerText = 'बोलिए, मैं सुन रहा हूँ...';
+            statusText.innerText = 'Listening... Speak now';
 
             recognitionInstance = new SpeechRecognition();
-            recognitionInstance.lang = 'hi-IN';
+            
+            // 🔴 English letters detection fix (en-IN)
+            recognitionInstance.lang = 'en-IN'; 
             recognitionInstance.interimResults = false;
 
             try {
@@ -782,12 +787,12 @@
             };
 
             recognitionInstance.onerror = function() {
-                statusText.innerText = "माफ़ करें, आपकी आवाज़ समझ नहीं आई।";
+                statusText.innerText = "Sorry, could not recognize your voice.";
             };
 
             recognitionInstance.onend = function() {
-                if (statusText.innerText === 'बोलिए, मैं सुन रहा हूँ...') {
-                    statusText.innerText = "माईक बंद हो गया। फिर से टच करें।";
+                if (statusText.innerText === 'Listening... Speak now') {
+                    statusText.innerText = "Mic stopped. Tap mic to try again.";
                 }
             };
         }
@@ -830,18 +835,18 @@
             if (rawSearchText !== "") {
                 if (trendingSection) trendingSection.style.display = 'none';
                 if (seeAllBtn) seeAllBtn.style.display = 'none';
-                if (mainSectionTitle) mainSectionTitle.innerText = `🔍 खोज के परिणाम: "${rawSearchText}"`;
+                if (mainSectionTitle) mainSectionTitle.innerText = `🔍 Search Results: "${rawSearchText}"`;
 
                 let query = rawSearchText.toLowerCase();
 
-                const stopWords = ["movie", "movies", "film", "films", "series", "show", "shows", "मूवी", "फिल्म", "सीरीज"];
+                const stopWords = ["movie", "movies", "film", "films", "series", "show", "shows"];
                 let cleanedQueryWords = query.split(/\s+/).filter(word => !stopWords.includes(word));
                 let cleanedQuery = cleanedQueryWords.join(' ').trim();
 
                 if (cleanedQuery === "") cleanedQuery = query;
 
                 const normalizedQuery = normalizeText(cleanedQuery);
-                const isNewQuery = query.includes("new") || query.includes("latest") || query.includes("नया") || query.includes("नयी");
+                const isNewQuery = query.includes("new") || query.includes("latest");
 
                 let filteredList = movieList.filter(movie => {
                     const name = (movie.name || '').toLowerCase();
@@ -877,7 +882,7 @@
             } else {
                 if (trendingSection) trendingSection.style.display = 'block';
                 if (seeAllBtn) seeAllBtn.style.display = 'inline-block';
-                if (mainSectionTitle) mainSectionTitle.innerText = 'नयी रिलीज़';
+                if (mainSectionTitle) mainSectionTitle.innerText = 'New Releases';
 
                 let categoryFiltered = movieList.filter(movie => 
                     (movie.category || '').toLowerCase() === currentCategory.toLowerCase()
@@ -1035,7 +1040,7 @@
             paginationContainer.innerHTML = "";
 
             if(movies.length === 0) {
-                container.innerHTML = "<p style='grid-column: span 2; text-align:center; color:#888; margin-top:30px;'>कोई परिणाम नहीं मिला!</p>";
+                container.innerHTML = "<p style='grid-column: span 2; text-align:center; color:#888; margin-top:30px;'>No results found!</p>";
                 return;
             }
 
@@ -1063,7 +1068,7 @@
                             <span class="like-display">👍 <span data-id="${movieId}">${movie.likes || 0}</span> Likes</span>
                             ${yearInfo}
                         </div>
-                        <div class="card-genre">${movie.genre || movie.detail || 'एक्शन, ड्रामा'}</div>
+                        <div class="card-genre">${movie.genre || movie.detail || 'Action, Drama'}</div>
                         <div class="play-btn">${buttonText}</div>
                     </div>
                 `;
@@ -1157,7 +1162,7 @@
                     listContainer.appendChild(epCard);
                 });
             } else {
-                listContainer.innerHTML = "<p style='grid-column: span 2; text-align:center; color:#888;'>कोई एपिसोड उपलब्ध नहीं है।</p>";
+                listContainer.innerHTML = "<p style='grid-column: span 2; text-align:center; color:#888;'>No episodes available.</p>";
             }
             
             overlay.style.display = 'flex';
@@ -1176,7 +1181,7 @@
         /* --- TIMER OVERLAY WITH POSTER AND ADS --- */
         function triggerTimerAdAndPlay(videoUrl, posterUrl) {
             if(!videoUrl) {
-                alert("वीडियो लिंक उपलब्ध नहीं है!");
+                alert("Video link not available!");
                 return;
             }
             pendingVideoUrl = videoUrl;
@@ -1195,7 +1200,7 @@
             document.getElementById('main-body').classList.add('body-locked');
 
             let timeLeft = 5; 
-            timerBadge.innerText = `⏱️ कृपया ${timeLeft} सेकंड प्रतीक्षा करें...`;
+            timerBadge.innerText = `⏱️ Please wait ${timeLeft} seconds...`;
             continueBtn.style.display = 'none';
 
             if (timerInterval) clearInterval(timerInterval);
@@ -1203,10 +1208,10 @@
             timerInterval = setInterval(() => {
                 timeLeft--;
                 if (timeLeft > 0) {
-                    timerBadge.innerText = `⏱️ कृपया ${timeLeft} सेकंड प्रतीक्षा करें...`;
+                    timerBadge.innerText = `⏱️ Please wait ${timeLeft} seconds...`;
                 } else {
                     clearInterval(timerInterval);
-                    timerBadge.innerText = "🎉 लिंक तैयार है! नीचे क्लिक करें:";
+                    timerBadge.innerText = "🎉 Link is Ready! Click Below:";
                     continueBtn.style.display = 'block'; 
                 }
             }, 1000);
