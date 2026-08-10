@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "Lripsome Men Cargos",
+    "category": "men_cargos",
+    "price": 440,
+    "sizes": ["28", "30", "32", "34"],
+    "image": "https://i.ibb.co/tpxD4fhr/Screenshot-20260810-154138-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  },
+  {
+    "id": 2,
+    "name": "Povaxpo Men Cargos",
+    "category": "men_cargos",
+    "price": 366,
+    "sizes": ["28", "30", "32", "34"],
+    "image": "https://i.ibb.co/kbNsrkp/Screenshot-20260810-154350-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  },
+  {
+    "id": 3,
+    "name": "ERENCHINO Men Cargos",
+    "category": "men_cargos",
+    "price": 340,
+    "sizes": ["28", "30", "32", "34"],
+    "image": "https://i.ibb.co/pvx4GMjY/Screenshot-20260810-154527-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  },
+  {
+    "id": 4,
+    "name": "RAAVI Men Cargos",
+    "category": "men_cargos",
+    "price": 338,
+    "sizes": ["28", "30", "32", "34"],
+    "image": "https://i.ibb.co/0yXxnjD3/Screenshot-20260810-154701-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  },
+  {
+    "id": 5,
+    "name": "RGN Men Cargos",
+    "category": "men_cargos",
+    "price": 337,
+    "sizes": ["28", "30", "32", "34"],
+    "image": "https://i.ibb.co/bg6z39Nv/Screenshot-20260810-154756-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  },
+  {
+    "id": 6,
+    "name": "Starvy Oversized Men Tie & Dye Round Neck Cotton Blend White, Maroon T-Shirt",
+    "category": "men_tshirts",
+    "price": 263,
+    "sizes": ["S", "M", "L", "XL"],
+    "image": "https://i.ibb.co/5XfMxF5N/Screenshot-20260810-154910-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  },
+  {
+    "id": 7,
+    "name": "Celebrino Men Typography Round Neck Polyester White, Black T-Shirt",
+    "category": "men_tshirts",
+    "price": 193,
+    "sizes": ["S", "M", "L", "XL"],
+    "image": "https://i.ibb.co/PvCmrKKG/Screenshot-20260810-155017-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  },
+  {
+    "id": 8,
+    "name": "TRIPR Men Printed Round Neck Cotton Blend Black T-Shirt",
+    "category": "men_tshirts",
+    "price": 205,
+    "sizes": ["S", "M", "L", "XL"],
+    "image": "https://i.ibb.co/3mnjjQRx/Screenshot-20260810-155125-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  },
+  {
+    "id": 9,
+    "name": "Kyanshi Fashion Men Graphic Print Round Neck Cotton Blend Black T-Shirt",
+    "category": "men_tshirts",
+    "price": 169,
+    "sizes": ["S", "M", "L", "XL"],
+    "image": "https://i.ibb.co/rK1pwGf4/Screenshot-20260810-155227-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  },
+  {
+    "id": 10,
+    "name": "annnackel Men Graphic Print Round Neck Pure Cotton Black T-Shirt",
+    "category": "men_tshirts",
+    "price": 374,
+    "sizes": ["S", "M", "L", "XL"],
+    "image": "https://i.ibb.co/ZRwCY194/Screenshot-20260810-155318-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  },
+  {
+    "id": 11,
+    "name": "Ai+ Pulse 2 (Purple, 64 GB) (4 GB RAM)",
+    "category": "mobile",
+    "price": 9499,
+    "images": [
+      "https://i.ibb.co/6RBpv7nR/Screenshot-20260810-155519-Chrome.png",
+      "https://i.ibb.co/xRMp5wR/Screenshot-20260810-155535-Chrome.png",
+      "https://i.ibb.co/v4w27zP8/Screenshot-20260810-155547-Chrome.png",
+      "https://i.ibb.co/ynmh67wr/Screenshot-20260810-155558-Chrome.png"
+    ],
+    "image": "https://i.ibb.co/6RBpv7nR/Screenshot-20260810-155519-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  },
+  {
+    "id": 12,
+    "name": "realme C71 (Sea Blue, 64 GB) (4 GB RAM)",
+    "category": "mobile",
+    "price": 13265,
+    "images": [
+      "https://i.ibb.co/TMXHDL2M/Screenshot-20260810-155821-Chrome.png",
+      "https://i.ibb.co/BHqjJN5t/Screenshot-20260810-155830-Chrome.png",
+      "https://i.ibb.co/G3nDfbhg/Screenshot-20260810-155905-Chrome.png"
+    ],
+    "image": "https://i.ibb.co/TMXHDL2M/Screenshot-20260810-155821-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  },
+  {
+    "id": 13,
+    "name": "URBANBOX Latest Premium Casual Gym Walking Running Sneakers For Men (White, Black , 9)",
+    "category": "shoes",
+    "price": 202,
+    "sizes": ["6", "7", "8", "9", "10"],
+    "image": "https://i.ibb.co/k6SGQkb8/Screenshot-20260810-160116-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  },
+  {
+    "id": 14,
+    "name": "Pennen Lightweight Sports Running Trekking Gym Shoes Casuals For Men (Grey , 7)",
+    "category": "shoes",
+    "price": 223,
+    "sizes": ["6", "7", "8", "9", "10"],
+    "image": "https://i.ibb.co/chWmgcLS/Screenshot-20260810-160249-Chrome.png",
+    "source_tag": "CASHKARO_FLIPKART"
+  }
+]
