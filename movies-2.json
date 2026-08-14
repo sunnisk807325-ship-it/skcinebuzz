@@ -3414,14 +3414,14 @@
     "detail": "एक्शन और थ्रिलर से भरपूर एक block buster फिल्म"
   },
   {
-  "name": "Anni Manchi Sakunamule",
-  "category": "movie",
-  "isSeries": false,
-  "year": 2023,
-  "url": "https://new6.filesdl.top/cloud/QXRI4EMsXgMf6mO",
-  "image": "https://i.ibb.co/q3hvQdx9/Screenshot-20260801-145857-Chrome.png",
-  "poster": "https://i.ibb.co/Y4LKb0kM/Screenshot-20260801-145937-Moto-App-Launcher.png",
-  "detail": "रोमांटिक और ड्रामा से भरपूर फिल्म"
+    "name": "Anni Manchi Sakunamule",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2023,
+    "url": "https://new6.filesdl.top/cloud/QXRI4EMsXgMf6mO",
+    "image": "https://i.ibb.co/q3hvQdx9/Screenshot-20260801-145857-Chrome.png",
+    "poster": "https://i.ibb.co/Y4LKb0kM/Screenshot-20260801-145937-Moto-App-Launcher.png",
+    "detail": "रोमांटिक और ड्रामा से भरपूर फिल्म"
   },
   {
     "name": "Son of Sara - Volume 1",
@@ -3686,12 +3686,12 @@
   {
     "name": "Musafir Cafe S01",
     "category": "series",
-    "isSeries": false,
+    "isSeries": true,
     "year": 2022,
     "url": "https://new6.filesdl.top/cloud/SeMAcw8QEj",
     "image": "https://i.ibb.co/GQ6nRFH1/Screenshot-20260810-135315-Chrome.png",
     "poster": "https://i.ibb.co/hJMBKQCr/Screenshot-20260810-135327-Chrome.png",
-    "detail": "इमोशनल एडवेंचर और ड्रामा फिल्म"
+    "detail": "इमोशनल एडवेंचर और ड्रामा सीरीज"
   },
   {
     "name": "Radhe Shyam",
@@ -3713,7 +3713,6 @@
     "poster": "https://i.ibb.co/p6dM9sCn/Screenshot-20260810-235210-Chrome.png",
     "detail": "इमोशनल एडवेंचर और ड्रामा फिल्म"
   },
-  [
   {
     "name": "Baahubali The Epic",
     "category": "movie",
