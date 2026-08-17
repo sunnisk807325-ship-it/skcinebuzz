@@ -4222,5 +4222,55 @@
     "image": "https://i.ibb.co/Kp02VT7D/Screenshot-20260816-185116-Chrome.png",
     "poster": "https://i.ibb.co/PZGybDT4/Screenshot-20260816-185151-Chrome.png",
     "detail": "नई फिल्म/सीरीज"
+  },
+  {
+    "name": "Indori Ishq S01",
+    "category": "series",
+    "isSeries": true,
+    "year": 2021,
+    "url": "https://new6.filesdl.top/cloud/X8KeT4xjkN",
+    "image": "https://i.ibb.co/Kx59nxPY/Screenshot-20260817-101335-Chrome.png",
+    "poster": "https://i.ibb.co/YFpxBN4R/Screenshot-20260817-101357-Chrome.png",
+    "detail": "नई फिल्म/सीरीज"
+  },
+  {
+    "name": "Dil Chahta Hai",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2001,
+    "url": "https://new6.filesdl.top/cloud/QejKvBusM4",
+    "image": "https://i.ibb.co/gby2Qg6z/Screenshot-20260817-154603-Chrome.png",
+    "poster": "https://i.ibb.co/7dNYyPYF/Screenshot-20260817-154613-Chrome.png",
+    "detail": "नई फिल्म/सीरीज"
+  },
+  {
+    "name": "Yeh Dil Bill",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2025,
+    "url": "https://new6.filesdl.top/cloud/BR0oCJdglt",
+    "image": "https://i.ibb.co/CKGJGLzK/Screenshot-20260817-154853-Chrome.png",
+    "poster": "https://i.ibb.co/hJFFpzhJ/Screenshot-20260817-154909-Chrome.png",
+    "detail": "नई फिल्म/सीरीज"
+  },
+  {
+    "name": "Thamma",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2025,
+    "url": "https://new6.filesdl.top/cloud/73imbJMN4S",
+    "image": "https://i.ibb.co/d0D8g7RZ/Screenshot-20260817-155120-Chrome.png",
+    "poster": "https://i.ibb.co/XrpZv952/Screenshot-20260817-155133-Chrome.png",
+    "detail": "नई फिल्म/सीरीज"
+  },
+  {
+    "name": "Jolly LLB",
+    "category": "movie",
+    "isSeries": false,
+    "year": 2013,
+    "url": "https://new6.filesdl.top/cloud/5nquSU2E1k",
+    "image": "https://i.ibb.co/tPskTJGZ/Screenshot-20260817-155335-Chrome.png",
+    "poster": "https://i.ibb.co/HDW4wBTF/Screenshot-20260817-155351-Chrome.png",
+    "detail": "नई फिल्म/सीरीज"
   }
 ]
