@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
@@ -425,26 +425,6 @@
             color: #ffffff;
             border: 1.5px solid rgba(255, 255, 255, 0.8);
             font-size: 18px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            z-index: 20;
-            backdrop-filter: blur(4px);
-        }
-
-        .close-ad-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: rgba(0, 0, 0, 0.6);
-            color: #ffffff;
-            border: 1.5px solid rgba(255, 255, 255, 0.8);
-            font-size: 18px;
-            font-weight: bold;
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -1118,8 +1098,24 @@
             }
         }
 
+        /* --- UPDATED TELEGRAM REDIRECT WITH ERROR HANDLING --- */
         function redirectToTelegram() {
-            window.open('https://t.me/ndtflow', '_blank');
+            openTelegramLink('ndtflow');
+        }
+
+        function openTelegramLink(username) {
+            const webUrl = `https://t.me/${username}`;
+            const appUrl = `tg://resolve?domain=${username}`;
+
+            // Safe open without causing ERR_UNKNOWN_URL_SCHEME in WebView
+            try {
+                window.location.href = appUrl;
+                setTimeout(() => {
+                    window.open(webUrl, '_blank');
+                }, 1000);
+            } catch (e) {
+                window.open(webUrl, '_blank');
+            }
         }
 
         /* --- BACKGROUND BANNER AD REFRESH --- */
@@ -1176,13 +1172,6 @@
         }
 
         setInterval(loadBannerAds, 120000);
-
-        function openTelegramLink(username) {
-            const webUrl = `https://t.me/${username}`;
-            const appUrl = `tg://resolve?domain=${username}`;
-            window.location.href = appUrl;
-            setTimeout(() => { window.open(webUrl, '_blank'); }, 1000);
-        }
 
         function openMenu() { 
             pushModalState('menu');
@@ -1757,3 +1746,4 @@
     </script>
 </body>
 </html>
+
