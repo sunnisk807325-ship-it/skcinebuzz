@@ -4,26 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="clckd" content="54d860a62105b2da28e98590e4e28d76" />
-    <!-- SEO & METADATA -->
     <title>Sk CineBuzz - Watch & Download Latest HD Movies & Web Series</title>
     <meta name="description" content="Download latest HD movies, Bollywood, Hollywood, South Hindi Dubbed movies, and web series for free in 480p, 720p, and 1080p on Sk CineBuzz.">
     <meta name="keywords" content="Sk CineBuzz, movie download, latest movies 480p 720p 1080p, free movie download site, download web series hindi, hindi dubbed movies download, full movie download online">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://sunnisk807325-ship-it.github.io/skcinebuzz/">
 
-    <!-- Open Graph Tags -->
     <meta property="og:title" content="Sk CineBuzz - Free HD Movie Download">
     <meta property="og:description" content="Stream and download latest HD movies and web series on Sk CineBuzz.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sunnisk807325-ship-it.github.io/skcinebuzz/">
 
-    <!-- Website Favicon (Updated with your new Logo) -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/Gf1Rs1MV/1785838430902.png">
     <link rel="icon" type="image/png" sizes="192x192" href="https://i.ibb.co/Gf1Rs1MV/1785838430902.png">
     <link rel="apple-touch-icon" href="https://i.ibb.co/Gf1Rs1MV/1785838430902.png">
-    </head>
-   
-   
+    
     <style>
         /* --- GLOBAL & APP DESIGN --- */
         * {
@@ -395,6 +390,300 @@
         .video-close-btn { position: absolute; top: 20px; right: 20px; background: rgba(255,255,255,0.3); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; z-index: 200005; }
         #appVideoFrame { width: 100%; height: 100%; max-width: 900px; max-height: 80vh; border: none; margin-top: 50px; }
 
+        /* === FULLSCREEN VIDEO AD SCREEN STYLES === */
+        .fullscreen-ad {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #000000;
+            z-index: 999999;
+        }
+
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sound-btn {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            border: 1.5px solid rgba(255, 255, 255, 0.8);
+            font-size: 18px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 20;
+            backdrop-filter: blur(4px);
+        }
+
+        .close-ad-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #ffffff;
+            border: 1.5px solid rgba(255, 255, 255, 0.8);
+            font-size: 18px;
+            font-weight: bold;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            z-index: 20;
+            backdrop-filter: blur(4px);
+        }
+
+        .ui-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 65px 16px 25px 16px;
+            background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.9) 100%);
+            cursor: pointer;
+        }
+
+        .top-branding {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-box {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .brand-logo-img {
+            width: 26px;
+            height: 26px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        .social-proof {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #00ff88;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            font-weight: bold;
+        }
+
+        .center-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 15px;
+        }
+
+        .main-text {
+            max-width: 60%;
+        }
+
+        .main-text h1 {
+            font-size: 1.8rem;
+            line-height: 1.1;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+        }
+
+        .main-text h1 span { color: #00ff88; }
+        .main-text p { font-size: 0.8rem; margin-top: 6px; color: #ddd; }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .feature-badge {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            backdrop-filter: blur(2px);
+        }
+
+        .bottom-section {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .cta-banner {
+            background: linear-gradient(90deg, #111 0%, #1e3c72 100%);
+            border: 2px solid #00ff88;
+            border-radius: 30px;
+            padding: 10px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+        }
+
+        .cta-text div:first-child { font-weight: bold; font-size: 0.95rem; }
+        .cta-text div:last-child { font-size: 0.75rem; color: #aaa; }
+
+        .cta-btn {
+            background: #00ff88;
+            color: #000;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            box-shadow: 0 0 10px rgba(0,255,136,0.6);
+        }
+
+        .trust-strip {
+            background: rgba(15, 15, 15, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 6px;
+            backdrop-filter: blur(4px);
+        }
+
+        .trust-item { text-align: center; }
+        .trust-item div:first-child { font-size: 0.85rem; font-weight: bold; color: #ffffff; }
+        .trust-item div:last-child { font-size: 0.65rem; color: #aaaaaa; margin-top: 2px; }
+
+        /* Video End Big Popup Card */
+        .end-popup-overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 30;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .end-popup-card {
+            position: relative;
+            background: #181818;
+            border: 2px solid #00ff88;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 320px;
+            padding: 28px 20px 24px 20px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: slowPopupAnim 0.7s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        @keyframes slowPopupAnim {
+            from { transform: scale(0.6) translateY(30px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        .popup-timer-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255, 255, 255, 0.12);
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            font-size: 0.75rem;
+            font-weight: bold;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: default;
+            transition: all 0.2s ease;
+        }
+
+        .popup-timer-btn.active-close {
+            cursor: pointer;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .popup-logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 2px solid #00ff88;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+            margin-bottom: 12px;
+        }
+
+        .popup-title { font-size: 1.4rem; font-weight: 900; color: #ffffff; margin-bottom: 4px; }
+        .popup-subtitle { font-size: 0.85rem; color: #00ff88; margin-bottom: 15px; font-weight: bold; }
+        .popup-desc { font-size: 0.8rem; color: #ccc; margin-bottom: 20px; line-height: 1.4; }
+
+        .popup-join-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #00ff88, #00b359);
+            color: #000000;
+            font-size: 1rem;
+            font-weight: 900;
+            padding: 14px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: transform 0.2s;
+        }
+
+        .popup-join-btn:active { transform: scale(0.96); }
+
         /* === FULLSCREEN AD TIMER OVERLAY === */
         .ad-timer-overlay {
             position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
@@ -426,15 +715,12 @@
             z-index: 5;
         }
 
-        .timer-status-text {
-            color: #ffcc00; font-size: 16px; font-weight: 700;
-        }
+        .timer-status-text { color: #ffcc00; font-size: 16px; font-weight: 700; }
 
-        /* --- 🖼️ MOVIE BANNER POSTER IN TIMER (SQUARE 1:1 RATIO + WHITE BORDER CROP) --- */
         .ad-poster-wrapper {
             width: 100%;
             max-width: 320px;
-            aspect-ratio: 1 / 1;          /* 1:1 स्क्वायर साइज़ */
+            aspect-ratio: 1 / 1;
             border-radius: 14px;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -449,7 +735,7 @@
         .ad-poster-wrapper img {
             width: 100%;
             height: 100%;
-            object-fit: cover;            /* साइड की सफेदी/बॉर्डर को ऑटो-क्रॉप करेगा */
+            object-fit: cover;
             object-position: center;
             display: block;
         }
@@ -478,7 +764,6 @@
 <body id="main-body">
 
     <div id="appMainContent">
-        <!-- HEADER BAR -->
         <div class="header-bar">
             <button class="icon-btn" onclick="openMenu()">☰</button>
             <div class="brand-logo">
@@ -511,7 +796,6 @@
             </div>
         </div>
 
-        <!-- SEARCH BAR WITH MIC & CLEAR BUTTON -->
         <div class="search-container">
             <div class="search-wrapper">
                 <span>🔍</span>
@@ -528,7 +812,6 @@
             </div>
         </div>
 
-        <!-- CATEGORY BUTTONS -->
         <div class="category-container">
             <button class="cat-btn active" id="btn-movie" onclick="changeCategory('movie', true)">Movie</button>
             <button class="cat-btn" id="btn-series" onclick="changeCategory('series', true)">Web Series</button>
@@ -536,7 +819,6 @@
             <button class="cat-btn" id="btn-kids" onclick="changeCategory('kids', true)">Kids</button>
         </div>
 
-        <!-- TRENDING MOVIES SECTION -->
         <div id="trendingSection">
             <div class="section-header">
                 <div class="section-title">🔥 Trending Content</div>
@@ -547,7 +829,6 @@
             </div>
         </div>
 
-        <!-- NEW RELEASES SECTION -->
         <div class="section-header" id="newReleaseHeader">
             <div class="section-title" id="mainSectionTitle">New Releases</div>
             <a href="#" class="see-all" id="seeAllBtn">See All &gt;</a>
@@ -555,17 +836,69 @@
 
         <div class="movie-grid" id="movieContainer"></div>
 
-        <!-- PAGINATION BUTTONS -->
         <div class="pagination-container" id="paginationContainer"></div>
 
-        <!-- FIRST BANNER AD CONTAINER -->
         <div class="ad-banner-wrapper" id="bannerAdWrapper1"></div>
 
-        <!-- SECOND BANNER AD CONTAINER -->
         <div class="ad-banner-wrapper" id="bannerAdWrapper2"></div>
     </div>
 
-    <!-- YOUTUBE VOICE SEARCH OVERLAY -->
+    <div class="fullscreen-ad" id="adScreen">
+        <button class="sound-btn" id="soundBtn" onclick="toggleSound(event)">🔇</button>
+      
+        <div class="video-container">
+            <video id="fullAdVideo" playsinline autoplay muted onended="showEndPopup()"></video>
+        </div>
+
+        <div class="ui-overlay" id="uiOverlay" onclick="redirectToTelegram()">
+            <div class="top-branding">
+                <div class="brand-box">
+                    <img src="https://i.ibb.co/QFbGgg0S/2026-08-27-03-04-53-413-0530.jpg" alt="Ad Logo" class="brand-logo-img">
+                    <span style="font-size: 0.85rem; font-weight: bold;">NDTFlow</span>
+                </div>
+                <div class="social-proof">👥 50K+ Happy Users</div>
+            </div>
+
+            <div class="center-content">
+                <div class="main-text">
+                    <h1>EARN<br>AMAZING<br><span>REWARDS</span></h1>
+                    <p>Share data & earn real rewards daily!</p>
+                </div>
+                <div class="feature-list">
+                    <div class="feature-badge">🎁 Instant Rewards</div>
+                    <div class="feature-badge">⚡ Fast Payouts</div>
+                    <div class="feature-badge">🛡️ 100% Safe</div>
+                </div>
+            </div>
+
+            <div class="bottom-section">
+                <div class="cta-banner">
+                    <div class="cta-text">
+                        <div>Join NDTFlow Today!</div>
+                        <div>Start Earning Now &raquo;</div>
+                    </div>
+                    <div class="cta-btn">JOIN NOW ➔</div>
+                </div>
+                <div class="trust-strip">
+                    <div class="trust-item"><div>👥 50K+</div><div>Users</div></div>
+                    <div class="trust-item"><div>🌐 10M+ GB</div><div>Data Shared</div></div>
+                    <div class="trust-item"><div>🛡️ 100%</div><div>Secure</div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="end-popup-overlay" id="endPopupOverlay">
+            <div class="end-popup-card">
+                <div class="popup-timer-btn" id="popupTimerBtn">3s</div>
+                <img src="https://i.ibb.co/QFbGgg0S/2026-08-27-03-04-53-413-0530.jpg" alt="NDTFlow Logo" class="popup-logo">
+                <div class="popup-title">NDTFlow</div>
+                <div class="popup-subtitle">Smart Data. Smart Earnings.</div>
+                <div class="popup-desc">Join our official Telegram community today to start earning daily rewards instantly!</div>
+                <button class="popup-join-btn" onclick="redirectToTelegram()">JOIN TELEGRAM ➔</button>
+            </div>
+        </div>
+    </div>
+
     <div class="yt-voice-overlay" id="ytVoiceOverlay">
         <button class="yt-voice-close" onclick="closeVoiceSearch()">✕</button>
         <div class="yt-voice-title" id="ytVoiceStatus">Listening... Speak now</div>
@@ -581,7 +914,6 @@
         <p style="color:#aaa; font-size:13px;">Speak clearly and slowly</p>
     </div>
 
-    <!-- SIDE MENU OVERLAY -->
     <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()">
         <div class="menu-box" onclick="event.stopPropagation()">
             <div class="menu-header">
@@ -594,23 +926,15 @@
         </div>
     </div>
 
-    <!-- AD TIMER OVERLAY (TIMER -> MOVIE POSTER -> CONTINUE -> 3 AD BANNERS) -->
     <div class="ad-timer-overlay" id="adTimerOverlay">
         <div class="ad-timer-box">
             <button class="top-right-close-btn" onclick="cancelTimerOverlay()">✕</button>
-            
-            <!-- 1. TIMER TEXT -->
             <p class="timer-status-text" id="timerBadge">⏱️ Please wait 5 seconds...</p>
-
-            <!-- 2. CUSTOM MOVIE BANNER POSTER FROM JSON (1:1 SQUARE) -->
             <div class="ad-poster-wrapper">
                 <img id="adMoviePosterImg" src="" alt="Movie Poster">
             </div>
-
-            <!-- 3. CONTINUE BUTTON -->
             <button class="continue-btn-red" id="continueToVideoBtn" onclick="closeTimerAndPlay()">▶ CONTINUE TO VIDEO</button>
 
-            <!-- 4. BANNER ADS SECTION BELOW CONTINUE BUTTON (3 BANNERS) -->
             <div class="ad-banner-wrapper">
                 <script type="text/javascript">
                   atOptions = {
@@ -652,7 +976,6 @@
         </div>
     </div>
 
-    <!-- UPDATE OVERLAY -->
     <div class="update-overlay" id="updateOverlay">
         <div class="update-box">
             <img id="updateImg" src="" alt="Update">
@@ -662,13 +985,11 @@
         </div>
     </div>
 
-    <!-- IN-APP PLAYER POPUP -->
     <div class="video-player-overlay" id="videoPlayerOverlay">
         <button class="video-close-btn" onclick="closeInAppPlayer()">✕ Close</button>
         <iframe id="appVideoFrame" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
 
-    <!-- EPISODE POPUP -->
     <div class="video-player-overlay" id="episodeOverlay" style="display:none; background: #0b0b0b; overflow-y: auto; justify-content: flex-start; padding-top: 60px; z-index: 100000;">
         <button class="video-close-btn" onclick="closeEpisodeSelector()" style="position: fixed; top: 15px; right: 15px; z-index: 100005;">✕ Back</button>
         <div style="text-align: center; margin-bottom: 20px; width: 100%; max-width: 600px;">
@@ -678,7 +999,6 @@
         <div class="movie-grid" id="episodeListContainer" style="width: 100%; max-width: 800px; padding-bottom: 50px;"></div>
     </div>
 
-    <!-- JAVASCRIPT LOGIC -->
     <script>
         const WORKER_URL = "https://cold-resonance-fff9skcinebuzz-like.sunnisk807325.workers.dev"; 
 
@@ -700,6 +1020,107 @@
         const paginationContainer = document.getElementById('paginationContainer');
 
         let recognitionInstance = null;
+
+        /* --- VIDEO ADS SETUP & LOGIC --- */
+        const adVideoUrls = [
+            'https://res.cloudinary.com/lpami3xk/video/upload/VID-20260829-WA0010.mp4',
+            'https://res.cloudinary.com/lpami3xk/video/upload/VID-20260829-WA0006.mp4'
+        ];
+        
+        let pendingMovieAction = null;
+        let countdownInterval = null;
+
+        function triggerVideoAdThenProceed(callback) {
+            pendingMovieAction = callback;
+            const randomIndex = Math.floor(Math.random() * adVideoUrls.length);
+            const selectedVideoUrl = adVideoUrls[randomIndex];
+
+            const adScreen = document.getElementById('adScreen');
+            const videoPlayer = document.getElementById('fullAdVideo');
+            const soundBtn = document.getElementById('soundBtn');
+            const endPopupOverlay = document.getElementById('endPopupOverlay');
+
+            if (countdownInterval) clearInterval(countdownInterval);
+            endPopupOverlay.style.display = 'none';
+
+            videoPlayer.src = selectedVideoUrl;
+            videoPlayer.muted = true;
+            soundBtn.innerText = '🔇';
+
+            adScreen.style.display = 'block';
+            document.getElementById('main-body').classList.add('body-locked');
+            videoPlayer.play();
+        }
+
+        function showEndPopup() {
+            const endPopupOverlay = document.getElementById('endPopupOverlay');
+            const timerBtn = document.getElementById('popupTimerBtn');
+
+            endPopupOverlay.style.display = 'flex';
+            
+            let timeLeft = 3;
+            timerBtn.innerText = timeLeft + 's';
+            timerBtn.classList.remove('active-close');
+            timerBtn.onclick = null;
+
+            if (countdownInterval) clearInterval(countdownInterval);
+            
+            countdownInterval = setInterval(() => {
+                timeLeft--;
+                if (timeLeft > 0) {
+                    timerBtn.innerText = timeLeft + 's';
+                } else {
+                    clearInterval(countdownInterval);
+                    timerBtn.innerText = '✕';
+                    timerBtn.classList.add('active-close');
+                    timerBtn.onclick = function(e) {
+                        closeFullScreenAd(e);
+                    };
+                }
+            }, 1000);
+        }
+
+        function toggleSound(event) {
+            event.stopPropagation();
+            const videoPlayer = document.getElementById('fullAdVideo');
+            const soundBtn = document.getElementById('soundBtn');
+
+            if (videoPlayer.muted) {
+                videoPlayer.muted = false;
+                soundBtn.innerText = '🔊';
+            } else {
+                videoPlayer.muted = true;
+                soundBtn.innerText = '🔇';
+            }
+        }
+
+        function closeFullScreenAd(event) {
+            if (event) event.stopPropagation();
+
+            const adScreen = document.getElementById('adScreen');
+            const videoPlayer = document.getElementById('fullAdVideo');
+            const endPopupOverlay = document.getElementById('endPopupOverlay');
+
+            if (countdownInterval) clearInterval(countdownInterval);
+
+            videoPlayer.pause();
+            videoPlayer.src = '';
+            endPopupOverlay.style.display = 'none';
+            adScreen.style.display = 'none';
+
+            // Proceed with original movie action
+            if (pendingMovieAction) {
+                const actionToRun = pendingMovieAction;
+                pendingMovieAction = null;
+                actionToRun();
+            } else {
+                document.getElementById('main-body').classList.remove('body-locked');
+            }
+        }
+
+        function redirectToTelegram() {
+            window.open('https://t.me/ndtflow', '_blank');
+        }
 
         /* --- BACKGROUND BANNER AD REFRESH --- */
         function loadBannerAds() {
@@ -769,7 +1190,7 @@
         }
         function closeMenu() { document.getElementById('menuOverlay').style.display = 'none'; }
 
-        /* --- 🎙️ SMOOTH VOICE SEARCH (SET TO ENGLISH - en-IN) --- */
+        /* --- SMOOTH VOICE SEARCH --- */
         function startVoiceSearch() {
             const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -784,8 +1205,6 @@
             statusText.innerText = 'Listening... Speak now';
 
             recognitionInstance = new SpeechRecognition();
-            
-            // 🔴 English letters detection fix (en-IN)
             recognitionInstance.lang = 'en-IN'; 
             recognitionInstance.interimResults = false;
 
@@ -827,14 +1246,12 @@
             document.getElementById('ytVoiceOverlay').style.display = 'none';
         }
 
-        /* --- CLEAR SEARCH FUNCTION --- */
         function clearSearch() {
             const searchBox = document.getElementById('searchBox');
             searchBox.value = '';
             filterMovies();
         }
 
-        /* --- SEARCH HELPER & LOGIC --- */
         function normalizeText(str) {
             if (!str) return '';
             return str.toLowerCase().replace(/[^a-z0-9]/gi, '');
@@ -990,13 +1407,16 @@
             document.getElementById('main-body').classList.add('body-locked');
         }
 
+        /* --- UPDATED: MOVIE CLICK PROCESS WITH VIDEO AD --- */
         function handleMovieClick(movie) {
-            autoAddLike(movie); 
-            if (movie.isSeries || (movie.episodes && movie.episodes.length > 0)) {
-                openEpisodeSelector(movie);
-            } else {
-                triggerTimerAdAndPlay(movie.url, movie.poster || movie.image);
-            }
+            triggerVideoAdThenProceed(() => {
+                autoAddLike(movie); 
+                if (movie.isSeries || (movie.episodes && movie.episodes.length > 0)) {
+                    openEpisodeSelector(movie);
+                } else {
+                    triggerTimerAdAndPlay(movie.url, movie.poster || movie.image);
+                }
+            });
         }
 
         function renderTrendingSection(movies) {
@@ -1145,7 +1565,6 @@
             filterMovies();
         }
 
-        /* --- HISTORY MANAGEMENT FOR BACK BUTTON --- */
         function pushModalState(type) {
             window.history.pushState({ modalType: type }, "");
         }
@@ -1164,7 +1583,9 @@
                     epCard.className = 'movie-card';
                     epCard.onclick = (e) => { 
                         e.stopPropagation(); 
-                        triggerTimerAdAndPlay(ep.url, ep.poster || ep.image || movie.poster || movie.image); 
+                        triggerVideoAdThenProceed(() => {
+                            triggerTimerAdAndPlay(ep.url, ep.poster || ep.image || movie.poster || movie.image); 
+                        });
                     };
                     
                     const epImage = ep.image || movie.image;
@@ -1192,12 +1613,12 @@
         function closeEpisodeSelector() {
             document.getElementById('episodeOverlay').style.display = 'none';
             if (document.getElementById('adTimerOverlay').style.display !== 'flex' && 
-                document.getElementById('videoPlayerOverlay').classList.contains('active') === false) {
+                document.getElementById('videoPlayerOverlay').classList.contains('active') === false &&
+                document.getElementById('adScreen').style.display !== 'block') {
                 document.getElementById('main-body').classList.remove('body-locked');
             }
         }
 
-        /* --- TIMER OVERLAY WITH POSTER AND ADS --- */
         function triggerTimerAdAndPlay(videoUrl, posterUrl) {
             if(!videoUrl) {
                 alert("Video link not available!");
@@ -1211,7 +1632,6 @@
             const continueBtn = document.getElementById('continueToVideoBtn');
             const posterImg = document.getElementById('adMoviePosterImg');
 
-            // Set Poster Image from JSON
             posterImg.src = posterUrl || "https://via.placeholder.com/400x180/1a1a1a/ffffff?text=Sk+CineBuzz";
 
             overlay.style.display = 'flex';
@@ -1287,11 +1707,17 @@
 
         /* --- BACK BUTTON CONTROLLER --- */
         window.addEventListener('popstate', function (e) {
+            const adScreen = document.getElementById('adScreen');
             const timerOverlay = document.getElementById('adTimerOverlay');
             const playerOverlay = document.getElementById('videoPlayerOverlay');
             const episodeOverlay = document.getElementById('episodeOverlay');
             const menuOverlay = document.getElementById('menuOverlay');
             const ytVoiceOverlay = document.getElementById('ytVoiceOverlay');
+
+            if (adScreen && adScreen.style.display === 'block') {
+                closeFullScreenAd();
+                return;
+            }
 
             if (ytVoiceOverlay && ytVoiceOverlay.style.display === 'flex') {
                 closeVoiceSearch();
