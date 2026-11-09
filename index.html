@@ -22,7 +22,6 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* DEFAULT: WEBSITE VIEW (NAVY BLUE THEME - SCREENSHOT 1) */
         body {
             background-color: #060913;
             color: #ffffff;
@@ -64,6 +63,21 @@
             align-items: center;
             font-size: 20px;
         }
+
+        .header-apk-btn {
+            background: linear-gradient(135deg, #E50914, #b20710);
+            color: #ffffff;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 2px 8px rgba(229, 9, 20, 0.4);
+            transition: transform 0.15s ease;
+        }
+        .header-apk-btn:active { transform: scale(0.92); }
 
         .brand-logo {
             display: flex;
@@ -268,7 +282,7 @@
         .in-page-ad-box p { color: #ffcc00; font-weight: 800; font-size: 13px; }
         .in-page-ad-box span { color: #94a3b8; font-size: 11px; }
 
-        /* SKELETON PLACEHOLDER */
+        /* SKELETON */
         .skeleton-card {
             background: #0b1329;
             height: 145px;
@@ -277,9 +291,7 @@
         }
         @keyframes pulse { 0%, 100% { opacity: 0.6; } 50% { opacity: 0.2; } }
 
-        /* ========================================================
-           APK VIEW: SCREENSHOT 4 STYLE (FULL MOVIES UNLOCKED)
-        ======================================================== */
+        /* APK VIEW */
         body.is-apk-mode {
             background-color: #0b0b0b !important;
             padding-bottom: 75px !important;
@@ -302,7 +314,6 @@
             display: flex !important;
         }
 
-        /* TRENDING SLIDER (APK ONLY) */
         .trending-carousel-container {
             display: none;
             padding: 0 16px;
@@ -370,7 +381,6 @@
             font-weight: 700;
         }
 
-        /* NEW RELEASES 2-COLUMN GRID (APK ONLY) */
         body.is-apk-mode #latestMoviesSection .movie-grid {
             display: grid !important;
             grid-template-columns: repeat(2, 1fr) !important;
@@ -430,7 +440,7 @@
         body.is-apk-mode .apk-year { color: #888; }
         body.is-apk-mode .apk-detail { color: #888; font-size: 11px; }
 
-        /* BOTTOM NAV BAR (SCREENSHOT 4) */
+        /* BOTTOM NAV BAR */
         .bottom-nav-bar {
             position: fixed;
             bottom: 0; left: 0;
@@ -462,6 +472,15 @@
         }
         .bottom-nav-item svg { width: 22px; height: 22px; fill: currentColor; }
         .bottom-nav-item.active { color: #E50914; }
+
+        /* SIDE MENU OVERLAY */
+        .menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); z-index: 999999; display: none; }
+        .menu-box { background: #141414; width: 260px; height: 100%; padding: 20px; display: flex; flex-direction: column; gap: 15px; border-right: 1px solid #222; }
+        .menu-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #2a2a2a; padding-bottom: 15px; }
+        .menu-header h2 { font-size: 18px; color: #E50914; }
+        .menu-close-btn { background: none; border: none; color: #fff; font-size: 20px; cursor: pointer; }
+        .menu-item { background: #1f1f1f; color: white; padding: 12px 15px; border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 10px; cursor: pointer; }
+        .menu-item:hover { background: #E50914; }
 
         /* MOVIE DETAIL MODAL */
         .movie-detail-modal {
@@ -608,7 +627,6 @@
             width: 100%;
         }
 
-        /* SCREENSHOT SECTION */
         .screenshot-section {
             background: #0b1329;
             border: 1px solid #1e293b;
@@ -709,7 +727,16 @@
             </div>
             
             <div class="header-right-actions">
-                <button class="icon-btn" onclick="openTelegramLink('allchannel97')" title="Notifications">
+                <!-- DOWNLOAD APK BUTTON (FOR WEBSITE ONLY) -->
+                <a href="https://www.appcreator24.com/app4130809-xb3zpc" target="_blank" class="header-apk-btn" id="headerApkBtn" title="Download Android App (APK)">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </a>
+                <!-- NOTIFICATION BUTTON -> https://t.me/allchannel97[span_3](start_span)[span_3](end_span) -->
+                <button class="icon-btn" onclick="openSafeTelegram('allchannel97')" title="Notifications">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
                 </button>
             </div>
@@ -722,13 +749,13 @@
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                 </span>
                 <input type="text" id="searchBox" class="search-input" placeholder="Search Movie, Web Series, Genre, Year..." onfocus="handleSearchFocus()" oninput="handleSearchInput()" autocomplete="off">
-                <button class="search-mic-btn" onclick="triggerVoiceSearch()" title="Voice Search" aria-label="Voice Search">
+                <button class="search-mic-btn" onclick="triggerVoiceSearch()" title="Voice Search">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
                 </button>
             </div>
         </section>
 
-        <!-- CATEGORIES BAR (APK ONLY)[span_0](start_span)[span_0](end_span) -->
+        <!-- CATEGORIES BAR (APK ONLY)[span_4](start_span)[span_4](end_span) -->
         <nav class="category-container" id="apkCategoryBar">
             <button class="cat-btn active" id="btn-all" onclick="changeCategory('all')">All</button>
             <button class="cat-btn" id="btn-movie" onclick="changeCategory('movie')">Movie</button>
@@ -747,7 +774,7 @@
 
         <!-- HOMEPAGE FEED -->
         <div id="homeSectionsWrapper">
-            <!-- 1. TRENDING MOVIES (TOP 10 ALWAYS)[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span) -->
+            <!-- 1. TRENDING MOVIES (TOP 10 ALWAYS)[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span) -->
             <section id="trendingSection">
                 <div class="section-header">
                     <h2 class="section-title">
@@ -755,11 +782,11 @@
                     </h2>
                     <span class="see-all-link" onclick="handleTrendingSeeAll()">Top 10 &gt;</span>
                 </div>
-                <!-- APK HORIZONTAL SLIDER[span_3](start_span)[span_3](end_span) -->
+                <!-- APK HORIZONTAL SLIDER[span_7](start_span)[span_7](end_span) -->
                 <div class="trending-carousel-container">
                     <div class="trending-slider" id="apkTrendingSlider"></div>
                 </div>
-                <!-- WEB HORIZONTAL ROW LIST[span_4](start_span)[span_4](end_span) -->
+                <!-- WEB HORIZONTAL ROW LIST[span_8](start_span)[span_8](end_span) -->
                 <div class="movie-grid" id="webTrendingContainer">
                     <div class="skeleton-card"></div>
                     <div class="skeleton-card"></div>
@@ -772,7 +799,7 @@
                 <span>Sponsored • Click here to access VIP cloud servers</span>
             </div>
 
-            <!-- 2. NEW RELEASES / LATEST MOVIES[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span) -->
+            <!-- 2. NEW RELEASES / LATEST MOVIES[span_9](start_span)[span_9](end_span)[span_10](start_span)[span_10](end_span) -->
             <section id="latestMoviesSection">
                 <div class="section-header">
                     <h2 class="section-title" id="moviesSectionTitle">New Releases</h2>
@@ -790,7 +817,7 @@
                 <span>Instant High-Speed Direct Stream Network</span>
             </div>
 
-            <!-- 3. WEB SERIES[span_7](start_span)[span_7](end_span) -->
+            <!-- 3. WEB SERIES[span_11](start_span)[span_11](end_span) -->
             <section id="webSeriesSection">
                 <div class="section-header">
                     <h2 class="section-title" style="color:#a855f7;">📺 Web Series</h2>
@@ -805,7 +832,7 @@
                 <span>Direct Google Drive & Mega Links Available</span>
             </div>
 
-            <!-- 4. ANIME[span_8](start_span)[span_8](end_span) -->
+            <!-- 4. ANIME[span_12](start_span)[span_12](end_span) -->
             <section id="animeSection">
                 <div class="section-header">
                     <h2 class="section-title" style="color:#ec4899;">⚡ Anime</h2>
@@ -837,19 +864,35 @@
         </footer>
     </main>
 
-    <!-- FLOATING BOTTOM NAVIGATION (APK SCREENSHOT 4 STYLE)[span_9](start_span)[span_9](end_span) -->
+    <!-- FLOATING BOTTOM NAVIGATION (APK SCREENSHOT 4 STYLE)[span_13](start_span)[span_13](end_span) -->
     <nav class="bottom-nav-bar" id="bottomNavBar">
         <button class="bottom-nav-item active" id="navHomeBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})">
             <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
             <span>Home</span>
         </button>
-        <button class="bottom-nav-item" id="navDownloadsBtn" onclick="openTelegramLink('allchannel97')">
-            <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+        <!-- TELEGRAM BUTTON BESIDE HOME -> https://t.me/skcinebuzz[span_14](start_span)[span_14](end_span) -->
+        <button class="bottom-nav-item" id="navTgBtn" onclick="openSafeTelegram('skcinebuzz')">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.13 7.19c-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59l2.76-2.69c.09-.08.03-.23-.09-.23-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
             <span>Telegram</span>
         </button>
     </nav>
 
-    <!-- MOVIE DETAIL PAGE (SCREENSHOT 2 & 3)[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span) -->
+    <!-- SIDE MENU OVERLAY -->
+    <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()">
+        <div class="menu-box" onclick="event.stopPropagation()">
+            <div class="menu-header">
+                <h2>Sk CineBuzz</h2>
+                <button class="menu-close-btn" onclick="closeMenu()">✕</button>
+            </div>
+            <a href="https://www.appcreator24.com/app4130809-xb3zpc" target="_blank" class="menu-item" style="background:#E50914; color:#fff;" id="menuApkItem">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download App (APK)
+            </a>
+            <div class="menu-item" onclick="closeMenu(); openSafeTelegram('allchannel97');">Telegram Channel</div>
+        </div>
+    </div>
+
+    <!-- MOVIE DETAIL PAGE (SCREENSHOT 2 & 3)[span_15](start_span)[span_15](end_span)[span_16](start_span)[span_16](end_span) -->
     <div class="movie-detail-modal" id="movieDetailModal">
         <div class="detail-top-nav">
             <button class="detail-close-btn" onclick="closeMovieDetail()">← Back</button>
@@ -894,7 +937,7 @@
             </div>
         </div>
 
-        <!-- ACTIONS PANEL: DIRECT JSON URL ON BUTTON[span_12](start_span)[span_12](end_span)[span_13](start_span)[span_13](end_span) -->
+        <!-- ACTIONS PANEL[span_17](start_span)[span_17](end_span)[span_18](start_span)[span_18](end_span) -->
         <div class="download-box-panel">
             <h4>Download this movie</h4>
             <button id="modalDirectDownloadBtn" class="filmyfly-dl-btn" onclick="handleDetailDownloadAction()">
@@ -914,7 +957,7 @@
             </button>
         </div>
 
-        <!-- SCREENSHOT SECTION: JSON POSTER LINK AS SCREENSHOT BELOW DOWNLOAD[span_14](start_span)[span_14](end_span) -->
+        <!-- SCREENSHOT SECTION[span_19](start_span)[span_19](end_span) -->
         <div class="screenshot-section" id="screenshotSection">
             <div class="screenshot-header">
                 <span>▢</span> Screenshot <span>▢</span>
@@ -933,19 +976,28 @@
         let isApkEnvironment = false;
         let currentCategory = 'all';
 
-        // ========================================================
-        // STRICT AD LOGIC (WEBSITE ONLY):
-        // 3 ADS REQUIRED PER PAGE/VIEW BEFORE MOVING TO NEXT
-        // SEARCH BOX TRIGGERS EXACTLY 1 AD
-        // ========================================================
-        let pageAdCount = 0;          // Counts ads on current view (0 to 3)
-        let searchAdTriggered = false; // Ensures search bar only triggers 1 ad
+        /* FIX: 100% ERROR-FREE TELEGRAM LAUNCHER (SOLVES net::ERR_UNKNOWN_URL_SCHEME) */
+        function openSafeTelegram(channelUsername) {
+            const cleanUser = channelUsername.replace('@', '').replace('https://t.me/', '');
+            const targetUrl = `https://t.me/${cleanUser}`;
+
+            // In Android APK/WebView, use intent fallback to prevent ERR_UNKNOWN_URL_SCHEME[span_20](start_span)[span_20](end_span)
+            if (isApkEnvironment) {
+                // Try opening in external browser or directly
+                window.location.href = `intent://resolve?domain=${cleanUser}#Intent;package=org.telegram.messenger;scheme=tg;S.browser_fallback_url=${encodeURIComponent(targetUrl)};end`;
+            } else {
+                window.open(targetUrl, '_blank', 'noopener,noreferrer');
+            }
+        }
+
+        // 3 ADS PER VIEW FOR WEBSITE
+        let pageAdCount = 0;
+        let searchAdTriggered = false;
 
         function openAdPopunder() {
             window.open(DIRECT_AD_LINK, '_blank', 'noopener,noreferrer');
         }
 
-        // Handles any click that wants to go to next page or perform an action
         function handleProtectedAction(targetCallback) {
             if (isApkEnvironment) {
                 targetCallback();
@@ -955,7 +1007,6 @@
             if (pageAdCount < 3) {
                 pageAdCount++;
                 openAdPopunder();
-                // If this click completed the 3rd ad, proceed to the target action immediately
                 if (pageAdCount >= 3) {
                     targetCallback();
                 }
@@ -964,7 +1015,6 @@
             }
         }
 
-        // Search Bar: exactly 1 ad on focus/click
         function handleSearchFocus() {
             if (isApkEnvironment) return;
             if (!searchAdTriggered) {
@@ -977,14 +1027,13 @@
             window.open(DIRECT_AD_LINK, '_blank', 'noopener,noreferrer');
         }
 
-        // Track "See All" view toggles for website
         let seeAllState = {
             movie: false,
             series: false,
             anime: false
         };
 
-        /* DETECT ENVIRONMENT (STRICT CHECK) */
+        /* ENVIRONMENT DETECTION (APK VS WEB) */
         function detectEnvironment() {
             const urlParams = new URLSearchParams(window.location.search);
             const ua = navigator.userAgent || '';
@@ -997,6 +1046,8 @@
             const webTrending = document.getElementById('webTrendingContainer');
             const webSeriesSec = document.getElementById('webSeriesSection');
             const animeSec = document.getElementById('animeSection');
+            const headerApkBtn = document.getElementById('headerApkBtn');
+            const menuApkItem = document.getElementById('menuApkItem');
 
             if (isApkEnvironment) {
                 document.body.classList.add('is-apk-mode');
@@ -1007,6 +1058,8 @@
                 if (webTrending) webTrending.style.display = 'none';
                 if (webSeriesSec) webSeriesSec.style.display = 'none';
                 if (animeSec) animeSec.style.display = 'none';
+                if (headerApkBtn) headerApkBtn.style.display = 'none';
+                if (menuApkItem) menuApkItem.style.display = 'none';
             } else {
                 document.body.classList.remove('is-apk-mode');
                 if (seoFooter) seoFooter.style.display = 'block';
@@ -1016,6 +1069,8 @@
                 if (webTrending) webTrending.style.display = 'flex';
                 if (webSeriesSec) webSeriesSec.style.display = 'block';
                 if (animeSec) animeSec.style.display = 'block';
+                if (headerApkBtn) headerApkBtn.style.display = 'flex';
+                if (menuApkItem) menuApkItem.style.display = 'flex';
             }
         }
 
@@ -1062,7 +1117,7 @@
             return likesMap[movieName].filter(ts => (now - ts) < thirtyDays).length;
         }
 
-        /* APK TRENDING CAROUSEL (TOP 10 ONLY)[span_15](start_span)[span_15](end_span) */
+        /* APK TRENDING CAROUSEL (TOP 10 ONLY)[span_21](start_span)[span_21](end_span) */
         function renderApkTrendingSlider(items) {
             const slider = document.getElementById('apkTrendingSlider');
             if (!slider) return;
@@ -1121,7 +1176,7 @@
                 const safeName = (movie.name || '').replace(/'/g, "\\'");
 
                 if (!isApkEnvironment) {
-                    /* WEBSITE HORIZONTAL CARD[span_16](start_span)[span_16](end_span) */
+                    /* WEBSITE HORIZONTAL CARD[span_22](start_span)[span_22](end_span) */
                     card.innerHTML = `
                         <div class="movie-info">
                             <div class="web-meta-top">
@@ -1142,7 +1197,7 @@
                     `;
                     card.prepend(imgEl);
                 } else {
-                    /* APK SCREENSHOT 4 STYLE[span_17](start_span)[span_17](end_span) */
+                    /* APK SCREENSHOT 4 STYLE[span_23](start_span)[span_23](end_span) */
                     const likes = movie.likes || getMonthLikesCount(movie.name) || 0;
                     card.innerHTML = `
                         <div class="apk-info-box">
@@ -1163,7 +1218,6 @@
             container.appendChild(fragment);
         }
 
-        /* "SEE ALL" FUNCTIONALITY FOR WEBSITE (PROTECTED BY 3 ADS) */
         function toggleSeeAll(type) {
             if (type === 'movie') {
                 seeAllState.movie = !seeAllState.movie;
@@ -1213,7 +1267,7 @@
 
                 allMoviesList = fetchedData.reverse().filter(m => isValidDownloadUrl(m.url));
 
-                // 1. TRENDING (ALWAYS TOP 10 ONLY)
+                // 1. TRENDING (TOP 10 ALWAYS)
                 const trendingList = [...allMoviesList].sort((a, b) => {
                     const lkA = (a.likes || 0) + getMonthLikesCount(a.name);
                     const lkB = (b.likes || 0) + getMonthLikesCount(b.name);
@@ -1246,7 +1300,7 @@
             }
         }
 
-        /* CATEGORY SWITCH (APK ONLY)[span_18](start_span)[span_18](end_span) */
+        /* CATEGORY SWITCH (APK ONLY)[span_24](start_span)[span_24](end_span) */
         function changeCategory(cat) {
             currentCategory = cat;
             document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
@@ -1308,28 +1362,25 @@
             if (activeMovieObj && activeMovieObj.name) shareMovie(activeMovieObj.name);
         }
 
-        /* CLICK HANDLER (PROTECTED BY 3 ADS ON WEBSITE) */
+        /* CLICK HANDLER: APK GOES TO WEBSITE DETAIL PAGE */
         function handleMovieClick(movie) {
             addMonthLike(movie.name);
 
             if (isApkEnvironment) {
-                // APK: Direct to website to download
                 const targetUrl = createDirectMovieLink(movie.name);
                 window.location.assign(targetUrl);
             } else {
-                // WEBSITE: Must show 3 ads before opening the movie detail page
                 handleProtectedAction(() => {
                     openMovieDetailModal(movie);
                 });
             }
         }
 
-        /* DETAIL PAGE (SCREENSHOT 2 & 3)[span_19](start_span)[span_19](end_span)[span_20](start_span)[span_20](end_span) */
+        /* DETAIL PAGE (SCREENSHOT 2 & 3)[span_25](start_span)[span_25](end_span)[span_26](start_span)[span_26](end_span) */
         function openMovieDetailModal(movie) {
             activeMovieObj = movie;
             window.history.pushState({ modal: 'detail' }, "");
 
-            // Reset ad count for the new detail view so user must see 3 ads here too before download
             pageAdCount = 0;
 
             document.getElementById('detailTitle').innerText = movie.name;
@@ -1343,7 +1394,6 @@
 
             directLoadImage(document.getElementById('detailPosterImg'), movie.image || movie.poster, true);
 
-            // Screenshot below download: Use poster link[span_21](start_span)[span_21](end_span)
             const sec = document.getElementById('screenshotSection');
             const scContainer = document.getElementById('screenshotContainer');
             scContainer.innerHTML = "";
@@ -1363,7 +1413,6 @@
             window.scrollTo(0,0);
         }
 
-        // Detail Page Download Action: Also requires 3 ads before opening the JSON url[span_22](start_span)[span_22](end_span)[span_23](start_span)[span_23](end_span)
         function handleDetailDownloadAction() {
             if (!activeMovieObj || !activeMovieObj.url) return;
             handleProtectedAction(() => {
@@ -1379,7 +1428,6 @@
             document.getElementById('movieDetailModal').style.display = 'none';
             document.getElementById('main-body').classList.remove('body-locked');
             activeMovieObj = null;
-            // Reset page ad count when returning to home view
             pageAdCount = 0;
         }
 
@@ -1428,11 +1476,12 @@
             }
         }
 
-        function openTelegramLink(u) { window.open(`https://t.me/${u}`, '_blank'); }
-        function openMenu() { alert("Sk CineBuzz - Enjoy Latest Movies & Series!"); }
+        function openMenu() { document.getElementById('menuOverlay').style.display = 'flex'; }
+        function closeMenu() { document.getElementById('menuOverlay').style.display = 'none'; }
 
         window.addEventListener('popstate', () => {
             if (document.getElementById('movieDetailModal').style.display === 'block') { closeMovieDetail(); }
+            if (document.getElementById('menuOverlay').style.display === 'flex') { closeMenu(); }
         });
 
         document.addEventListener("DOMContentLoaded", () => {
@@ -1442,4 +1491,5 @@
     </script>
 </body>
 </html>
+
 
