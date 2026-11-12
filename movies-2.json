@@ -6548,10 +6548,16 @@
   },
   {
     "name": "Korean Drama Series: School 2017 (Season 1) 2017 [in Hindi] HD 480p & 720p &1080p All Episodes ( K-Drama TV Series) .",
-    "category": "movie",
-    "isSeries": false,
+    "category": "kdrama",
+    "isSeries": true,
     "year": 2017,
-    "url": "https://hubcloud.pw/drive/0nllz-hdo_pzlsu",
+    "url": "",
+    "episodes": [
+      {
+        "name": "Episode 1",
+        "url": "https://hubcloud.pw/drive/0nllz-hdo_pzlsu"
+      }
+    ],
     "image": "https://i.ibb.co/XxrqJXxH/School-2017-S01-Hindi-Dubbed-Korean-Drama-Series.jpg",
     "poster": "https://i.ibb.co/s9rhkPQw/kat2022-02-22-23h43m54s426-th.jpg",
     "detail": "Comedy, Drama, Romance, Mystery"
