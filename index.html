@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer">
-    <title>Sk CineBuzz - Watch & Download Latest HD Movies & Web Series</title>
-    <meta name="description" content="Download latest HD movies, Bollywood, Hollywood, South Hindi Dubbed movies, and web series for free on Sk CineBuzz.">
+    <title>Sk CineBuzz - Watch & Download Latest HD Movies, K-Drama & Web Series</title>
+    <meta name="description" content="Download latest HD movies, Bollywood, Hollywood, South Hindi Dubbed movies, K-Drama Hindi Dubbed, Anime, and web series for free on Sk CineBuzz.">
+    <meta name="keywords" content="SK CineBuzz, K-Drama Hindi Dubbed Download, Korean Drama in Hindi, Hindi Dubbed Movies 480p 720p 1080p, Web Series Free Download, Anime Hindi Dubbed, SkCineBuzz 2026">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://sunnisk807325-ship-it.github.io/skcinebuzz/">
 
@@ -22,6 +23,7 @@
             -webkit-tap-highlight-color: transparent;
         }
 
+        /* DEFAULT: WEBSITE VIEW */
         body {
             background-color: #060913;
             color: #ffffff;
@@ -75,9 +77,7 @@
             justify-content: center;
             text-decoration: none;
             box-shadow: 0 2px 8px rgba(229, 9, 20, 0.4);
-            transition: transform 0.15s ease;
         }
-        .header-apk-btn:active { transform: scale(0.92); }
 
         .brand-logo {
             display: flex;
@@ -137,7 +137,7 @@
             background-color: #1a1a1a;
             color: #ccc;
             border: 1px solid #282828;
-            padding: 7px 16px;
+            padding: 7px 15px;
             font-size: 12px;
             font-weight: 600;
             border-radius: 20px;
@@ -252,6 +252,16 @@
             background-color: #022c22;
             color: #34d399;
             border: 1px solid #059669;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 1px 6px;
+            border-radius: 4px;
+        }
+
+        .web-badge-ep {
+            background-color: #3b0764;
+            color: #d8b4fe;
+            border: 1px solid #7e22ce;
             font-size: 10px;
             font-weight: 800;
             padding: 1px 6px;
@@ -493,6 +503,53 @@
             padding: 16px 14px 60px 14px;
         }
 
+        /* DEDICATED EPISODE LIST SCREEN (STAGE 2 FOR EPISODE-WISE CONTENT) */
+        .episode-screen-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: #060913;
+            z-index: 300000;
+            overflow-y: auto;
+            display: none;
+            padding: 16px 14px 60px 14px;
+        }
+
+        .ep-list-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .ep-row-btn {
+            background: #0b1329;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 16px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: border-color 0.2s, transform 0.1s;
+        }
+        .ep-row-btn:hover { border-color: #00d592; }
+        .ep-row-btn:active { transform: scale(0.98); }
+
+        .ep-row-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .ep-row-dl-tag {
+            background: #00d592;
+            color: #032015;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 6px 14px;
+            border-radius: 20px;
+        }
+
         .detail-top-nav {
             display: flex;
             align-items: center;
@@ -660,7 +717,7 @@
             border: 1px solid #1e293b;
         }
 
-        /* SEO FOOTER */
+        /* SEO FOOTER WITH K-DRAMA KEYWORDS */
         .seo-web-footer {
             margin: 30px 14px 10px 14px;
             background: #0b1329;
@@ -727,7 +784,6 @@
             </div>
             
             <div class="header-right-actions">
-                <!-- DOWNLOAD APK BUTTON (FOR WEBSITE ONLY) -->
                 <a href="https://www.appcreator24.com/app4130809-xb3zpc" target="_blank" class="header-apk-btn" id="headerApkBtn" title="Download Android App (APK)">
                     <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -735,7 +791,6 @@
                         <line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
                 </a>
-                <!-- NOTIFICATION BUTTON -> https://t.me/allchannel97[span_3](start_span)[span_3](end_span) -->
                 <button class="icon-btn" onclick="openSafeTelegram('allchannel97')" title="Notifications">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
                 </button>
@@ -748,17 +803,18 @@
                 <span class="search-icon">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                 </span>
-                <input type="text" id="searchBox" class="search-input" placeholder="Search Movie, Web Series, Genre, Year..." onfocus="handleSearchFocus()" oninput="handleSearchInput()" autocomplete="off">
+                <input type="text" id="searchBox" class="search-input" placeholder="Search Movie, K-Drama, Web Series, Anime..." onfocus="handleSearchFocus()" oninput="handleSearchInput()" autocomplete="off">
                 <button class="search-mic-btn" onclick="triggerVoiceSearch()" title="Voice Search">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
                 </button>
             </div>
         </section>
 
-        <!-- CATEGORIES BAR (APK ONLY)[span_4](start_span)[span_4](end_span) -->
+        <!-- CATEGORIES BAR (APK ONLY - INCLUDES K-DRAMA) -->
         <nav class="category-container" id="apkCategoryBar">
             <button class="cat-btn active" id="btn-all" onclick="changeCategory('all')">All</button>
             <button class="cat-btn" id="btn-movie" onclick="changeCategory('movie')">Movie</button>
+            <button class="cat-btn" id="btn-kdrama" onclick="changeCategory('kdrama')">K-Drama</button>
             <button class="cat-btn" id="btn-series" onclick="changeCategory('series')">Web Series</button>
             <button class="cat-btn" id="btn-anime" onclick="changeCategory('anime')">Anime</button>
             <button class="cat-btn" id="btn-kids" onclick="changeCategory('kids')">Kids</button>
@@ -774,7 +830,7 @@
 
         <!-- HOMEPAGE FEED -->
         <div id="homeSectionsWrapper">
-            <!-- 1. TRENDING MOVIES (TOP 10 ALWAYS)[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span) -->
+            <!-- 1. TRENDING MOVIES -->
             <section id="trendingSection">
                 <div class="section-header">
                     <h2 class="section-title">
@@ -782,24 +838,22 @@
                     </h2>
                     <span class="see-all-link" onclick="handleTrendingSeeAll()">Top 10 &gt;</span>
                 </div>
-                <!-- APK HORIZONTAL SLIDER[span_7](start_span)[span_7](end_span) -->
                 <div class="trending-carousel-container">
                     <div class="trending-slider" id="apkTrendingSlider"></div>
                 </div>
-                <!-- WEB HORIZONTAL ROW LIST[span_8](start_span)[span_8](end_span) -->
                 <div class="movie-grid" id="webTrendingContainer">
                     <div class="skeleton-card"></div>
                     <div class="skeleton-card"></div>
                 </div>
             </section>
 
-            <!-- AD 1 (WEBSITE ONLY) -->
+            <!-- AD 1 -->
             <div class="in-page-ad-box" id="inPageAd1" onclick="triggerDirectAd()">
-                <p>⚡ DOWNLOAD 4K MOVIES & SERIES FAST</p>
+                <p>⚡ DOWNLOAD 4K MOVIES, K-DRAMA & SERIES FAST</p>
                 <span>Sponsored • Click here to access VIP cloud servers</span>
             </div>
 
-            <!-- 2. NEW RELEASES / LATEST MOVIES[span_9](start_span)[span_9](end_span)[span_10](start_span)[span_10](end_span) -->
+            <!-- 2. NEW RELEASES / LATEST MOVIES -->
             <section id="latestMoviesSection">
                 <div class="section-header">
                     <h2 class="section-title" id="moviesSectionTitle">New Releases</h2>
@@ -811,13 +865,22 @@
                 </div>
             </section>
 
-            <!-- AD 2 (WEBSITE ONLY) -->
+            <!-- 3. K-DRAMA SECTION (WEBSITE) -->
+            <section id="kdramaSection">
+                <div class="section-header">
+                    <h2 class="section-title" style="color:#f43f5e;">🇰🇷 K-Drama (Hindi & Multi Audio)</h2>
+                    <span class="see-all-link" id="kdramaSeeAllBtn" onclick="handleProtectedAction(() => toggleSeeAll('kdrama'))">See All &gt;</span>
+                </div>
+                <div class="movie-grid" id="kdramaContainer"></div>
+            </section>
+
+            <!-- AD 2 -->
             <div class="in-page-ad-box" id="inPageAd2" onclick="triggerDirectAd()">
                 <p>🚀 WATCH ALL EPISODES IN HD DUAL AUDIO</p>
                 <span>Instant High-Speed Direct Stream Network</span>
             </div>
 
-            <!-- 3. WEB SERIES[span_11](start_span)[span_11](end_span) -->
+            <!-- 4. WEB SERIES -->
             <section id="webSeriesSection">
                 <div class="section-header">
                     <h2 class="section-title" style="color:#a855f7;">📺 Web Series</h2>
@@ -826,13 +889,13 @@
                 <div class="movie-grid" id="seriesContainer"></div>
             </section>
 
-            <!-- AD 3 (WEBSITE ONLY) -->
+            <!-- AD 3 -->
             <div class="in-page-ad-box" id="inPageAd3" onclick="triggerDirectAd()">
                 <p>🎁 JOIN VIP TELEGRAM & REQUEST ANY CONTENT</p>
                 <span>Direct Google Drive & Mega Links Available</span>
             </div>
 
-            <!-- 4. ANIME[span_12](start_span)[span_12](end_span) -->
+            <!-- 5. ANIME -->
             <section id="animeSection">
                 <div class="section-header">
                     <h2 class="section-title" style="color:#ec4899;">⚡ Anime</h2>
@@ -842,20 +905,20 @@
             </section>
         </div>
 
-        <!-- SEO FOOTER (WEBSITE ONLY) -->
+        <!-- SEO FOOTER WITH K-DRAMA & MULTI-LANGUAGE KEYWORDS -->
         <footer class="seo-web-footer" id="seoWebFooter">
-            <div class="seo-breadcrumb">Home » Hollywood & Bollywood Hindi Movies » Dual Audio HD Movies Free Download</div>
+            <div class="seo-breadcrumb">Home » Hollywood, Bollywood, K-Drama & Anime Hindi Dubbed » Dual Audio HD Free Download</div>
             
             <div class="seo-tags-box">
                 <strong>Tag: </strong>
-                <span>SK CineBuzz, Sk CineBuzz Movie Download, Latest Movies HD ESub Sk CineBuzz, Hindi Dubbed Movies 480p 720p 1080p, SK CineBuzz Web Series Free, Bollywood Hollywood South Movies, HEVC 300MB Dual Audio Movie Download Sk CineBuzz, SkCinebuzz Online Stream.</span>
+                <span>SK CineBuzz, Sk CineBuzz Movie Download, K-Drama Hindi Dubbed Download, Korean Drama All Episodes in Hindi, Latest Movies HD ESub Sk CineBuzz, Hindi Dubbed Movies 480p 720p 1080p, SK CineBuzz Web Series Free, Bollywood Hollywood South Movies, Anime Hindi Dubbed Episodes, HEVC 300MB Dual Audio Movie Download Sk CineBuzz.</span>
             </div>
 
-            <h3 class="seo-how-to-header">मूवी डाउनलोड कैसे करें!</h3>
-            <div class="seo-how-to-sub">How To Download Movies on SK CineBuzz</div>
+            <h3 class="seo-how-to-header">मूवी और के-ड्रामा (K-Drama) डाउनलोड कैसे करें!</h3>
+            <div class="seo-how-to-sub">How To Download Movies, K-Drama & Web Series on SK CineBuzz</div>
 
             <div class="seo-keywords-list">
-                SK CineBuzz, SK CineBuzz New, SkCineBuzz 2026, skcinebuzz xyz, skcinebuzz full hd, skcinebuzz download, sk cine buzz movie, sk cinebuzz web series, hindi dubbed full movies online, south hindi dubbed movies, download 720p hevc dual audio movies
+                SK CineBuzz, K-Drama in Hindi, Korean Drama Hindi Dubbed, Best K-Drama Download Free, SK CineBuzz New, SkCineBuzz 2026, skcinebuzz xyz, skcinebuzz full hd, skcinebuzz download, sk cine buzz movie, sk cinebuzz web series, hindi dubbed full movies online, south hindi dubbed movies, download 720p hevc dual audio movies
             </div>
 
             <div class="seo-brand-powered">
@@ -864,13 +927,12 @@
         </footer>
     </main>
 
-    <!-- FLOATING BOTTOM NAVIGATION (APK SCREENSHOT 4 STYLE)[span_13](start_span)[span_13](end_span) -->
+    <!-- FLOATING BOTTOM NAVIGATION -->
     <nav class="bottom-nav-bar" id="bottomNavBar">
         <button class="bottom-nav-item active" id="navHomeBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})">
             <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
             <span>Home</span>
         </button>
-        <!-- TELEGRAM BUTTON BESIDE HOME -> https://t.me/skcinebuzz[span_14](start_span)[span_14](end_span) -->
         <button class="bottom-nav-item" id="navTgBtn" onclick="openSafeTelegram('skcinebuzz')">
             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8l-1.13 7.19c-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59l2.76-2.69c.09-.08.03-.23-.09-.23-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
             <span>Telegram</span>
@@ -892,11 +954,11 @@
         </div>
     </div>
 
-    <!-- MOVIE DETAIL PAGE (SCREENSHOT 2 & 3)[span_15](start_span)[span_15](end_span)[span_16](start_span)[span_16](end_span) -->
+    <!-- STAGE 1: MOVIE / SERIES DETAIL PAGE -->
     <div class="movie-detail-modal" id="movieDetailModal">
         <div class="detail-top-nav">
             <button class="detail-close-btn" onclick="closeMovieDetail()">← Back</button>
-            <span style="font-weight: 700; color: #fff; font-size:14px;">Movie Details</span>
+            <span style="font-weight: 700; color: #fff; font-size:14px;">Details</span>
             <button class="detail-close-btn" style="background:#1e293b; color:#38bdf8;" onclick="shareCurrentMovie()">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
             </button>
@@ -937,12 +999,20 @@
             </div>
         </div>
 
-        <!-- ACTIONS PANEL[span_17](start_span)[span_17](end_span)[span_18](start_span)[span_18](end_span) -->
+        <!-- SCREENSHOT SECTION -->
+        <div class="screenshot-section" id="screenshotSection">
+            <div class="screenshot-header">
+                <span>▢</span> Screenshot <span>▢</span>
+            </div>
+            <div class="screenshot-grid" id="screenshotContainer"></div>
+        </div>
+
+        <!-- ACTIONS PANEL (BELOW SCREENSHOTS FOR EPISODES / MOVIES) -->
         <div class="download-box-panel">
-            <h4>Download this movie</h4>
+            <h4 id="downloadPanelHeading">Download this movie</h4>
             <button id="modalDirectDownloadBtn" class="filmyfly-dl-btn" onclick="handleDetailDownloadAction()">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
-                Download 480p 720p 1080p [HD]
+                <span id="dlBtnText">Download 480p 720p 1080p [HD]</span>
             </button>
 
             <button class="share-action-btn" onclick="shareCurrentMovie()">
@@ -953,17 +1023,31 @@
                     <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
                     <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
                 </svg>
-                Share Movie With Friends
+                Share With Friends
             </button>
         </div>
+    </div>
 
-        <!-- SCREENSHOT SECTION[span_19](start_span)[span_19](end_span) -->
-        <div class="screenshot-section" id="screenshotSection">
-            <div class="screenshot-header">
-                <span>▢</span> Screenshot <span>▢</span>
-            </div>
-            <div class="screenshot-grid" id="screenshotContainer"></div>
+    <!-- STAGE 2: SEPARATE EPISODE SELECTION SCREEN (REQUIRES 3 ADS BEFORE OPENING LINK) -->
+    <div class="episode-screen-modal" id="episodeScreenModal">
+        <div class="detail-top-nav">
+            <button class="detail-close-btn" onclick="closeEpisodeScreen()">← Back</button>
+            <span style="font-weight: 700; color: #00d592; font-size:14px;">Select Episode</span>
+            <span style="width:60px;"></span>
         </div>
+
+        <div class="detail-header-card">
+            <img id="epScreenPosterImg" src="" alt="Poster">
+            <div class="detail-header-info">
+                <h2 id="epScreenTitle">Series Title</h2>
+                <div class="detail-header-badges">
+                    <span class="web-badge-ep">ALL EPISODES</span> • 
+                    <span class="web-badge-hd">HD</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ep-list-container" id="epListContainer"></div>
     </div>
 
     <script>
@@ -976,21 +1060,30 @@
         let isApkEnvironment = false;
         let currentCategory = 'all';
 
-        /* FIX: 100% ERROR-FREE TELEGRAM LAUNCHER (SOLVES net::ERR_UNKNOWN_URL_SCHEME) */
+        /* ========================================================
+           1. OPEN LINK IN REAL GOOGLE CHROME FROM ANDROID APK
+        ======================================================== */
+        function openInRealChrome(targetUrl) {
+            const cleanUrl = targetUrl.replace(/^https?:\/\//, '');
+            // Android Chrome Intent: Forces opening in external Google Chrome app
+            const chromeIntent = `intent://${cleanUrl}#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=${encodeURIComponent(targetUrl)};end`;
+            window.location.href = chromeIntent;
+        }
+
         function openSafeTelegram(channelUsername) {
             const cleanUser = channelUsername.replace('@', '').replace('https://t.me/', '');
             const targetUrl = `https://t.me/${cleanUser}`;
 
-            // In Android APK/WebView, use intent fallback to prevent ERR_UNKNOWN_URL_SCHEME[span_20](start_span)[span_20](end_span)
             if (isApkEnvironment) {
-                // Try opening in external browser or directly
                 window.location.href = `intent://resolve?domain=${cleanUser}#Intent;package=org.telegram.messenger;scheme=tg;S.browser_fallback_url=${encodeURIComponent(targetUrl)};end`;
             } else {
                 window.open(targetUrl, '_blank', 'noopener,noreferrer');
             }
         }
 
-        // 3 ADS PER VIEW FOR WEBSITE
+        /* ========================================================
+           2. STRICT 3-AD LOGIC PER SCREEN (WEBSITE ONLY)
+        ======================================================== */
         let pageAdCount = 0;
         let searchAdTriggered = false;
 
@@ -1029,6 +1122,7 @@
 
         let seeAllState = {
             movie: false,
+            kdrama: false,
             series: false,
             anime: false
         };
@@ -1044,6 +1138,7 @@
             const ad2 = document.getElementById('inPageAd2');
             const ad3 = document.getElementById('inPageAd3');
             const webTrending = document.getElementById('webTrendingContainer');
+            const kdramaSec = document.getElementById('kdramaSection');
             const webSeriesSec = document.getElementById('webSeriesSection');
             const animeSec = document.getElementById('animeSection');
             const headerApkBtn = document.getElementById('headerApkBtn');
@@ -1056,6 +1151,7 @@
                 if (ad2) ad2.style.display = 'none';
                 if (ad3) ad3.style.display = 'none';
                 if (webTrending) webTrending.style.display = 'none';
+                if (kdramaSec) kdramaSec.style.display = 'none';
                 if (webSeriesSec) webSeriesSec.style.display = 'none';
                 if (animeSec) animeSec.style.display = 'none';
                 if (headerApkBtn) headerApkBtn.style.display = 'none';
@@ -1067,6 +1163,7 @@
                 if (ad2) ad2.style.display = 'block';
                 if (ad3) ad3.style.display = 'block';
                 if (webTrending) webTrending.style.display = 'flex';
+                if (kdramaSec) kdramaSec.style.display = 'block';
                 if (webSeriesSec) webSeriesSec.style.display = 'block';
                 if (animeSec) animeSec.style.display = 'block';
                 if (headerApkBtn) headerApkBtn.style.display = 'flex';
@@ -1074,10 +1171,11 @@
             }
         }
 
-        function isValidDownloadUrl(url) {
-            if (!url || typeof url !== 'string') return false;
-            const cleaned = url.trim().toLowerCase();
-            return cleaned.length > 8 && cleaned !== '#' && !cleaned.startsWith('javascript');
+        function isValidItem(m) {
+            if (!m || !m.name) return false;
+            const hasUrl = typeof m.url === 'string' && m.url.trim().length > 6 && m.url !== '#';
+            const hasEpisodes = Array.isArray(m.episodes) && m.episodes.length > 0;
+            return hasUrl || hasEpisodes;
         }
 
         function directLoadImage(imgElement, srcUrl, isPriority = false) {
@@ -1117,7 +1215,7 @@
             return likesMap[movieName].filter(ts => (now - ts) < thirtyDays).length;
         }
 
-        /* APK TRENDING CAROUSEL (TOP 10 ONLY)[span_21](start_span)[span_21](end_span) */
+        /* APK TRENDING CAROUSEL */
         function renderApkTrendingSlider(items) {
             const slider = document.getElementById('apkTrendingSlider');
             if (!slider) return;
@@ -1174,9 +1272,13 @@
                 const yearTag = movie.year || "2026";
                 const detailText = movie.detail || "नई फिल्म/सीरीज";
                 const safeName = (movie.name || '').replace(/'/g, "\\'");
+                const hasEpisodes = Array.isArray(movie.episodes) && movie.episodes.length > 0;
 
                 if (!isApkEnvironment) {
-                    /* WEBSITE HORIZONTAL CARD[span_22](start_span)[span_22](end_span) */
+                    const badgeHtml = hasEpisodes 
+                        ? `<span class="web-badge-ep">${movie.episodes.length} EPISODES</span>` 
+                        : `<span class="web-badge-hd">HD</span>`;
+
                     card.innerHTML = `
                         <div class="movie-info">
                             <div class="web-meta-top">
@@ -1187,7 +1289,7 @@
                             <div class="web-meta-bottom">
                                 <div>
                                     <span>${detailText}</span> &nbsp;
-                                    <span class="web-badge-hd">HD</span>
+                                    ${badgeHtml}
                                 </div>
                                 <button class="card-share-btn" onclick="event.stopPropagation(); shareMovie('${safeName}')">
                                     Share
@@ -1197,7 +1299,6 @@
                     `;
                     card.prepend(imgEl);
                 } else {
-                    /* APK SCREENSHOT 4 STYLE[span_23](start_span)[span_23](end_span) */
                     const likes = movie.likes || getMonthLikesCount(movie.name) || 0;
                     card.innerHTML = `
                         <div class="apk-info-box">
@@ -1206,7 +1307,7 @@
                                 <span class="apk-likes">👍 ${likes} Likes</span>
                                 <span class="apk-year">${yearTag}</span>
                             </div>
-                            <div class="apk-detail">${detailText}</div>
+                            <div class="apk-detail">${hasEpisodes ? movie.episodes.length + ' Episodes' : detailText}</div>
                         </div>
                     `;
                     card.prepend(imgEl);
@@ -1223,35 +1324,26 @@
                 seeAllState.movie = !seeAllState.movie;
                 const movies = allMoviesList.filter(m => (m.category || 'movie').toLowerCase() === 'movie');
                 const btn = document.getElementById('moviesSeeAllBtn');
-                if (seeAllState.movie) {
-                    renderSectionList(movies, 'moviesContainer', null);
-                    btn.innerText = "Show Less";
-                } else {
-                    renderSectionList(movies, 'moviesContainer', 10);
-                    btn.innerText = "See All >";
-                }
+                renderSectionList(movies, 'moviesContainer', seeAllState.movie ? null : 10);
+                btn.innerText = seeAllState.movie ? "Show Less" : "See All >";
+            } else if (type === 'kdrama') {
+                seeAllState.kdrama = !seeAllState.kdrama;
+                const kdramas = allMoviesList.filter(m => (m.category || '').toLowerCase() === 'kdrama');
+                const btn = document.getElementById('kdramaSeeAllBtn');
+                renderSectionList(kdramas, 'kdramaContainer', seeAllState.kdrama ? null : 10);
+                btn.innerText = seeAllState.kdrama ? "Show Less" : "See All >";
             } else if (type === 'series') {
                 seeAllState.series = !seeAllState.series;
-                const series = allMoviesList.filter(m => (m.category || '').toLowerCase() === 'series' || m.isSeries);
+                const series = allMoviesList.filter(m => (m.category || '').toLowerCase() === 'series');
                 const btn = document.getElementById('seriesSeeAllBtn');
-                if (seeAllState.series) {
-                    renderSectionList(series, 'seriesContainer', null);
-                    btn.innerText = "Show Less";
-                } else {
-                    renderSectionList(series, 'seriesContainer', 10);
-                    btn.innerText = "See All >";
-                }
+                renderSectionList(series, 'seriesContainer', seeAllState.series ? null : 10);
+                btn.innerText = seeAllState.series ? "Show Less" : "See All >";
             } else if (type === 'anime') {
                 seeAllState.anime = !seeAllState.anime;
                 const anime = allMoviesList.filter(m => (m.category || '').toLowerCase() === 'anime');
                 const btn = document.getElementById('animeSeeAllBtn');
-                if (seeAllState.anime) {
-                    renderSectionList(anime, 'animeContainer', null);
-                    btn.innerText = "Show Less";
-                } else {
-                    renderSectionList(anime, 'animeContainer', 10);
-                    btn.innerText = "See All >";
-                }
+                renderSectionList(anime, 'animeContainer', seeAllState.anime ? null : 10);
+                btn.innerText = seeAllState.anime ? "Show Less" : "See All >";
             }
         }
 
@@ -1265,9 +1357,9 @@
                 const res = await fetch(githubJsonUrl, { cache: "default" });
                 const fetchedData = await res.json();
 
-                allMoviesList = fetchedData.reverse().filter(m => isValidDownloadUrl(m.url));
+                allMoviesList = fetchedData.reverse().filter(m => isValidItem(m));
 
-                // 1. TRENDING (TOP 10 ALWAYS)
+                // 1. TRENDING
                 const trendingList = [...allMoviesList].sort((a, b) => {
                     const lkA = (a.likes || 0) + getMonthLikesCount(a.name);
                     const lkB = (b.likes || 0) + getMonthLikesCount(b.name);
@@ -1276,18 +1368,17 @@
 
                 if (isApkEnvironment) {
                     renderApkTrendingSlider(trendingList);
-                } else {
-                    renderSectionList(trendingList, 'webTrendingContainer', 10);
-                }
-
-                // 2. MOVIES / NEW RELEASES
-                if (isApkEnvironment) {
                     renderSectionList(allMoviesList, 'moviesContainer', null);
                 } else {
+                    renderSectionList(trendingList, 'webTrendingContainer', 10);
+
                     const moviesList = allMoviesList.filter(m => (m.category || 'movie').toLowerCase() === 'movie');
                     renderSectionList(moviesList, 'moviesContainer', 10);
 
-                    const seriesList = allMoviesList.filter(m => (m.category || '').toLowerCase() === 'series' || m.isSeries);
+                    const kdramaList = allMoviesList.filter(m => (m.category || '').toLowerCase() === 'kdrama');
+                    renderSectionList(kdramaList, 'kdramaContainer', 10);
+
+                    const seriesList = allMoviesList.filter(m => (m.category || '').toLowerCase() === 'series');
                     renderSectionList(seriesList, 'seriesContainer', 10);
 
                     const animeList = allMoviesList.filter(m => (m.category || '').toLowerCase() === 'anime');
@@ -1300,7 +1391,7 @@
             }
         }
 
-        /* CATEGORY SWITCH (APK ONLY)[span_24](start_span)[span_24](end_span) */
+        /* CATEGORY SWITCH (APK ONLY) */
         function changeCategory(cat) {
             currentCategory = cat;
             document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
@@ -1308,14 +1399,8 @@
             if (activeBtn) activeBtn.classList.add('active');
 
             let filtered = allMoviesList;
-            if (cat === 'movie') {
-                filtered = allMoviesList.filter(m => (m.category || 'movie').toLowerCase() === 'movie');
-            } else if (cat === 'series') {
-                filtered = allMoviesList.filter(m => (m.category || '').toLowerCase() === 'series' || m.isSeries);
-            } else if (cat === 'anime') {
-                filtered = allMoviesList.filter(m => (m.category || '').toLowerCase() === 'anime');
-            } else if (cat === 'kids') {
-                filtered = allMoviesList.filter(m => (m.category || '').toLowerCase() === 'kids');
+            if (cat !== 'all') {
+                filtered = allMoviesList.filter(m => (m.category || 'movie').toLowerCase() === cat);
             }
             renderSectionList(filtered, 'moviesContainer', null);
         }
@@ -1337,7 +1422,7 @@
             if (!movieName) return;
             const shareUrl = createDirectMovieLink(movieName);
             const shareTitle = `${movieName} - Sk CineBuzz`;
-            const shareText = `Download "${movieName}" Full Movie in HD Dual Audio! Watch here:\n${shareUrl}`;
+            const shareText = `Watch & Download "${movieName}" Full HD! Open here:\n${shareUrl}`;
 
             if (navigator.share && window.isSecureContext) {
                 navigator.share({ title: shareTitle, text: shareText, url: shareUrl })
@@ -1362,13 +1447,13 @@
             if (activeMovieObj && activeMovieObj.name) shareMovie(activeMovieObj.name);
         }
 
-        /* CLICK HANDLER: APK GOES TO WEBSITE DETAIL PAGE */
+        /* CLICK HANDLER: APK OPENS DIRECTLY IN REAL CHROME BROWSER */
         function handleMovieClick(movie) {
             addMonthLike(movie.name);
 
             if (isApkEnvironment) {
                 const targetUrl = createDirectMovieLink(movie.name);
-                window.location.assign(targetUrl);
+                openInRealChrome(targetUrl);
             } else {
                 handleProtectedAction(() => {
                     openMovieDetailModal(movie);
@@ -1376,16 +1461,19 @@
             }
         }
 
-        /* DETAIL PAGE (SCREENSHOT 2 & 3)[span_25](start_span)[span_25](end_span)[span_26](start_span)[span_26](end_span) */
+        /* STAGE 1: DETAIL PAGE */
         function openMovieDetailModal(movie) {
             activeMovieObj = movie;
             window.history.pushState({ modal: 'detail' }, "");
 
+            // Reset ad counter for Stage 1 Detail View
             pageAdCount = 0;
+
+            const isEpisodeWise = Array.isArray(movie.episodes) && movie.episodes.length > 0;
 
             document.getElementById('detailTitle').innerText = movie.name;
             document.getElementById('detailYearBadge').innerText = movie.year || '2026';
-            document.getElementById('detailLangBadge').innerText = movie.category || 'Movie';
+            document.getElementById('detailLangBadge').innerText = (movie.category || 'Movie').toUpperCase();
 
             document.getElementById('tableName').innerText = `${movie.name} (${movie.year || 2026}) Dual Audio HD ESub`;
             document.getElementById('tableGenre').innerText = movie.detail || 'Action, Drama';
@@ -1394,6 +1482,7 @@
 
             directLoadImage(document.getElementById('detailPosterImg'), movie.image || movie.poster, true);
 
+            // Screenshot Section
             const sec = document.getElementById('screenshotSection');
             const scContainer = document.getElementById('screenshotContainer');
             scContainer.innerHTML = "";
@@ -1408,24 +1497,87 @@
                 sec.style.display = 'none';
             }
 
+            // Button Text based on Episode Wise vs Single Link
+            if (isEpisodeWise) {
+                document.getElementById('downloadPanelHeading').innerText = "All Episodes Available";
+                document.getElementById('dlBtnText').innerText = `View & Download Episodes (${movie.episodes.length})`;
+            } else {
+                document.getElementById('downloadPanelHeading').innerText = "Download this movie";
+                document.getElementById('dlBtnText').innerText = "Download 480p 720p 1080p [HD]";
+            }
+
             document.getElementById('movieDetailModal').style.display = 'block';
             document.getElementById('main-body').classList.add('body-locked');
             window.scrollTo(0,0);
         }
 
         function handleDetailDownloadAction() {
-            if (!activeMovieObj || !activeMovieObj.url) return;
+            if (!activeMovieObj) return;
+            const isEpisodeWise = Array.isArray(activeMovieObj.episodes) && activeMovieObj.episodes.length > 0;
+
+            // Requires 3 Ads on Detail Page before proceeding
             handleProtectedAction(() => {
-                let targetUrl = activeMovieObj.url;
-                if (targetUrl.includes("drive.google.com") && targetUrl.includes("/view")) {
-                    targetUrl = targetUrl.replace("/view", "/preview");
+                if (isEpisodeWise) {
+                    openEpisodeSelectionScreen(activeMovieObj);
+                } else {
+                    if (!activeMovieObj.url) return;
+                    let targetUrl = activeMovieObj.url;
+                    if (targetUrl.includes("drive.google.com") && targetUrl.includes("/view")) {
+                        targetUrl = targetUrl.replace("/view", "/preview");
+                    }
+                    window.open(targetUrl, '_blank', 'noopener,noreferrer');
                 }
-                window.open(targetUrl, '_blank', 'noopener,noreferrer');
             });
+        }
+
+        /* STAGE 2: SEPARATE EPISODE SELECTION SCREEN (WITH ITS OWN 3-AD REQUIREMENT) */
+        function openEpisodeSelectionScreen(movie) {
+            window.history.pushState({ modal: 'episodes' }, "");
+            
+            // Reset ad counter for Stage 2 Episode Screen so user must view 3 ads here too
+            pageAdCount = 0;
+
+            document.getElementById('epScreenTitle').innerText = movie.name;
+            directLoadImage(document.getElementById('epScreenPosterImg'), movie.image || movie.poster, true);
+
+            const epContainer = document.getElementById('epListContainer');
+            epContainer.innerHTML = "";
+
+            movie.episodes.forEach((ep, idx) => {
+                const epTitle = ep.name || `Episode ${idx + 1}`;
+                const epUrl = ep.url;
+
+                const row = document.createElement('div');
+                row.className = 'ep-row-btn';
+                row.onclick = () => {
+                    // Requires 3 ads on this Episode Screen before opening the episode URL
+                    handleProtectedAction(() => {
+                        let cleanEpUrl = epUrl;
+                        if (cleanEpUrl.includes("drive.google.com") && cleanEpUrl.includes("/view")) {
+                            cleanEpUrl = cleanEpUrl.replace("/view", "/preview");
+                        }
+                        window.open(cleanEpUrl, '_blank', 'noopener,noreferrer');
+                    });
+                };
+
+                row.innerHTML = `
+                    <span class="ep-row-title">🎬 ${epTitle}</span>
+                    <span class="ep-row-dl-tag">Download</span>
+                `;
+                epContainer.appendChild(row);
+            });
+
+            document.getElementById('episodeScreenModal').style.display = 'block';
+        }
+
+        function closeEpisodeScreen() {
+            document.getElementById('episodeScreenModal').style.display = 'none';
+            pageAdCount = 0;
         }
 
         function closeMovieDetail() {
             document.getElementById('movieDetailModal').style.display = 'none';
+            document.getElementById('episodeScreenModal').style.display = 'none';
             document.getElementById('main-body').classList.remove('body-locked');
             activeMovieObj = null;
             pageAdCount = 0;
@@ -1470,6 +1622,7 @@
             const urlParams = new URLSearchParams(window.location.search);
             const movieParam = urlParams.get('movie');
             if (movieParam) {
+         if (movieParam) {
                 const target = decodeURIComponent(movieParam).trim().toLowerCase();
                 const found = allMoviesList.find(m => m.name && m.name.trim().toLowerCase() === target);
                 if (found) openMovieDetailModal(found);
@@ -1480,8 +1633,9 @@
         function closeMenu() { document.getElementById('menuOverlay').style.display = 'none'; }
 
         window.addEventListener('popstate', () => {
-            if (document.getElementById('movieDetailModal').style.display === 'block') { closeMovieDetail(); }
-            if (document.getElementById('menuOverlay').style.display === 'flex') { closeMenu(); }
+            if (document.getElementById('episodeScreenModal').style.display === 'block') { closeEpisodeScreen(); return; }
+            if (document.getElementById('movieDetailModal').style.display === 'block') { closeMovieDetail(); return; }
+            if (document.getElementById('menuOverlay').style.display === 'flex') { closeMenu(); return; }
         });
 
         document.addEventListener("DOMContentLoaded", () => {
@@ -1491,5 +1645,3 @@
     </script>
 </body>
 </html>
-
-
